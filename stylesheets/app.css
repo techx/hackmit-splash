@@ -1,0 +1,62 @@
+.red {
+  color: #FF585D; }
+
+.blue {
+  color: #74D1EA; }
+
+.gray {
+  color: #515B6B; }
+
+body {
+  background-color: #252C37;
+  font-family: 'Karla', sans-serif;
+  color: #FFFFFF; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; }
+
+h2, h3, h4, h5, h6 {
+  letter-spacing: .128ex; }
+
+h1 {
+  color: #252C37;
+  text-shadow: 1px -1px 0 #FF585D, -1px -1px 0 #FF585D, -1px 1px 0 #FF585D, 1px 1px 0 #FF585D;
+  letter-spacing: .05ex; }
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.lead, .spinner, .controls {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 33%; }
+
+.lead {
+  text-align: right; }
+
+.brand {
+  color: #252C37;
+  text-shadow: 1px -1px 0 #74D1EA, -1px -1px 0 #74D1EA, -1px 1px 0 #74D1EA, 1px 1px 0 #74D1EA; }
+
+.brand:before {
+  color: #252C37;
+  text-shadow: 1px -1px 0 #FF585D, -1px -1px 0 #FF585D, -1px 1px 0 #FF585D, 1px 1px 0 #FF585D;
+  content: 'HACK'; }
+
+.brand:after {
+  color: #252C37;
+  text-shadow: 1px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF;
+  content: ' 2017'; }
+
+.spinner {
+  background-image: url(../images/hack_logo_glow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 200px; }
+
+/*# sourceMappingURL=app.css.map */
