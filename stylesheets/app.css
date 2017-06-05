@@ -112,6 +112,19 @@ i {
     margin: 30px 0 30px; }
 
 .main section {
-  margin-top: 30px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .main section .content {
+    margin-left: 40px;
+    border: 1px solid #F8B1B1;
+    border-radius: 0 0 50px 0; }
+
+#faq .content {
+  padding-bottom: 15px;
+  padding-left: 15px; }
+#faq .question {
+  margin-top: 15px; }
+#faq .answer {
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */

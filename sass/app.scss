@@ -197,6 +197,28 @@ i {
 
 .main {
     section {
-        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .content {
+            margin-left: 40px;
+            border: 1px solid $red-light;
+            border-radius: 0 0 50px 0;
+        }
+    }
+}
+
+#faq {
+    .content {
+        padding-bottom: 15px;
+        padding-left: 15px;
+    }
+
+    .question {
+        margin-top: 15px;
+    }
+
+    .answer {
+        display: none;
     }
 }
