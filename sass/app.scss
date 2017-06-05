@@ -40,6 +40,8 @@ body {
 
     font-family: 'Karla', sans-serif;
     color: $white;
+
+    padding: 60px 0 60px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -133,18 +135,11 @@ i {
 // Top content
 
 .top {
-    // Prob need to prefix these
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
+    
 }
 
 .lead, .spinner, .controls {
-    // Prob need to prefix these
-    flex-grow: 2;
-    flex-shrink: 2;
-    flex-basis: 33%;
+
 }
 
 .lead {
@@ -178,8 +173,9 @@ i {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    width: 100%;
-    height: 200px;
+    
+    // width: auto;
+    // height: 200px;
 }
 
 .controls ul {
