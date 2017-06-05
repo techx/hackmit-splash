@@ -7,3 +7,10 @@ Sass/SCSS is a CSS preprocessor that has kinds of sweet sugar - nesting styles, 
 ```bash
 sass --watch sass:stylesheets
 ```
+
+## TODO
+
+- Set tracking. Heading: 50, subheading: 128
+- Twitter and FB images
+- Favicon
+- Autoupdating countdown

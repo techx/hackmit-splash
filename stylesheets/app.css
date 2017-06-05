@@ -16,12 +16,60 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif; }
 
 h2, h3, h4, h5, h6 {
-  letter-spacing: .128ex; }
+  letter-spacing: .15ex;
+  font-weight: 400; }
 
 h1 {
   color: #252C37;
   text-shadow: 1px -1px 0 #FF585D, -1px -1px 0 #FF585D, -1px 1px 0 #FF585D, 1px 1px 0 #FF585D;
+  font-weight: 700;
   letter-spacing: .05ex; }
+
+a.button, h2.title {
+  display: inline-block;
+  min-width: 250px;
+  padding: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 2.25ex;
+  border: 1px solid #F8B1B1;
+  border-radius: 30px; }
+
+h2.title {
+  text-align: center;
+  color: #252C37;
+  background-color: #FF585D;
+  box-shadow: 1px -1px 0 #F8B1B1, -1px -1px 0 #F8B1B1, -1px 1px 0 #F8B1B1, 1px 1px 0 #F8B1B1;
+  border: 3px solid #252C37;
+  position: relative; }
+  h2.title i {
+    right: 3px; }
+
+i {
+  display: inline-block;
+  padding: 17px;
+  border-radius: 20px;
+  background-color: #252C37;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 3px;
+  color: #F8B1B1; }
+  i.plus {
+    background-image: url("../assets/images/icons/Register Icon.svg");
+    background-position: 55% 50%;
+    background-size: 150%; }
+  i.faq {
+    background-image: url("../assets/images/icons/FAQ Icon.svg");
+    background-position: 40% 40%;
+    background-size: 120%; }
+  i.speakers {
+    background-image: url("../assets/images/icons/Speakers Icon.svg");
+    background-position: 40% 50%;
+    background-size: 120%; }
+  i.sponsors {
+    background-image: url("../assets/images/icons/Sponsors Icon.svg");
+    background-size: 80%; }
 
 .top {
   display: flex;
@@ -30,12 +78,16 @@ h1 {
   align-items: center; }
 
 .lead, .spinner, .controls {
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex-grow: 2;
+  flex-shrink: 2;
   flex-basis: 33%; }
 
 .lead {
   text-align: right; }
+  .lead h3 {
+    margin: 0; }
+  .lead .brand {
+    margin-top: 50px; }
 
 .brand {
   color: #252C37;
@@ -58,5 +110,10 @@ h1 {
   background-position: 50% 50%;
   width: 100%;
   height: 200px; }
+
+.controls ul {
+  list-style: none; }
+  .controls ul li {
+    margin: 10px 0 10px; }
 
 /*# sourceMappingURL=app.css.map */
