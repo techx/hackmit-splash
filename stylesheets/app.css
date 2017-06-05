@@ -112,16 +112,21 @@ i {
     margin: 30px 0 30px; }
 
 .main section {
-  padding-top: 30px;
+  margin: 0px !important;
+  padding-top: 30px !important;
   padding-bottom: 30px; }
   .main section .content {
     margin-left: 40px;
     border: 1px solid #F8B1B1;
     border-radius: 0 0 50px 0; }
 
+#register .row {
+  padding: 0; }
+#register .content {
+  padding: 25px; }
+
 #faq .content {
-  padding-bottom: 15px;
-  padding-left: 15px; }
+  padding: 15px; }
 #faq .question {
   margin-top: 15px; }
 #faq .answer {
