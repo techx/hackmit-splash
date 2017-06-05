@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="11969 -2845 346 69">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Hexagon_Fill);
+      }
+
+      .cls-2 {
+        fill: #d0d6e0;
+      }
+    </style>
+    <clipPath id="clip-Hexagon_Fill">
+      <rect x="11969" y="-2845" width="346" height="69"/>
+    </clipPath>
+  </defs>
+  <g id="Hexagon_Fill" data-name="Hexagon Fill" class="cls-1">
+    <g id="Group_571" data-name="Group 571" transform="translate(11322.5 -3080.5)">
+      <g id="Group_569" data-name="Group 569" transform="translate(218 -436)">
+        <path id="Path_543" data-name="Path 543" class="cls-2" d="M-75.333,1h228l12.667,19L152.667,39h-228L-88,20Z" transform="translate(535.5 686.5)"/>
+      </g>
+      <g id="Group_570" data-name="Group 570" transform="translate(272.7 -436)">
+        <path id="Path_544" data-name="Path 544" class="cls-2" d="M-75.333,1h228l12.667,19L152.667,39h-228L-88,20Z" transform="translate(535.5 686.5)"/>
+      </g>
+    </g>
+  </g>
+</svg>

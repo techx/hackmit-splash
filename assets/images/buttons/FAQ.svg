@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="11032 -2301 557 145">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-FAQ);
+      }
+
+      .cls-2, .cls-3, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #ff585d;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        stroke: #f9b1b1;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #f9b1b1;
+        font-size: 56px;
+        font-family: Poppins;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-FAQ">
+      <rect x="11032" y="-2301" width="557" height="145"/>
+    </clipPath>
+  </defs>
+  <g id="FAQ" class="cls-1">
+    <g id="Group_556" data-name="Group 556" transform="translate(9673 -2717)">
+      <g id="Group_555" data-name="Group 555" transform="translate(1367 424)">
+        <g id="Group_554" data-name="Group 554" transform="translate(0 0)">
+          <g id="Ellipse_307" data-name="Ellipse 307" class="cls-2" transform="translate(10.75 10.75)">
+            <circle class="cls-5" cx="53.75" cy="53.75" r="53.75"/>
+            <circle class="cls-6" cx="53.75" cy="53.75" r="51.25"/>
+          </g>
+          <g id="Rectangle_608" data-name="Rectangle 608" class="cls-3" transform="translate(0)">
+            <rect class="cls-5" width="541.083" height="129" rx="64.5"/>
+            <rect class="cls-6" x="1" y="1" width="539.083" height="127" rx="63.5"/>
+          </g>
+        </g>
+      </g>
+      <text id="_" data-name="?" class="cls-4" transform="translate(1413.583 505.708)"><tspan x="0" y="0">?</tspan></text>
+    </g>
+  </g>
+</svg>

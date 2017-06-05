@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="11969 -2696 346 69">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Hexagon_Filled);
+      }
+
+      .cls-2 {
+        fill: #d0d6e0;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #d0d6e0;
+        stroke-width: 2px;
+      }
+    </style>
+    <clipPath id="clip-Hexagon_Filled">
+      <rect x="11969" y="-2696" width="346" height="69"/>
+    </clipPath>
+  </defs>
+  <g id="Hexagon_Filled" data-name="Hexagon Filled" class="cls-1">
+    <g id="Group_574" data-name="Group 574" transform="translate(11322.5 -2931.5)">
+      <g id="Group_572" data-name="Group 572" transform="translate(218 -436)">
+        <path id="Path_545" data-name="Path 545" class="cls-2" d="M-75.333,1h228l12.667,19L152.667,39h-228L-88,20Z" transform="translate(535.5 686.5)"/>
+      </g>
+      <g id="Group_573" data-name="Group 573" transform="translate(272.7 -436)">
+        <path id="Path_546" data-name="Path 546" class="cls-2" d="M-75.333,1h228l12.667,19L152.667,39h-228L-88,20Z" transform="translate(535.5 686.5)"/>
+      </g>
+    </g>
+    <g id="Group_575" data-name="Group 575" transform="translate(11534.5 -3372.5)">
+      <path id="Path_547" data-name="Path 547" class="cls-3" d="M-72,1H216l16,24L216,49H-72L-88,25Z" transform="translate(535.5 686.5)"/>
+    </g>
+  </g>
+</svg>

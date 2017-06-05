@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="10577 -2994 145 145">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-FAQ_Icon);
+      }
+
+      .cls-2 {
+        fill: #f9b1b1;
+        font-size: 56px;
+        font-family: Poppins;
+      }
+    </style>
+    <clipPath id="clip-FAQ_Icon">
+      <rect x="10577" y="-2994" width="145" height="145"/>
+    </clipPath>
+  </defs>
+  <g id="FAQ_Icon" data-name="FAQ Icon" class="cls-1">
+    <g id="Group_584" data-name="Group 584" transform="translate(10585 -2986)">
+      <text id="_" data-name="?" class="cls-2" transform="translate(46.583 81.708)"><tspan x="0" y="0">?</tspan></text>
+    </g>
+  </g>
+</svg>

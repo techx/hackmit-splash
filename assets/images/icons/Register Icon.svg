@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="10365 -2994 145 145">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Register_Icon);
+      }
+
+      .cls-2 {
+        fill: #f9b1b1;
+        font-size: 56px;
+        font-family: Poppins;
+      }
+    </style>
+    <clipPath id="clip-Register_Icon">
+      <rect x="10365" y="-2994" width="145" height="145"/>
+    </clipPath>
+  </defs>
+  <g id="Register_Icon" data-name="Register Icon" class="cls-1">
+    <g id="Group_577" data-name="Group 577" transform="translate(10373 -2986)">
+      <g id="Group_576" data-name="Group 576" transform="translate(10.75 10.75)">
+        <text id="_" data-name="+" class="cls-2" transform="translate(34.042 70.958)"><tspan x="0" y="0">+</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

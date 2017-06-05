@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="11244 -2994 145 145">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-FAQ_-_Small);
+      }
+
+      .cls-2, .cls-3, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #ff585d;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        stroke: #f9b1b1;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #f9b1b1;
+        font-size: 56px;
+        font-family: Poppins;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-FAQ_-_Small">
+      <rect x="11244" y="-2994" width="145" height="145"/>
+    </clipPath>
+  </defs>
+  <g id="FAQ_-_Small" data-name="FAQ - Small" class="cls-1">
+    <g id="Group_538" data-name="Group 538" transform="translate(11252 -2986)">
+      <g id="Group_537" data-name="Group 537" transform="translate(0 0)">
+        <g id="Group_536" data-name="Group 536" transform="translate(0)">
+          <g id="Ellipse_301" data-name="Ellipse 301" class="cls-2" transform="translate(10.75 10.75)">
+            <circle class="cls-5" cx="53.75" cy="53.75" r="53.75"/>
+            <circle class="cls-6" cx="53.75" cy="53.75" r="51.25"/>
+          </g>
+          <g id="Rectangle_591" data-name="Rectangle 591" class="cls-3">
+            <rect class="cls-5" width="129" height="129" rx="64.5"/>
+            <rect class="cls-6" x="1" y="1" width="127" height="127" rx="63.5"/>
+          </g>
+        </g>
+      </g>
+      <text id="_" data-name="?" class="cls-4" transform="translate(46.583 81.708)"><tspan x="0" y="0">?</tspan></text>
+    </g>
+  </g>
+</svg>

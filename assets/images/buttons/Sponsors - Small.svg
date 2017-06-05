@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="11244 -2769 145 145">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Sponsors_-_Small);
+      }
+
+      .cls-2, .cls-3, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #ff585d;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        stroke: #f9b1b1;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #f9b1b1;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Sponsors_-_Small">
+      <rect x="11244" y="-2769" width="145" height="145"/>
+    </clipPath>
+  </defs>
+  <g id="Sponsors_-_Small" data-name="Sponsors - Small" class="cls-1">
+    <g id="Group_547" data-name="Group 547" transform="translate(11252 -2761)">
+      <g id="Group_544" data-name="Group 544" transform="translate(0 0)">
+        <g id="Group_543" data-name="Group 543" transform="translate(0)">
+          <g id="Ellipse_304" data-name="Ellipse 304" class="cls-2" transform="translate(10.75 10.75)">
+            <circle class="cls-5" cx="53.75" cy="53.75" r="53.75"/>
+            <circle class="cls-6" cx="53.75" cy="53.75" r="51.25"/>
+          </g>
+          <g id="Rectangle_594" data-name="Rectangle 594" class="cls-3">
+            <rect class="cls-5" width="129" height="129" rx="64.5"/>
+            <rect class="cls-6" x="1" y="1" width="127" height="127" rx="63.5"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_546" data-name="Group 546" transform="translate(23.777 64.048) rotate(-43)">
+        <path id="Union_21" data-name="Union 21" class="cls-3" d="M25.069,50.983a3.5,3.5,0,0,1-3.5-3.5v0a3.5,3.5,0,0,1-3.5,3.5h-.19a3.5,3.5,0,0,1-3.5-3.5v0a3.5,3.5,0,0,1-3.5,3.5h-.19a3.5,3.5,0,0,1-3.5-3.5V31.731h0V47.483a3.5,3.5,0,0,1-3.5,3.5H3.5a3.5,3.5,0,0,1-3.5-3.5V3.5A3.5,3.5,0,0,1,3.5,0H25.259a3.5,3.5,0,0,1,3.5,3.5V47.483a3.5,3.5,0,0,1-3.5,3.5Z" transform="translate(11.222 0)"/>
+        <g id="Group_545" data-name="Group 545" transform="translate(0 9.695)">
+          <path id="Rectangle_600" data-name="Rectangle 600" class="cls-4" d="M0,0H31.156a0,0,0,0,1,0,0V11.82a3.5,3.5,0,0,1-3.5,3.5H3.5A3.5,3.5,0,0,1,0,11.82V0A0,0,0,0,1,0,0Z" transform="translate(39.218 34.929) rotate(-90)"/>
+          <rect id="Rectangle_601" data-name="Rectangle 601" class="cls-4" width="5.375" height="18.279" rx="2.688" transform="matrix(0.208, -0.978, 0.978, 0.208, 25.044, 5.258)"/>
+          <rect id="Rectangle_602" data-name="Rectangle 602" class="cls-4" width="5.375" height="13.531" rx="2.688" transform="translate(1.789 21.857) rotate(-90)"/>
+          <rect id="Rectangle_603" data-name="Rectangle 603" class="cls-4" width="5.375" height="15.32" rx="2.688" transform="translate(0 15.321) rotate(-90)"/>
+          <rect id="Rectangle_604" data-name="Rectangle 604" class="cls-4" width="5.375" height="11.742" rx="2.688" transform="translate(3.578 8.784) rotate(-90)"/>
+          <rect id="Rectangle_605" data-name="Rectangle 605" class="cls-4" width="5.375" height="11.742" rx="2.688" transform="translate(3.578 28.393) rotate(-90)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

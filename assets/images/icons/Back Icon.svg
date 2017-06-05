@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="10789 -2994 145 145">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Back_Icon);
+      }
+
+      .cls-2 {
+        fill: #bee7f0;
+        font-size: 56px;
+        font-family: Poppins;
+      }
+    </style>
+    <clipPath id="clip-Back_Icon">
+      <rect x="10789" y="-2994" width="145" height="145"/>
+    </clipPath>
+  </defs>
+  <g id="Back_Icon" data-name="Back Icon" class="cls-1">
+    <g id="Group_598" data-name="Group 598" transform="translate(10797 -2986)">
+      <text id="_" data-name="&lt;" class="cls-2" transform="translate(46.583 81.708)"><tspan x="0" y="0">&lt;</tspan></text>
+    </g>
+  </g>
+</svg>

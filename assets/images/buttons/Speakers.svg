@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="11032 -2076 557 145">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Speakers);
+      }
+
+      .cls-2, .cls-3, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #ff585d;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        stroke: #f9b1b1;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #f9b1b1;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-Speakers">
+      <rect x="11032" y="-2076" width="557" height="145"/>
+    </clipPath>
+  </defs>
+  <g id="Speakers" class="cls-1">
+    <g id="Group_560" data-name="Group 560" transform="translate(9673 -2623)">
+      <g id="Group_558" data-name="Group 558" transform="translate(1367 555)">
+        <g id="Group_557" data-name="Group 557">
+          <g id="Ellipse_308" data-name="Ellipse 308" class="cls-2" transform="translate(10.75 10.75)">
+            <circle class="cls-5" cx="53.75" cy="53.75" r="53.75"/>
+            <circle class="cls-6" cx="53.75" cy="53.75" r="51.25"/>
+          </g>
+          <g id="Rectangle_609" data-name="Rectangle 609" class="cls-3" transform="translate(0)">
+            <rect class="cls-5" width="541.083" height="129" rx="64.5"/>
+            <rect class="cls-6" x="1" y="1" width="539.083" height="127" rx="63.5"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_559" data-name="Group 559" transform="translate(1408.272 593.049)">
+        <path id="Rectangle_610" data-name="Rectangle 610" class="cls-4" d="M2,0H15.292a0,0,0,0,1,0,0V22.393a0,0,0,0,1,0,0H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0Z" transform="translate(0 14.395)"/>
+        <path id="Path_541" data-name="Path 541" class="cls-4" d="M0,6.555,17.613-8c1.926,0,2.267.313,2.267,2.079V40.624c0,1.767-.174,2.559-2.267,2.559L0,28.788Z" transform="translate(13.763 8)"/>
+        <ellipse id="Ellipse_309" data-name="Ellipse 309" class="cls-4" cx="6.117" cy="6.398" rx="6.117" ry="6.398" transform="translate(26.761 18.328)"/>
+      </g>
+    </g>
+  </g>
+</svg>
