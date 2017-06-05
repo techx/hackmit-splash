@@ -63,7 +63,7 @@ h1 {
 
 a.button, h2.title {
     display: inline-block;
-    min-width: 250px;
+    min-width: 210px;
     padding: 10px;
 
     text-decoration: none;
@@ -72,6 +72,8 @@ a.button, h2.title {
 
     border: 1px solid $red-light;
     border-radius: 30px;
+
+    position: relative;
 }
 
 h2.title {
@@ -88,10 +90,18 @@ h2.title {
 
     border: 3px solid $black;
 
-    position: relative;
-
     i {
         right: 3px;
+    }
+}
+
+a.button {
+    padding-left: 50px;
+
+    i {
+        left: 3px;
+        border: 3px solid $red;
+        padding: 14px;
     }
 }
 
@@ -110,7 +120,7 @@ i {
 
     &.plus {
         background-image: url("../assets/images/icons/Register Icon.svg");
-        background-position: 55% 50%;
+        background-position: 60% 50%;
         background-size: 150%;
     }
 
@@ -134,13 +144,13 @@ i {
 
 // Top content
 
-.top {
+// .top {
     
-}
+// }
 
-.lead, .spinner, .controls {
+// .lead, .spinner, .controls {
 
-}
+// }
 
 .lead {
     text-align: right;
@@ -173,15 +183,20 @@ i {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    
-    // width: auto;
-    // height: 200px;
 }
 
 .controls ul {
     list-style: none;
 
     li {
-        margin: 10px 0 10px;
+        margin: 30px 0 30px;
+    }
+}
+
+// Main content
+
+.main {
+    section {
+        margin-top: 30px;
     }
 }
