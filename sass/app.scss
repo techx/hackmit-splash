@@ -1,5 +1,6 @@
 // Colors
 
+// $red-dark: #FF2D50;
 $red: #FF585D;
 $red-light: #F8B1B1;
 
@@ -8,7 +9,8 @@ $blue-light: #BEE7F0;
 
 $black: #252C37;
 $gray: #515B6B;
-$white: #FFFFFF;
+// $white: #FFFFFF;
+$white: #CED4E0;
 
 .red {
     color: $red;
@@ -174,14 +176,6 @@ i {
 
 // Top content
 
-// .top {
-    
-// }
-
-// .lead, .spinner, .controls {
-
-// }
-
 .lead {
     text-align: right;
 
@@ -190,7 +184,15 @@ i {
     }
 
     .brand {
-        margin-top: 50px;
+        margin-top: 80px;
+    }
+
+    h3:nth-child(1), p:nth-child(5) {
+        margin-right: -30px;
+    }
+
+    h3:nth-child(2), p:nth-child(4) {
+        margin-right: -10px;
     }
 }
 
@@ -209,10 +211,20 @@ i {
 }
 
 .spinner {
-    background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    // padding: 0 !important;
+
+    .inner {
+        background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
+        background-size: 55%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+        border: 4px solid $gray;
+        border-radius: 100%;
+    }
 }
 
 .controls ul {
@@ -220,12 +232,18 @@ i {
 
     li {
         margin: 30px 0 30px;
+
+        &:nth-child(1), &:nth-child(4) {
+            margin-left: -18px;
+        }
     }
 }
 
 // Main content
 
 .main {
+    // display: none !important;
+
     section {
         margin: 0px !important;
         padding-top: 30px !important;
