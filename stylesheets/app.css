@@ -34,6 +34,7 @@ a {
 a.button, h2.title {
   display: inline-block;
   min-width: 210px;
+  min-height: 42px;
   padding: 10px;
   text-decoration: none;
   color: #FFFFFF;
@@ -41,6 +42,14 @@ a.button, h2.title {
   border: 1px solid #F8B1B1;
   border-radius: 30px;
   position: relative; }
+  a.button.small, h2.title.small {
+    min-width: 0;
+    padding-left: 20px;
+    padding-right: 20px; }
+  a.button.blue, h2.title.blue {
+    border-color: #BEE7F0; }
+    a.button.blue i, h2.title.blue i {
+      border-color: #74D1EA; }
 
 h2.title {
   text-align: center;
@@ -66,8 +75,7 @@ i {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   position: absolute;
-  top: 3px;
-  color: #F8B1B1; }
+  top: 3px; }
   i.plus {
     background-image: url("../assets/images/icons/Register Icon.svg");
     background-position: 60% 50%;
@@ -83,6 +91,13 @@ i {
   i.sponsors {
     background-image: url("../assets/images/icons/Sponsors Icon.svg");
     background-size: 80%; }
+  i.up {
+    background-image: url("../assets/images/icons/Back Icon.svg");
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
 
 .lead {
   text-align: right; }

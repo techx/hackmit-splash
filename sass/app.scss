@@ -72,6 +72,7 @@ a {
 a.button, h2.title {
     display: inline-block;
     min-width: 210px;
+    min-height: 42px;
     padding: 10px;
 
     text-decoration: none;
@@ -82,6 +83,20 @@ a.button, h2.title {
     border-radius: 30px;
 
     position: relative;
+
+    &.small {
+        min-width: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &.blue {
+        border-color: $blue-light;
+
+        i {
+            border-color: $blue;
+        }
+    }
 }
 
 h2.title {
@@ -124,8 +139,6 @@ i {
     position: absolute;
     top: 3px;
 
-    color: $red-light;
-
     &.plus {
         background-image: url("../assets/images/icons/Register Icon.svg");
         background-position: 60% 50%;
@@ -147,6 +160,15 @@ i {
     &.sponsors {
         background-image: url("../assets/images/icons/Sponsors Icon.svg");
         background-size: 80%;
+    }
+
+    &.up {
+        background-image: url("../assets/images/icons/Back Icon.svg");
+        -webkit-transform: rotate(90deg);
+           -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+             -o-transform: rotate(90deg);
+                transform: rotate(90deg);
     }
 }
 
