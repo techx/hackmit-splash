@@ -59,6 +59,14 @@ h1 {
     letter-spacing: .05ex;
 }
 
+a {
+    color: $red;
+
+    &:hover, &:active {
+        color: $red-light;
+    }
+}
+
 // Buttons
 
 a.button, h2.title {
@@ -226,9 +234,19 @@ i {
 
     .question {
         margin-top: 15px;
+        cursor: pointer;
+
+        &:before {
+            color: $red;
+            content: '+';
+        }
     }
 
     .answer {
         display: none;
+    }
+
+    .expanded .answer {
+        display: inline;
     }
 }

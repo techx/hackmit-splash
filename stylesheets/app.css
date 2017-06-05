@@ -26,6 +26,11 @@ h1 {
   font-weight: 700;
   letter-spacing: .05ex; }
 
+a {
+  color: #FF585D; }
+  a:hover, a:active {
+    color: #F8B1B1; }
+
 a.button, h2.title {
   display: inline-block;
   min-width: 210px;
@@ -128,8 +133,14 @@ i {
 #faq .content {
   padding: 15px; }
 #faq .question {
-  margin-top: 15px; }
+  margin-top: 15px;
+  cursor: pointer; }
+  #faq .question:before {
+    color: #FF585D;
+    content: '+'; }
 #faq .answer {
   display: none; }
+#faq .expanded .answer {
+  display: inline; }
 
 /*# sourceMappingURL=app.css.map */
