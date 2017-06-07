@@ -51,14 +51,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3, h4, h5, h6 {
-    letter-spacing: .15ex;
+    letter-spacing: .128em;
     font-weight: 400;
 }
 
 h1 {
     @include stroke($black, $red);
     font-weight: 700;
-    letter-spacing: .05ex;
+    letter-spacing: .05em;
 }
 
 a {
@@ -79,7 +79,7 @@ a.button, h2.title {
 
     text-decoration: none;
     color: $white;
-    font-size: 2.25ex;
+    font-size: 16px;
 
     border: 1px solid $red-light;
     border-radius: 30px;
@@ -137,35 +137,33 @@ i {
     background-color: $black;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    background-size: contain;
 
     position: absolute;
     top: 3px;
 
     &.plus {
-        background-image: url("../assets/images/icons/Register Icon.svg");
-        background-position: 60% 50%;
-        background-size: 150%;
+        background-image: url("../assets/images/icons/Register Icon@2x.png");
     }
 
     &.faq {
-        background-image: url("../assets/images/icons/FAQ Icon.svg");
-        background-position: 40% 40%;
-        background-size: 120%;
+        background-image: url("../assets/images/icons/FAQ Icon@2x.png");
     }
 
     &.speakers {
-        background-image: url("../assets/images/icons/Speakers Icon.svg");
-        background-position: 40% 50%;
-        background-size: 120%;
+        background-image: url("../assets/images/icons/Speakers Icon@2x.png");
     }
 
     &.sponsors {
-        background-image: url("../assets/images/icons/Sponsors Icon.svg");
-        background-size: 80%;
+        background-image: url("../assets/images/icons/Sponsors Icon@2x.png");
+    }
+
+    &.back {
+        background-image: url("../assets/images/icons/Back Icon@2x.png");
     }
 
     &.up {
-        background-image: url("../assets/images/icons/Back Icon.svg");
+        background-image: url("../assets/images/icons/Back Icon@2x.png");
         -webkit-transform: rotate(90deg);
            -moz-transform: rotate(90deg);
             -ms-transform: rotate(90deg);

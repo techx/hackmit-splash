@@ -17,14 +17,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif; }
 
 h2, h3, h4, h5, h6 {
-  letter-spacing: .15ex;
+  letter-spacing: .128em;
   font-weight: 400; }
 
 h1 {
   color: #252C37;
   text-shadow: 1px -1px 0 #FF585D, -1px -1px 0 #FF585D, -1px 1px 0 #FF585D, 1px 1px 0 #FF585D;
   font-weight: 700;
-  letter-spacing: .05ex; }
+  letter-spacing: .05em; }
 
 a {
   color: #FF585D; }
@@ -38,7 +38,7 @@ a.button, h2.title {
   padding: 10px;
   text-decoration: none;
   color: #CED4E0;
-  font-size: 2.25ex;
+  font-size: 16px;
   border: 1px solid #F8B1B1;
   border-radius: 30px;
   position: relative; }
@@ -74,25 +74,21 @@ i {
   background-color: #252C37;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
   top: 3px; }
   i.plus {
-    background-image: url("../assets/images/icons/Register Icon.svg");
-    background-position: 60% 50%;
-    background-size: 150%; }
+    background-image: url("../assets/images/icons/Register Icon@2x.png"); }
   i.faq {
-    background-image: url("../assets/images/icons/FAQ Icon.svg");
-    background-position: 40% 40%;
-    background-size: 120%; }
+    background-image: url("../assets/images/icons/FAQ Icon@2x.png"); }
   i.speakers {
-    background-image: url("../assets/images/icons/Speakers Icon.svg");
-    background-position: 40% 50%;
-    background-size: 120%; }
+    background-image: url("../assets/images/icons/Speakers Icon@2x.png"); }
   i.sponsors {
-    background-image: url("../assets/images/icons/Sponsors Icon.svg");
-    background-size: 80%; }
+    background-image: url("../assets/images/icons/Sponsors Icon@2x.png"); }
+  i.back {
+    background-image: url("../assets/images/icons/Back Icon@2x.png"); }
   i.up {
-    background-image: url("../assets/images/icons/Back Icon.svg");
+    background-image: url("../assets/images/icons/Back Icon@2x.png");
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
