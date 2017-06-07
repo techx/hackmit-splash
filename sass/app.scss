@@ -9,8 +9,8 @@ $blue-light: #BEE7F0;
 
 $black: #252C37;
 $gray: #515B6B;
-// $white: #FFFFFF;
-$white: #CED4E0;
+$white: #D0D6E0; // Columbia Blue
+$light: transparentize($white, 0.6);
 
 .red {
     color: $red;
@@ -22,6 +22,10 @@ $white: #CED4E0;
 
 .gray {
     color: $gray;
+}
+
+.light {
+    color: $light;
 }
 
 // Mixins
@@ -210,18 +214,19 @@ i {
 
 .spinner {
     // padding: 0 !important;
+    margin: auto;
 
-    .inner {
+    img {
         background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
-        background-size: 55%;
+        background-size: 25%;
         background-repeat: no-repeat;
         background-position: 50% 50%;
 
-        height: 400px;
-        width: 400px;
-        margin: 0 auto;
-        border: 4px solid $gray;
-        border-radius: 100%;
+        // height: 400px;
+        // width: 400px;
+        // margin: 0 auto;
+        // border: 4px solid $gray;
+        // border-radius: 100%;
     }
 }
 

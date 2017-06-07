@@ -7,10 +7,13 @@
 .gray {
   color: #515B6B; }
 
+.light {
+  color: rgba(208, 214, 224, 0.4); }
+
 body {
   background-color: #252C37;
   font-family: 'Karla', sans-serif;
-  color: #CED4E0;
+  color: #D0D6E0;
   padding: 60px 0 60px; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,7 +40,7 @@ a.button, h2.title {
   min-height: 42px;
   padding: 10px;
   text-decoration: none;
-  color: #CED4E0;
+  color: #D0D6E0;
   font-size: 16px;
   border: 1px solid #F8B1B1;
   border-radius: 30px;
@@ -117,19 +120,16 @@ i {
 
 .brand:after {
   color: #252C37;
-  text-shadow: 1px -1px 0 #CED4E0, -1px -1px 0 #CED4E0, -1px 1px 0 #CED4E0, 1px 1px 0 #CED4E0;
+  text-shadow: 1px -1px 0 #D0D6E0, -1px -1px 0 #D0D6E0, -1px 1px 0 #D0D6E0, 1px 1px 0 #D0D6E0;
   content: ' 2017'; }
 
-.spinner .inner {
-  background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
-  background-size: 55%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  height: 400px;
-  width: 400px;
-  margin: 0 auto;
-  border: 4px solid #515B6B;
-  border-radius: 100%; }
+.spinner {
+  margin: auto; }
+  .spinner img {
+    background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; }
 
 .controls ul {
   list-style: none; }
