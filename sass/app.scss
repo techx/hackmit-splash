@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'buttons';
 @import 'header_footer';
+@import 'responsive';
 
 // Basics & Typeography
 
@@ -9,18 +10,6 @@ body {
 
     font-family: 'Karla', sans-serif;
     color: $white;
-
-    // Vertically center content
-    display: flex;
-    align-items: center;
-
-    .top {
-        flex-basis: 100%;
-    }
-
-    .main {
-        flex-basis: 0%;
-    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,6 +35,21 @@ a {
     }
 }
 
+// Vertically center content
+.fixed-view {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .top {
+        flex-basis: 100%;
+    }
+
+    .main {
+        flex-basis: 0%;
+    }
+}
+
 
 // Top content
 
@@ -59,18 +63,6 @@ a {
         flex-shrink: 1;
         flex-grow: 1;
         flex-basis: 33%;
-    }
-
-    @media screen and (max-width: $break-med) {
-        .spinner {
-            flex-shrink: 2;
-            flex-grow: 2;
-            flex-basis: 50%;
-        }
-
-        .lead, .conrols {
-            flex-basis: 25%;
-        }
     }
 }
 
@@ -166,19 +158,17 @@ body.section-expanded {
     }
 }
 
-#register {
-    .row {
-        padding: 0;
-    }
-
-    .content {
-        padding: 25px;
-    }
+#register .content {
+    padding: 25px;
+    max-width: 400px;
 }
 
 #faq {
     .content {
-        padding: 15px;
+        padding: 5px 15px 15px 15px;
+        max-width: 500px;
+        max-height: 400px;
+        overflow-y: scroll;
     }
 
     .question {

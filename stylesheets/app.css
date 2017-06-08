@@ -142,16 +142,40 @@ footer {
   footer .right {
     background-image: url(../assets/images/border-bottom-right@2x.png); }
 
+.scrolling-view {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 100%;
+    padding-top: 48px; }
+
+  .fixed-view {
+    height: auto !important; }
+    .fixed-view .lead {
+      display: none; }
+
+  .scrolling-view {
+    display: block; }
+    .scrolling-view .spinner {
+      flex-shrink: 2;
+      flex-grow: 2;
+      flex-basis: 66%; }
+    .scrolling-view .controls {
+      flex-basis: 33%; }
+    .scrolling-view .lead-bottom {
+      display: block !important;
+      text-align: left !important;
+      padding-left: 10px;
+      padding-right: 10px; }
+
+  footer {
+    bottom: auto;
+    margin-top: 20px; } }
 body {
   background-color: #252C37;
   font-family: 'Karla', sans-serif;
-  color: #D0D6E0;
-  display: flex;
-  align-items: center; }
-  body .top {
-    flex-basis: 100%; }
-  body .main {
-    flex-basis: 0%; }
+  color: #D0D6E0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif; }
@@ -171,6 +195,15 @@ a {
   a:hover, a:active {
     color: #F8B1B1; }
 
+.fixed-view {
+  display: flex;
+  align-items: center;
+  height: 100%; }
+  .fixed-view .top {
+    flex-basis: 100%; }
+  .fixed-view .main {
+    flex-basis: 0%; }
+
 .top {
   display: flex;
   flex-direction: row;
@@ -180,13 +213,6 @@ a {
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: 33%; }
-  @media screen and (max-width: 768px) {
-    .top .spinner {
-      flex-shrink: 2;
-      flex-grow: 2;
-      flex-basis: 50%; }
-    .top .lead, .top .conrols {
-      flex-basis: 25%; } }
 
 .lead {
   text-align: right;
@@ -242,13 +268,15 @@ body.section-expanded .top, body.section-expanded .main {
   .main > section.expanded {
     display: block !important; }
 
-#register .row {
-  padding: 0; }
 #register .content {
-  padding: 25px; }
+  padding: 25px;
+  max-width: 400px; }
 
 #faq .content {
-  padding: 15px; }
+  padding: 5px 15px 15px 15px;
+  max-width: 500px;
+  max-height: 400px;
+  overflow-y: scroll; }
 #faq .question {
   margin-top: 15px;
   cursor: pointer; }

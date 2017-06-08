@@ -77,10 +77,9 @@
 	var launchDate = new Date('Sep 16 2017');
 	var remainingMessage = " DAYS REMAINING";
 	var launchMessage = "";
-	var countdownElement = document.getElementById('days');
 
 	/* Handles timezone conversions */
-	function updateCountdown() {
+	function updateCountdown(countdownElement) {
 		var localDate = new Date();
 		var utc = localDate.getTime() + (localDate.getTimezoneOffset() * 60000);
 		var edtNow = new Date(utc + (3600000*(-4)));
@@ -95,6 +94,9 @@
 			countdownElement.innerHTML = launchMessage;
 		}
 	}
-	updateCountdown();
+
+	Array
+		.from(document.getElementsByClassName('days'))
+		.forEach(updateCountdown);
 
 })();

@@ -1,0 +1,51 @@
+// On desktop, hide the bottom, scrolling view
+.scrolling-view {
+    display: none;
+}
+
+@media screen and (max-width: $break-med) {
+	body {
+		height: 100%;
+		padding-top: $hf-height;
+	}
+
+	.fixed-view {
+		height: auto !important;
+
+		.lead {
+	    	display: none;
+	    }
+	}
+
+	.scrolling-view {
+		display: block;
+
+	    .spinner {
+	        flex-shrink: 2;
+	        flex-grow: 2;
+	        flex-basis: 66%;
+	    }
+
+	    .controls {
+	        flex-basis: 33%;
+
+	        // .button-primary {
+	        // 	display: none !important;
+	        // }
+	    }
+
+	    .lead-bottom {
+	    	display: block !important;
+
+	    	text-align: left !important;
+
+	    	padding-left: 10px;
+	    	padding-right: 10px;
+	    }
+	}
+
+	footer {
+		bottom: auto;
+		margin-top: 20px;
+	}
+}
