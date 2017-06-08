@@ -51,6 +51,19 @@
 	router();
 
 	////////////////////
+	// Untoggle sections by clicking spinner
+	////////////////////
+
+	document.getElementsByClassName('spinner')[0].addEventListener('click', function() {
+		// Hide all sections
+			document.querySelectorAll('.main > section').forEach(function(element) {
+				element.classList.remove('expanded');
+			});
+			document.body.classList.remove('section-expanded');
+	});
+
+
+	////////////////////
 	// COUNTDOWN
 	////////////////////
 
