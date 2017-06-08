@@ -26,62 +26,34 @@
 
 	var sections = ['register', 'faq', 'speakers', 'sponsors'];
 
+	function hideAllSections() {
+		document.querySelectorAll('.main > section.expanded').forEach(function(element) {
+			element.classList.remove('expanded');
+		});
+	}
+
 	function router() {
-		var section = location.hash.slice(1);
+		// The bit after the # (e.g. url == #faq --> section == faq)
+		var currentSection = location.hash.slice(1);
 		
 		document.body.classList.remove('section-expanded');
 
-		if (sections.indexOf(section) >= 0) {
+		if (sections.indexOf(currentSection) >= 0) {
+			hideAllSections();
 			document.body.classList.add('section-expanded');
 
-			// Hide all sections
-			document.querySelectorAll('.main > section').forEach(function(element) {
-				// console.log('hiding', element)
-				element.classList.remove('expanded');
-				// console.log(element);
-			});
-
-			// Reveal routed section
-			document.getElementById(section)
+			// Reveal current section
+			document.getElementById(currentSection)
 					.classList.add('expanded');
+		} else if (!currentSection.length) {
+			// Navigated to /# or /, hide all sections
+			hideAllSections();
 		}
 	}
 
+	// Call the router on page start, and whenever the URL hash changes
 	window.addEventListener('hashchange', router);
 	router();
-
-	////////////////////
-	// Untoggle sections by clicking spinner
-	////////////////////
-
-	document.getElementsByClassName('spinner')[0]
-		.addEventListener('click', function() {
-		// Hide all sections
-			document.querySelectorAll('.main > section').forEach(function(element) {
-				element.classList.remove('expanded');
-			});
-			document.body.classList.remove('section-expanded');
-	});
-
-    ////////////////////
-    // Rip this is kind of a hack to fix the above
-    ////////////////////
-
-    Array.
-    	from(sections).forEach(function(section) {
-    		var current_section = document.getElementById(section+"-button");
-			document.body.classList.add('section-expanded');
-			// Hide all sections
-			document.querySelectorAll('.main > section').forEach(function(element) {
-				// console.log('hiding', element)
-				element.classList.remove('expanded');
-				// console.log(element);
-			});
-
-			// Reveal routed section
-			current_section.classList.add('expanded');
-		});		
-    
 
 	////////////////////
 	// COUNTDOWN
