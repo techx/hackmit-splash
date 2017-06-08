@@ -51,7 +51,7 @@ a.button {
     display: inline-block;
     min-width: 200px;
     min-height: 42px;
-    padding: 10px 10px 10px 50px;
+    padding: $button-padding $button-padding $button-padding 50px;
 
     text-decoration: none;
     color: $white;
@@ -85,7 +85,13 @@ a.button {
 }
 
 @mixin button-active() {
+    $padding-adjustment: 3.6px / 2;
+
     padding-left: 0px;
+    // Because of the box shadow + border, an active button would be fatter
+    // than a regular button without reducing padding
+    padding-top: $button-padding - $padding-adjustment;
+    padding-bottom: $button-padding - $padding-adjustment;
 
     text-align: center;
     color: $black;
@@ -104,6 +110,7 @@ a.button {
     i {
         right: 3px;
         left: auto;
+        top: 3px - $padding-adjustment;
     }
 }
 
@@ -114,8 +121,10 @@ a.button {
 .controls ul {
     list-style: none;
 
+    margin-bottom: -$controls-spacing;
+
     li {
-        margin: 40px 0 40px;
+        margin: 0 0 $controls-spacing;
 
         // Fake circular wrapping of buttons
         &:nth-child(1), &:nth-child(4) {
@@ -140,8 +149,11 @@ body.section-expanded .controls {
         }
     }
 
-    // My section is expanded --> show only a back button
+    // My section is expanded --> show a back button and a section header (restyle the primary button)
     li.expanded {
+        margin-top: -11px;
+        margin-bottom: $controls-spacing - 19.6px / 2;
+
         .primary-button {
             @include button-active();
         }

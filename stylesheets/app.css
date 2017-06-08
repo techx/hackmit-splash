@@ -55,9 +55,10 @@ a.button {
     padding: 14px; }
 
 .controls ul {
-  list-style: none; }
+  list-style: none;
+  margin-bottom: -50px; }
   .controls ul li {
-    margin: 40px 0 40px; }
+    margin: 0 0 50px; }
     .controls ul li:nth-child(1), .controls ul li:nth-child(4) {
       margin-left: -18px; }
   .controls ul .back-button {
@@ -67,20 +68,26 @@ body.section-expanded .controls li:not(.expanded) .compact-button {
   display: inline; }
 body.section-expanded .controls li:not(.expanded) .back-button, body.section-expanded .controls li:not(.expanded) .primary-button {
   display: none; }
-body.section-expanded .controls li.expanded .primary-button {
-  padding-left: 0px;
-  text-align: center;
-  color: #252C37;
-  background-color: #FF585D;
-  box-shadow: 1px -1px 0 #F8B1B1, -1px -1px 0 #F8B1B1, -1px 1px 0 #F8B1B1, 1px 1px 0 #F8B1B1;
-  border: 3px solid #252C37; }
-  body.section-expanded .controls li.expanded .primary-button i {
-    right: 3px;
-    left: auto; }
-body.section-expanded .controls li.expanded .compact-button {
-  display: none; }
-body.section-expanded .controls li.expanded .back-button {
-  display: inline; }
+body.section-expanded .controls li.expanded {
+  margin-top: -11px;
+  margin-bottom: 40.2px; }
+  body.section-expanded .controls li.expanded .primary-button {
+    padding-left: 0px;
+    padding-top: 8.2px;
+    padding-bottom: 8.2px;
+    text-align: center;
+    color: #252C37;
+    background-color: #FF585D;
+    box-shadow: 1px -1px 0 #F8B1B1, -1px -1px 0 #F8B1B1, -1px 1px 0 #F8B1B1, 1px 1px 0 #F8B1B1;
+    border: 3px solid #252C37; }
+    body.section-expanded .controls li.expanded .primary-button i {
+      right: 3px;
+      left: auto;
+      top: 1.2px; }
+  body.section-expanded .controls li.expanded .compact-button {
+    display: none; }
+  body.section-expanded .controls li.expanded .back-button {
+    display: inline; }
 
 body:not(.section-expanded) .controls .back-button, body:not(.section-expanded) .controls .compact-button {
   display: none; }

@@ -33,6 +33,11 @@ $light: transparentize($white, 0.6);
     color: $light;
 }
 
+// Other variables
+
+$controls-spacing: 50px;
+$button-padding: 10px;
+
 // Mixins
 
 @mixin stroke($fill, $outline) {
