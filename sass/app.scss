@@ -376,6 +376,14 @@ footer {
             margin-left: -18px;
         }
     }
+
+    &.compact-buttons {
+        display: none;
+    }
+
+    &.full-buttons {
+        display: block;
+    }
 }
 
 // Main content
@@ -387,6 +395,16 @@ body.section-expanded {
 
     .top, .main {
         flex-basis: 50%;
+    }
+
+    .controls {
+        .compact-buttons {
+            display: block !important;
+        }
+
+        .full-buttons {
+            display: none !important;
+        }
     }
 }
 
