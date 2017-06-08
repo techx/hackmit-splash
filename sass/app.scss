@@ -331,7 +331,9 @@ footer {
 .main {
     // display: none !important;
 
-    section {
+    > section {
+        display: none !important;
+
         margin: 0px !important;
         padding-top: 30px !important;
         padding-bottom: 30px;
@@ -340,6 +342,10 @@ footer {
             margin-left: 40px;
             border: 1px solid $red-light;
             border-radius: 0 0 50px 0;
+        }
+
+        &.expanded {
+            display: block !important;
         }
     }
 }

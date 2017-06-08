@@ -1,7 +1,10 @@
 
 (function() {
 
-	// Allow questions in FAQ to be expanded
+	////////////////////
+	// FAQ TOGGLES
+	////////////////////
+
 	Array
 		.from(document.getElementsByClassName('question'))
 		.forEach(function (question) {
@@ -16,5 +19,32 @@
 
 			}).bind(this));
 		});
+
+	////////////////////
+	// SECTION TOGGLES
+	////////////////////
+
+	var sections = ['register', 'faq', 'speakers', 'sponsors'];
+
+	function router() {
+		// Adapted from http://joakim.beng.se/blog/posts/a-javascript-router-in-20-lines.html
+
+		var section = location.hash.slice(1);
+		if (sections.indexOf(section) >= 0) {
+			// Hide all sections
+			document.querySelectorAll('.main > section').forEach(function(element) {
+				console.log('hiding', element)
+				element.classList.remove('expanded');
+				console.log(element);
+			});
+
+			// Reveal routed section
+			document.getElementById(section)
+					.classList.add('expanded');
+		}
+	}
+
+	window.addEventListener('hashchange', router);
+	router();
 
 })();

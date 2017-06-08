@@ -193,14 +193,17 @@ footer {
     .controls ul li:nth-child(1), .controls ul li:nth-child(4) {
       margin-left: -18px; }
 
-.main section {
+.main > section {
+  display: none !important;
   margin: 0px !important;
   padding-top: 30px !important;
   padding-bottom: 30px; }
-  .main section .content {
+  .main > section .content {
     margin-left: 40px;
     border: 1px solid #F8B1B1;
     border-radius: 0 0 50px 0; }
+  .main > section.expanded {
+    display: block !important; }
 
 #register .row {
   padding: 0; }
