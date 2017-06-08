@@ -211,19 +211,25 @@ footer {
     margin: 40px 0 40px; }
     .controls ul li:nth-child(1), .controls ul li:nth-child(4) {
       margin-left: -18px; }
-  .controls ul.compact-buttons {
-    display: none; }
-  .controls ul.full-buttons {
-    display: block; }
+
+body.section-expanded .controls li:not(.expanded) .compact-button {
+  display: inline-block; }
+body.section-expanded .controls li:not(.expanded) .back-button, body.section-expanded .controls li:not(.expanded) .primary-button {
+  display: none; }
+body.section-expanded .controls li.expanded .primary-button, body.section-expanded .controls li.expanded .compact-button {
+  display: none; }
+body.section-expanded .controls li.expanded .back-button {
+  display: inline-block; }
+
+body:not(.section-expanded) .controls .back-button, body:not(.section-expanded) .controls .compact-button {
+  display: none; }
+body:not(.section-expanded) .controls .button-primary {
+  display: inline-block; }
 
 body.section-expanded .lead {
   display: none; }
 body.section-expanded .top, body.section-expanded .main {
   flex-basis: 50%; }
-body.section-expanded .controls .compact-buttons {
-  display: block !important; }
-body.section-expanded .controls .full-buttons {
-  display: none !important; }
 
 .main > section {
   display: none !important;

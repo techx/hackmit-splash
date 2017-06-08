@@ -370,19 +370,49 @@ footer {
     list-style: none;
 
     li {
+        // display: inline-block !important;
+
         margin: 40px 0 40px;
 
+        // Fake circular wrapping of buttons
         &:nth-child(1), &:nth-child(4) {
             margin-left: -18px;
         }
     }
+}
 
-    &.compact-buttons {
+body.section-expanded .controls {
+    // Some section is expanded, but not mine --> show only a compact button
+    li:not(.expanded) {
+        .compact-button {
+            display: inline-block;
+        }
+
+        .back-button, .primary-button {
+            display: none;
+        }
+    }
+
+    // My section is expanded --> show only a back button
+    li.expanded {
+        .primary-button, .compact-button {
+            display: none;
+        }
+
+        .back-button {
+            display: inline-block;
+        }
+    }
+}
+
+// Nothing is expanded: show only full buttons
+body:not(.section-expanded) .controls {
+    .back-button, .compact-button {
         display: none;
     }
 
-    &.full-buttons {
-        display: block;
+    .button-primary {
+        display: inline-block;
     }
 }
 
@@ -398,13 +428,6 @@ body.section-expanded {
     }
 
     .controls {
-        .compact-buttons {
-            display: block !important;
-        }
-
-        .full-buttons {
-            display: none !important;
-        }
     }
 }
 
