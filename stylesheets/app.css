@@ -169,7 +169,8 @@ footer {
       flex-basis: 25%; } }
 
 .lead {
-  text-align: right; }
+  text-align: right;
+  padding-left: 100px; }
   .lead h3 {
     margin-top: 8px;
     margin-bottom: 8px; }
