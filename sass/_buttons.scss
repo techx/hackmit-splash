@@ -1,0 +1,168 @@
+/////////////////////////////////
+// General icon styles
+/////////////////////////////////
+
+i {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: $black;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    top: 3px;
+
+    &.plus {
+        background-image: url("../assets/images/icons/Register Icon@2x.png");
+    }
+
+    &.faq {
+        background-image: url("../assets/images/icons/FAQ Icon@2x.png");
+    }
+
+    &.speakers {
+        background-image: url("../assets/images/icons/Speakers Icon@2x.png");
+    }
+
+    &.sponsors {
+        background-image: url("../assets/images/icons/Sponsors Icon@2x.png");
+    }
+
+    &.back {
+        background-image: url("../assets/images/icons/Back Icon@2x.png");
+    }
+
+    // &.up {
+    //     background-image: url("../assets/images/icons/Back Icon@2x.png");
+    //     -webkit-transform: rotate(90deg);
+    //        -moz-transform: rotate(90deg);
+    //         -ms-transform: rotate(90deg);
+    //          -o-transform: rotate(90deg);
+    //             transform: rotate(90deg);
+    // }
+}
+
+/////////////////////////////////
+// General button styles
+/////////////////////////////////
+
+a.button {
+    display: inline-block;
+    min-width: 200px;
+    min-height: 42px;
+    padding: 10px 10px 10px 50px;
+
+    text-decoration: none;
+    color: $white;
+    font-size: 16px;
+
+    border: 1px solid $red-light;
+    border-radius: 30px;
+
+    position: relative;
+
+    &.small {
+        min-width: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &.blue {
+        border-color: $blue-light;
+
+        i {
+            border-color: $blue;
+        }
+    }
+
+    // By default, the icon will be on the left
+    i {
+        border: 3px solid $red;
+        left: 3px;
+        padding: 14px;
+    }
+}
+
+@mixin button-active() {
+    padding-left: 0px;
+
+    text-align: center;
+    color: $black;
+
+    background-color: $red;
+
+    box-shadow: 
+         1px -1px 0 $red-light,
+        -1px -1px 0 $red-light,  
+        -1px  1px 0 $red-light,
+         1px  1px 0 $red-light;
+
+    border: 3px solid $black;
+
+    // When the button is active, pull the icon to the right
+    i {
+        right: 3px;
+        left: auto;
+    }
+}
+
+/////////////////////////////////
+// Controls on right of spinner
+/////////////////////////////////
+
+.controls ul {
+    list-style: none;
+
+    li {
+        margin: 40px 0 40px;
+
+        // Fake circular wrapping of buttons
+        &:nth-child(1), &:nth-child(4) {
+            margin-left: -18px;
+        }
+    }
+
+    .back-button {
+        margin-right: 25px;
+    }
+}
+
+body.section-expanded .controls {
+    // Some section is expanded, but not mine --> show only a compact button
+    li:not(.expanded) {
+        .compact-button {
+            display: inline;
+        }
+
+        .back-button, .primary-button {
+            display: none;
+        }
+    }
+
+    // My section is expanded --> show only a back button
+    li.expanded {
+        .primary-button {
+            @include button-active();
+        }
+
+        .compact-button {
+            display: none;
+        }
+
+        .back-button {
+            display: inline;
+        }
+    }
+}
+
+// Nothing is expanded: show only full buttons
+body:not(.section-expanded) .controls {
+    .back-button, .compact-button {
+        display: none;
+    }
+
+    .button-primary {
+        display: inline;
+    }
+}

@@ -1,0 +1,88 @@
+// Header/footer
+
+$hf-side-height: 32px;                      // height of flared out sides of header/footer
+$hf-offset: 16px;                           // distance from top/bottom of screen to header or footer
+$hf-height: $hf-side-height + $hf-offset;   // height of header and footer
+
+header, footer {
+    position: absolute;
+    width: 100%;
+    height: $hf-height;
+
+    .mid, .left, .right {
+        position: absolute;
+        height: $hf-side-height;
+    }
+
+    .left, .right {
+        width: 345.5px * ($hf-side-height / 52px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: $black;
+    }
+
+    .mid {
+        width: 100%;
+    }
+
+    .left {
+        left: 0;
+        z-index: 999;
+    }
+
+    .right {
+        right: 0;
+        z-index: 99;
+    }
+    
+    @media screen and (max-width: $break-med) {
+        .right {
+            display: none;
+        }
+    }
+}
+
+header {
+    top: 0;
+
+    .mid, .left, .right {
+        bottom: 0;
+    }
+
+    .mid {
+        border-top: .5px solid $blue-light;
+    }
+
+    .left {
+        background-image: url(../assets/images/border-top-left@2x.png);
+        
+    }
+
+    .right {
+        background-image: url(../assets/images/border-top-right@2x.png);
+    }
+}
+
+footer {
+    bottom: 0;
+
+    .mid, .left, .right {
+        bottom: $hf-offset;
+    }
+
+    .mid {
+        border-bottom: .5px solid $blue-light;
+    }
+
+    .left, .right {
+        bottom: $hf-offset - 7.5px * ($hf-side-height / 52px);
+    }
+
+    .left {
+        background-image: url(../assets/images/border-bottom-left@2x.png);
+    }
+
+    .right {
+        background-image: url(../assets/images/border-bottom-right@2x.png);
+    }
+}

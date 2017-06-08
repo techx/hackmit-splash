@@ -1,0 +1,45 @@
+// Breakpoints
+
+$break-med: 768px;
+$break-small: 480px;
+
+// Colors
+
+// $red-dark: #FF2D50;
+$red: #FF585D;
+$red-light: #F8B1B1;
+
+$blue: #74D1EA;
+$blue-light: #BEE7F0;
+
+$black: #252C37;
+$gray: #515B6B;
+$white: #D0D6E0; // Columbia Blue
+$light: transparentize($white, 0.6);
+
+.red {
+    color: $red;
+}
+
+.blue {
+    color: $blue;
+}
+
+.gray {
+    color: $gray;
+}
+
+.light {
+    color: $light;
+}
+
+// Mixins
+
+@mixin stroke($fill, $outline) {
+    color: $fill;
+    text-shadow:
+         1px -1px 0 $outline,
+        -1px -1px 0 $outline,  
+        -1px  1px 0 $outline,
+         1px  1px 0 $outline;
+}
