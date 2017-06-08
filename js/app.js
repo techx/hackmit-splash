@@ -27,15 +27,18 @@
 	var sections = ['register', 'faq', 'speakers', 'sponsors'];
 
 	function router() {
-		// Adapted from http://joakim.beng.se/blog/posts/a-javascript-router-in-20-lines.html
-
 		var section = location.hash.slice(1);
+		
+		document.body.classList.remove('section-expanded');
+
 		if (sections.indexOf(section) >= 0) {
+			document.body.classList.add('section-expanded');
+
 			// Hide all sections
 			document.querySelectorAll('.main > section').forEach(function(element) {
-				console.log('hiding', element)
+				// console.log('hiding', element)
 				element.classList.remove('expanded');
-				console.log(element);
+				// console.log(element);
 			});
 
 			// Reveal routed section

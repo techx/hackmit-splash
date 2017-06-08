@@ -51,6 +51,18 @@ body {
 
     font-family: 'Karla', sans-serif;
     color: $white;
+
+    // Vertically center content
+    display: flex;
+    align-items: center;
+
+    .top {
+        flex-basis: 100%;
+    }
+
+    .main {
+        flex-basis: 0%;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,7 +92,7 @@ a {
 
 a.button, h2.title {
     display: inline-block;
-    min-width: 180px;
+    min-width: 200px;
     min-height: 42px;
     padding: 10px;
 
@@ -184,11 +196,6 @@ i {
 $hf-side-height: 32px;                      // height of flared out sides of header/footer
 $hf-offset: 16px;                           // distance from top/bottom of screen to header or footer
 $hf-height: $hf-side-height + $hf-offset;   // height of header and footer
-
-body {
-    padding-top: $hf-height;
-    position: relative;
-}
 
 header, footer {
     position: absolute;
@@ -371,6 +378,16 @@ footer {
 }
 
 // Main content
+
+body.section-expanded {
+    .lead {
+        display: none;
+    }
+
+    .top, .main {
+        flex-basis: 50%;
+    }
+}
 
 .main {
     // display: none !important;
