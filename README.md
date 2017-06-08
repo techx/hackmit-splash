@@ -12,6 +12,8 @@ sass --watch sass:stylesheets
 
 [Desktop view + branding](https://xd.adobe.com/view/37a42ed1-e379-46cc-bc49-3d466431cfbd/)
 
+[Full desktop experience](https://xd.adobe.com/view/43524a38-5392-4f4b-9799-357acd574b58/)
+
 [Mobile view](https://xd.adobe.com/view/1291a362-5918-4e32-a741-0e39b2ead0e6/)
 
 ## TODO
