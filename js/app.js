@@ -54,7 +54,8 @@
 	// Untoggle sections by clicking spinner
 	////////////////////
 
-	document.getElementsByClassName('spinner')[0].addEventListener('click', function() {
+	document.getElementsByClassName('spinner')[0]
+		.addEventListener('click', function() {
 		// Hide all sections
 			document.querySelectorAll('.main > section').forEach(function(element) {
 				element.classList.remove('expanded');
@@ -62,6 +63,25 @@
 			document.body.classList.remove('section-expanded');
 	});
 
+    ////////////////////
+    // Rip this is kind of a hack to fix the above
+    ////////////////////
+
+    Array.
+    	from(sections).forEach(function(section) {
+    		var current_section = document.getElementById(section+"-button");
+			document.body.classList.add('section-expanded');
+			// Hide all sections
+			document.querySelectorAll('.main > section').forEach(function(element) {
+				// console.log('hiding', element)
+				element.classList.remove('expanded');
+				// console.log(element);
+			});
+
+			// Reveal routed section
+			current_section.classList.add('expanded');
+		});		
+    
 
 	////////////////////
 	// COUNTDOWN
