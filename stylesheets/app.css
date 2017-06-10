@@ -151,18 +151,17 @@ footer {
     padding-top: 48px; }
 
   .fixed-view {
-    height: auto !important; }
+    height: auto !important;
+    display: block !important; }
+    .fixed-view .top {
+      display: block; }
+      .fixed-view .top .spinner, .fixed-view .top .controls {
+        flex-basis: 100%; }
     .fixed-view .lead {
       display: none; }
 
   .scrolling-view {
     display: block; }
-    .scrolling-view .spinner {
-      flex-shrink: 2;
-      flex-grow: 2;
-      flex-basis: 66%; }
-    .scrolling-view .controls {
-      flex-basis: 33%; }
     .scrolling-view .lead-bottom {
       display: block !important;
       text-align: left !important;

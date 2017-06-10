@@ -11,31 +11,26 @@
 
 	.fixed-view {
 		height: auto !important;
+		display: block !important;  // Override display: flex; to push main content below top
+
+		.top {
+			display: block;  // Override display: flex; to push controls below spinner
+
+			.spinner, .controls {
+				flex-basis: 100%;
+			}
+		}
 
 		.lead {
-	    	display: none;
+	    	display: none;  // Hide left-side lead
 	    }
 	}
 
 	.scrolling-view {
-		display: block;
-
-	    .spinner {
-	        flex-shrink: 2;
-	        flex-grow: 2;
-	        flex-basis: 66%;
-	    }
-
-	    .controls {
-	        flex-basis: 33%;
-
-	        // .button-primary {
-	        // 	display: none !important;
-	        // }
-	    }
+		display: block;  // Override display: none; to reveal scrolling view
 
 	    .lead-bottom {
-	    	display: block !important;
+	    	display: block !important;  // Override display: none;
 
 	    	text-align: left !important;
 
