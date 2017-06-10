@@ -128,12 +128,22 @@ a {
 
 .spinner {
     margin: auto;
-
+    background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     img {
-        background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
-        background-size: 25%;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
+
+        -webkit-animation: rotation 8s infinite linear;
+    }
+}
+
+@-webkit-keyframes rotation {
+     from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
     }
 }
 
@@ -211,4 +221,3 @@ body.section-expanded {
         display: block;
     }
 }
-
