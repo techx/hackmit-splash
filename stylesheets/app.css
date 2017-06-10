@@ -190,20 +190,35 @@ footer {
 body {
   background-color: #252C37;
   font-family: 'Karla', sans-serif;
-  color: #D0D6E0; }
+  color: #D0D6E0;
+  font-size: 12px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif; }
 
-h2, h3, h4, h5, h6 {
-  letter-spacing: .128em;
-  font-weight: 400; }
-
 h1 {
   color: #252C37;
   text-shadow: 1px -1px 0 #FF585D, -1px -1px 0 #FF585D, -1px 1px 0 #FF585D, 1px 1px 0 #FF585D;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: .05em; }
+
+h2, h3 {
+  letter-spacing: .128em;
+  font-weight: 400; }
+
+h4, h5, h6 {
+  letter-spacing: .08em;
+  font-weight: 400; }
+
+h3 {
+  font-size: 14px; }
+
+h4 {
+  font-size: 12px; }
+
+h5 {
+  font-size: 10px; }
 
 a {
   color: #FF585D; }
@@ -234,13 +249,15 @@ a {
     margin-top: 8px;
     margin-bottom: 8px; }
   .lead .brand {
-    margin-top: 80px; }
+    margin-top: 45px; }
   .lead h3:nth-child(1), .lead p:nth-child(5) {
-    margin-right: -20px; }
+    margin-right: -15px; }
   .lead h1:nth-child(3) {
     margin-right: 10px; }
   .lead h3:nth-child(2), .lead p:nth-child(4) {
     margin-right: 0; }
+  .lead p:nth-child(5) {
+    padding-left: 30px; }
 
 .brand {
   color: #252C37;
@@ -249,7 +266,8 @@ a {
 .brand:before {
   color: #252C37;
   text-shadow: 1px -1px 0 #FF585D, -1px -1px 0 #FF585D, -1px 1px 0 #FF585D, 1px 1px 0 #FF585D;
-  content: 'HACK'; }
+  content: 'HACK';
+  padding-right: 8px; }
 
 .brand:after {
   color: #252C37;
@@ -288,8 +306,9 @@ body.section-expanded .controls {
   display: block; }
 
 #register .content {
-  padding: 25px;
-  max-width: 400px; }
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 360px; }
 
 #faq .content {
   padding: 5px 15px 15px 15px;

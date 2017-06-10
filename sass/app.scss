@@ -10,21 +10,40 @@ body {
 
     font-family: 'Karla', sans-serif;
     color: $white;
+    font-size: 12px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
 
-h2, h3, h4, h5, h6 {
+h1 {
+    @include stroke($black, $red);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+}
+
+h2, h3 {
     letter-spacing: .128em;
     font-weight: 400;
 }
 
-h1 {
-    @include stroke($black, $red);
-    font-weight: 700;
-    letter-spacing: .05em;
+h4, h5, h6 {
+    letter-spacing: .08em;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+h5 {
+    font-size: 10px;
 }
 
 a {
@@ -72,11 +91,11 @@ a {
     }
 
     .brand {
-        margin-top: 80px;
+        margin-top: 45px;
     }
 
     h3:nth-child(1), p:nth-child(5) {
-        margin-right: -20px;
+        margin-right: -15px;
     }
 
     h1:nth-child(3) {
@@ -85,6 +104,10 @@ a {
 
     h3:nth-child(2), p:nth-child(4) {
         margin-right: 0;
+    }
+
+    p:nth-child(5) {
+        padding-left: 30px;
     }
 }
 
@@ -95,6 +118,7 @@ a {
 .brand:before {
     @include stroke($black, $red);
     content: 'HACK';
+    padding-right: 8px;
 }
 
 .brand:after {
@@ -154,8 +178,9 @@ body.section-expanded {
 
 
 #register .content {
-    padding: 25px;
-    max-width: 400px;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 360px;
 }
 
 #faq {
