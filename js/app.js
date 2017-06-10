@@ -29,12 +29,7 @@
 	var sections = ['register', 'faq', 'speakers', 'sponsors'];
 
 	function hideAllSections() {
-		// Hide main content sections
-		document.querySelectorAll('.main > section.expanded').forEach(function(element) {
-			element.classList.remove('expanded');
-		});
-
-		// Reset buttons to default view
+		// Reset buttons to default view and hide main content sections
 		document.querySelectorAll('.controls li.expanded').forEach(function(element) {
 			element.classList.remove('expanded');
 		});
@@ -48,17 +43,10 @@
 
 		if (sections.indexOf(currentSection) >= 0) {
 			hideAllSections();
-			document.body.classList.add('section-expanded');
 
 			// Reveal current section
-			document.getElementById(currentSection)
-					.classList.add('expanded');
-
-			// Change appearance of buttons
-			document.getElementById(currentSection+"-buttons")
-					.classList.add('expanded');
-
-			// Switch compact button for this section to a back button
+			document.getElementById(currentSection).classList.add('expanded');
+			document.body.classList.add('section-expanded');
 
 		} else if (!currentSection.length) {
 			// Navigated to /# or /, hide all sections

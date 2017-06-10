@@ -51,13 +51,14 @@ i {
 
 a.button {
     display: inline-block;
-    min-width: 200px;
+    min-width: 180px;
     min-height: 42px;
     padding: $button-padding $button-padding $button-padding 50px;
 
     text-decoration: none;
     color: $white;
-    font-size: 16px;
+    letter-spacing: .1em;
+    font-size: 14px;
 
     border: 1px solid $red-light;
     border-radius: 30px;

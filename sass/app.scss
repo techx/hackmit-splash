@@ -44,10 +44,6 @@ a {
     .top {
         flex-basis: 100%;
     }
-
-    .main {
-        flex-basis: 0%;
-    }
 }
 
 
@@ -107,7 +103,6 @@ a {
 }
 
 .spinner {
-    // padding: 0 !important;
     margin: auto;
 
     img {
@@ -115,12 +110,6 @@ a {
         background-size: 25%;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-
-        // height: 400px;
-        // width: 400px;
-        // margin: 0 auto;
-        // border: 4px solid $gray;
-        // border-radius: 100%;
     }
 }
 
@@ -131,32 +120,38 @@ body.section-expanded {
         display: none;
     }
 
-    .top, .main {
-        flex-basis: 50%;
+    .spinner {
+        flex-basis: 33%;
+    }
+
+    .controls {
+        flex-basis: 66%;
     }
 }
 
-.main {
-    // display: none !important;
 
-    > section {
-        display: none !important;
-
-        margin: 0px !important;
-        padding-top: 30px !important;
-        padding-bottom: 30px;
-
-        .content {
-            margin-left: 40px;
-            border: 1px solid $red-light;
-            border-radius: 0 0 50px 0;
-        }
-
-        &.expanded {
-            display: block !important;
-        }
-    }
+.controls li {
+    position: relative;
+    width: 100%;
 }
+
+.controls .content {
+    display: none;  // Hide sections by default
+
+    position: absolute;
+    left: 110px;
+    top: 60px;
+
+    padding: 20px 30px 20px 30px;
+
+    border: 1px solid $red-light;
+    border-radius: 0 0 50px 0;
+}
+
+.controls .expanded .content {
+    display: block;  // Reveal section
+}
+
 
 #register .content {
     padding: 25px;
@@ -167,13 +162,14 @@ body.section-expanded {
     .content {
         padding: 5px 15px 15px 15px;
         max-width: 500px;
-        max-height: 400px;
+        max-height: 200px;
         overflow-y: scroll;
     }
 
     .question {
         margin-top: 15px;
         cursor: pointer;
+        font-size: 12px;
 
         &:before {
             color: $red;
@@ -183,10 +179,11 @@ body.section-expanded {
 
     .answer {
         display: none;
+        margin-left: 20px;
     }
 
     .expanded .answer {
-        display: inline;
+        display: block;
     }
 }
 

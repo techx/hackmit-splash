@@ -32,12 +32,13 @@ i {
 
 a.button {
   display: inline-block;
-  min-width: 200px;
+  min-width: 180px;
   min-height: 42px;
   padding: 10px 10px 10px 50px;
   text-decoration: none;
   color: #D0D6E0;
-  font-size: 16px;
+  letter-spacing: .1em;
+  font-size: 14px;
   border: 1px solid #F8B1B1;
   border-radius: 30px;
   position: relative; }
@@ -56,13 +57,28 @@ a.button {
 
 .controls ul {
   list-style: none;
-  margin-bottom: -50px; }
+  margin-bottom: -40px; }
   .controls ul li {
-    margin: 0 0 50px; }
+    margin: 0 0 40px; }
     .controls ul li:nth-child(1), .controls ul li:nth-child(4) {
       margin-left: -18px; }
   .controls ul .back-button {
     margin-right: 25px; }
+  .controls ul .primary-button:hover {
+    color: #D0D6E0; }
+  .controls ul .primary-button:active {
+    padding-top: 8.2px;
+    padding-bottom: 8.2px;
+    color: #252C37;
+    background-color: #FF585D;
+    box-shadow: 1px -1px 0 #F8B1B1, -1px -1px 0 #F8B1B1, -1px 1px 0 #F8B1B1, 1px 1px 0 #F8B1B1;
+    border: 3px solid #252C37;
+    text-align: center;
+    padding-left: 0px; }
+    .controls ul .primary-button:active i {
+      right: 3px;
+      left: auto;
+      top: 1.2px; }
 
 body.section-expanded .controls li:not(.expanded) .compact-button {
   display: inline; }
@@ -70,16 +86,16 @@ body.section-expanded .controls li:not(.expanded) .back-button, body.section-exp
   display: none; }
 body.section-expanded .controls li.expanded {
   margin-top: -11px;
-  margin-bottom: 40.2px; }
+  margin-bottom: 30.2px; }
   body.section-expanded .controls li.expanded .primary-button {
-    padding-left: 0px;
     padding-top: 8.2px;
     padding-bottom: 8.2px;
-    text-align: center;
     color: #252C37;
     background-color: #FF585D;
     box-shadow: 1px -1px 0 #F8B1B1, -1px -1px 0 #F8B1B1, -1px 1px 0 #F8B1B1, 1px 1px 0 #F8B1B1;
-    border: 3px solid #252C37; }
+    border: 3px solid #252C37;
+    text-align: center;
+    padding-left: 0px; }
     body.section-expanded .controls li.expanded .primary-button i {
       right: 3px;
       left: auto;
@@ -200,8 +216,6 @@ a {
   height: 100%; }
   .fixed-view .top {
     flex-basis: 100%; }
-  .fixed-view .main {
-    flex-basis: 0%; }
 
 .top {
   display: flex;
@@ -252,20 +266,26 @@ a {
 
 body.section-expanded .lead {
   display: none; }
-body.section-expanded .top, body.section-expanded .main {
-  flex-basis: 50%; }
+body.section-expanded .spinner {
+  flex-basis: 33%; }
+body.section-expanded .controls {
+  flex-basis: 66%; }
 
-.main > section {
-  display: none !important;
-  margin: 0px !important;
-  padding-top: 30px !important;
-  padding-bottom: 30px; }
-  .main > section .content {
-    margin-left: 40px;
-    border: 1px solid #F8B1B1;
-    border-radius: 0 0 50px 0; }
-  .main > section.expanded {
-    display: block !important; }
+.controls li {
+  position: relative;
+  width: 100%; }
+
+.controls .content {
+  display: none;
+  position: absolute;
+  left: 110px;
+  top: 60px;
+  padding: 20px 30px 20px 30px;
+  border: 1px solid #F8B1B1;
+  border-radius: 0 0 50px 0; }
+
+.controls .expanded .content {
+  display: block; }
 
 #register .content {
   padding: 25px;
@@ -274,17 +294,19 @@ body.section-expanded .top, body.section-expanded .main {
 #faq .content {
   padding: 5px 15px 15px 15px;
   max-width: 500px;
-  max-height: 400px;
+  max-height: 200px;
   overflow-y: scroll; }
 #faq .question {
   margin-top: 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 12px; }
   #faq .question:before {
     color: #FF585D;
     content: '+'; }
 #faq .answer {
-  display: none; }
+  display: none;
+  margin-left: 20px; }
 #faq .expanded .answer {
-  display: inline; }
+  display: block; }
 
 /*# sourceMappingURL=app.css.map */
