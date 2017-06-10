@@ -44,8 +44,7 @@ a.button {
   position: relative; }
   a.button.small {
     min-width: 0;
-    padding-left: 20px;
-    padding-right: 20px; }
+    padding: 12px 20px 12px 20px; }
   a.button.blue {
     border-color: #BEE7F0; }
     a.button.blue i {
@@ -80,13 +79,15 @@ a.button {
       left: auto;
       top: 1.2px; }
 
+body.section-expanded .controls li {
+  margin-bottom: 64px; }
 body.section-expanded .controls li:not(.expanded) .compact-button {
   display: inline; }
 body.section-expanded .controls li:not(.expanded) .back-button, body.section-expanded .controls li:not(.expanded) .primary-button {
   display: none; }
 body.section-expanded .controls li.expanded {
   margin-top: -11px;
-  margin-bottom: 30.2px; }
+  margin-bottom: 51.5px; }
   body.section-expanded .controls li.expanded .primary-button {
     padding-top: 8.2px;
     padding-bottom: 8.2px;

@@ -67,8 +67,7 @@ a.button {
 
     &.small {
         min-width: 0;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 12px 20px 12px 20px;
     }
 
     &.blue {
@@ -152,6 +151,10 @@ a.button {
 }
 
 body.section-expanded .controls {
+    li {
+        margin-bottom: $controls-spacing + 24px;
+    }
+
     // Some section is expanded, but not mine --> show only a compact button
     li:not(.expanded) {
         .compact-button {
@@ -166,7 +169,7 @@ body.section-expanded .controls {
     // My section is expanded --> show a back button and a section header (restyle the primary button)
     li.expanded {
         margin-top: -11px;
-        margin-bottom: $controls-spacing - 19.6px / 2;
+        margin-bottom: $controls-spacing + 11.5;
 
         .primary-button {
             @include button-active();
