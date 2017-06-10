@@ -43,6 +43,40 @@ i {
     //          -o-transform: rotate(90deg);
     //             transform: rotate(90deg);
     // }
+
+    &.mail {
+        background-image: url("../assets/images/icons/Mail Icon@2x.png");
+    }
+
+    &.twitter {
+        background-image: url("../assets/images/icons/Twitter Icon@2x.png");
+    }
+
+    &.facebook {
+        background-image: url("../assets/images/icons/Facebook Icon@2x.png");
+    }
+
+    &.instagram {
+        background-image: url("../assets/images/icons/Instagram Icon@2x.png");
+    }
+}
+
+/////////////////////////////////
+// Social buttons
+/////////////////////////////////
+
+.social a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    i {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+    }
 }
 
 /////////////////////////////////

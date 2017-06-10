@@ -1,6 +1,7 @@
 // Header/footer
 
 $hf-side-height: 32px;                      // height of flared out sides of header/footer
+$hf-side-width: 345.5px * ($hf-side-height / 52px);     // width of flared out sides of header/footer
 $hf-offset: 16px;                           // distance from top/bottom of screen to header or footer
 $hf-height: $hf-side-height + $hf-offset;   // height of header and footer
 
@@ -15,10 +16,16 @@ header, footer {
     }
 
     .left, .right {
-        width: 345.5px * ($hf-side-height / 52px);
+        width: $hf-side-width;
         background-size: contain;
         background-repeat: no-repeat;
         background-color: $black;
+
+        &:after {
+            display: block;
+            position: absolute;
+            color: $light;
+        }
     }
 
     .mid {
@@ -33,12 +40,6 @@ header, footer {
     .right {
         right: 0;
         z-index: 99;
-    }
-    
-    @media screen and (max-width: $break-med) {
-        .right {
-            display: none;
-        }
     }
 }
 
@@ -55,7 +56,6 @@ header {
 
     .left {
         background-image: url(../assets/images/border-top-left@2x.png);
-        
     }
 
     .right {
@@ -76,13 +76,40 @@ footer {
 
     .left, .right {
         bottom: $hf-offset - 7.5px * ($hf-side-height / 52px);
+
+        &:after {
+            bottom: 4px;
+        }
     }
 
     .left {
         background-image: url(../assets/images/border-bottom-left@2x.png);
+
+        &:after {
+            padding-left: 20px;
+
+            content: 'HACK TO THE FUTURE';
+            
+            font-size: 14px;
+            letter-spacing: .05em;
+        }
     }
 
     .right {
         background-image: url(../assets/images/border-bottom-right@2x.png);
+    }
+}
+
+.social {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+
+    li {
+        padding: 0 2px 0 2px;
+        display: inline-block;
     }
 }

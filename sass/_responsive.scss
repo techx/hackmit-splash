@@ -39,6 +39,12 @@
 	    }
 	}
 
+	header, footer {
+		.right {
+            display: none;
+        }
+	}
+
 	footer {
 		bottom: auto;
 		margin-top: 20px;
