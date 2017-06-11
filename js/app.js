@@ -33,29 +33,43 @@
 		document.querySelectorAll('.controls li.expanded').forEach(function(element) {
 			element.classList.remove('expanded');
 		});
+
+		// The primary button should no longer go back now that sections are hidden
+		document.querySelectorAll('.primary-button').forEach(function(element) {
+            var nextSection = element.parentElement.getAttribute('id').replace('-section', '');
+            element.setAttribute('href', '#'+nextSection);
+        });
 	}
 
-	function router() {
+	function router(event) {
 		// The bit after the # (e.g. url == #faq --> section == faq)
-		var currentSection = location.hash.slice(1);
-		
+		var nextSection = location.hash.slice(1);
+		var li = document.getElementById(nextSection + '-section');
+
 		document.body.classList.remove('section-expanded');
 
-		if (sections.indexOf(currentSection) >= 0) {
+		if (sections.indexOf(nextSection) >= 0) {
+            // The URL hash is one of our sections --? reveal it
 			hideAllSections();
 
 			// Reveal current section
-			document.getElementById(currentSection).classList.add('expanded');
+			li.classList.add('expanded');
 			document.body.classList.add('section-expanded');
 
-		} else if (!currentSection.length) {
-			// Navigated to /# or /, hide all sections
+			// Edit the section title's href, so when clicked, we go back
+            li.querySelector('.primary-button').setAttribute('href', '#!');
+            return false;
+		} else if (!nextSection.length || nextSection === "!") {
+			// Navigated to /#!, /#, or / --> hide all sections
 			hideAllSections();
 		}
 	}
 
 	// Call the router on page start, and whenever the URL hash changes
-	window.addEventListener('hashchange', router);
+	// Array.from(document.getElementsByTagName('a')).forEach(function (a) {
+    //    a.addEventListener('click', router);
+    // });
+    window.addEventListener('hashchange', router);
 	router();
 
 	////////////////////

@@ -128,24 +128,36 @@ a {
 }
 
 .spinner {
+    display: block;
     margin: auto;
     background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
     background-size: 25%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    /*img {
-        -webkit-animation: rotation 8s infinite linear; 
-    }*/ 
+
+    // img {
+    //   -webkit-animation: rotation 45s infinite linear;
+    //           animation: rotation 45s infinite linear;
+    // }
 }
 
-@-webkit-keyframes rotation {
-     from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-    }
-}
+/*@-webkit-keyframes rotation {*/
+    //from {
+        //-webkit-transform: rotate(0deg);
+    //}
+    //to {
+        //-webkit-transform: rotate(359deg);
+    //}
+//}
+
+//@keyframes rotation {
+    //from {
+        //transform: rotate(0deg);
+    //}
+    //to {
+        //transform: rotate(359deg);
+    //}
+/*}*/
 
 // Main content
 
@@ -187,13 +199,13 @@ body.section-expanded {
 }
 
 
-#register .content {
+#register-section .content {
     padding-left: 40px;
     padding-right: 40px;
     max-width: 360px;
 }
 
-#faq {
+#faq-section {
     .content {
         padding: 5px 15px 15px 15px;
         max-width: 500px;
