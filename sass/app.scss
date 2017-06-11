@@ -133,10 +133,9 @@ a {
     background-size: 25%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    img {
-
-        -webkit-animation: rotation 8s infinite linear;
-    }
+    /*img {
+        -webkit-animation: rotation 8s infinite linear; 
+    }*/ 
 }
 
 @-webkit-keyframes rotation {
