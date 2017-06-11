@@ -59,6 +59,17 @@ $mobile-body-side-padding: 20px;
         }
 	}
 
+	header .left {
+		background-image: url(../assets/images/border-top-left-mobile@2x.png);
+
+		.brand {
+			position: absolute;
+			font-size: 20px;
+			left: 13px;
+			bottom: 13px;
+		}
+	}
+
 	footer {
 		bottom: auto;
 		margin-top: 20px;
