@@ -318,19 +318,26 @@ a {
   content: ' 2017'; }
 
 .spinner {
+  display: block;
   margin: auto;
   background-image: url(../assets/images/hack-logo/hack_logo_glow.png);
   background-size: 25%;
   background-repeat: no-repeat;
   background-position: 50% 50%; }
   .spinner img {
-    -webkit-animation: rotation 8s infinite linear; }
+    -webkit-animation: rotation 45s infinite linear;
+    animation: rotation 45s infinite linear; }
 
 @-webkit-keyframes rotation {
   from {
     -webkit-transform: rotate(0deg); }
   to {
     -webkit-transform: rotate(359deg); } }
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
 body.section-expanded .lead {
   display: none; }
 body.section-expanded .spinner {
