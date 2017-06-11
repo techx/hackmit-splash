@@ -228,7 +228,16 @@ footer {
 
   footer {
     bottom: auto;
-    margin-top: 20px; } }
+    margin-top: 20px; }
+
+  .controls ul {
+    margin-bottom: 0; }
+    .controls ul li {
+      margin-left: 0 !important; }
+      .controls ul li .back-button, .controls ul li .compact-button {
+        display: none !important; }
+      .controls ul li .primary-button {
+        display: inline-block !important; } }
 body {
   background-color: #252C37;
   font-family: 'Karla', sans-serif;
@@ -361,27 +370,27 @@ body.section-expanded .controls {
 .controls .expanded .content {
   display: block; }
 
-#register .content {
+#register-section .content {
   padding-left: 40px;
   padding-right: 40px;
   max-width: 360px; }
 
-#faq .content {
+#faq-section .content {
   padding: 5px 15px 15px 15px;
   max-width: 500px;
   max-height: 200px;
   overflow-y: scroll; }
-#faq .question {
+#faq-section .question {
   margin-top: 15px;
   cursor: pointer;
   font-size: 12px; }
-  #faq .question:before {
+  #faq-section .question:before {
     color: #FF585D;
     content: '+'; }
-#faq .answer {
+#faq-section .answer {
   display: none;
   margin-left: 20px; }
-#faq .expanded .answer {
+#faq-section .expanded .answer {
   display: block; }
 
 /*# sourceMappingURL=app.css.map */
