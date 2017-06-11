@@ -1,12 +1,29 @@
-// On desktop, hide the bottom, scrolling view
-.scrolling-view {
-    display: none;
+$mobile-body-side-padding: 20px;
+
+// Above break-med width (desktop)
+@media screen and (min-width: $break-med + 1) {
+	.mobile-only {
+		display: none;
+	}
 }
 
+// Below break-med width (mobile)
 @media screen and (max-width: $break-med) {
+	.desktop-only {
+		display: none !important;
+	}
+
 	body {
 		height: 100%;
-		padding-top: $hf-height;
+		padding: $hf-height $mobile-body-side-padding 0 $mobile-body-side-padding;
+	}
+
+	.mobile-dates {
+		text-align: center;
+
+		h3 {
+			margin: 10px 0 0 0;
+		}
 	}
 
 	.fixed-view {
@@ -20,26 +37,19 @@
 				flex-basis: 100%;
 			}
 		}
-
-		.lead {
-	    	display: none;  // Hide left-side lead
-	    }
 	}
 
-	.scrolling-view {
-		display: block;  // Override display: none; to reveal scrolling view
 
-	    .lead-bottom {
-	    	display: block !important;  // Override display: none;
+	.scrolling-view .lead-bottom {
+		text-align: center;
 
-	    	text-align: left !important;
-
-	    	padding-left: 10px;
-	    	padding-right: 10px;
-	    }
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	header, footer {
+		margin-left: -$mobile-body-side-padding;
+
 		.right {
             display: none;
         }
@@ -51,18 +61,30 @@
 	}
 
 	.controls ul {
+		padding-left: 0;
 		margin-bottom: 0;
 
 		li {
-			margin-left: 0 !important;  // Don't arrange buttons circularly
+			margin: 0 0 40px 0 !important; // Don't arrange buttons circularly, reset other margins
+
+			&.expanded {
+				margin-bottom: 20px !important;
+			}
 
 			.back-button, .compact-button {
 				display: none !important;
 			}
 
 			.primary-button {
-				display: inline-block !important;
+				display: block !important;
+				margin: auto;
+				max-width: 180px;
 			}
+		}
+
+		.content {
+			position: initial;
+			margin: 20px auto 0 auto;
 		}
 	}
 }

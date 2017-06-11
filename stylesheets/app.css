@@ -197,13 +197,21 @@ footer {
     padding: 0 2px 0 2px;
     display: inline-block; }
 
-.scrolling-view {
-  display: none; }
-
+@media screen and (min-width: 769px) {
+  .mobile-only {
+    display: none; } }
 @media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none !important; }
+
   body {
     height: 100%;
-    padding-top: 48px; }
+    padding: 48px 20px 0 20px; }
+
+  .mobile-dates {
+    text-align: center; }
+    .mobile-dates h3 {
+      margin: 10px 0 0 0; }
 
   .fixed-view {
     height: auto !important;
@@ -212,32 +220,37 @@ footer {
       display: block; }
       .fixed-view .top .spinner, .fixed-view .top .controls {
         flex-basis: 100%; }
-    .fixed-view .lead {
+
+  .scrolling-view .lead-bottom {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  header, footer {
+    margin-left: -20px; }
+    header .right, footer .right {
       display: none; }
-
-  .scrolling-view {
-    display: block; }
-    .scrolling-view .lead-bottom {
-      display: block !important;
-      text-align: left !important;
-      padding-left: 10px;
-      padding-right: 10px; }
-
-  header .right, footer .right {
-    display: none; }
 
   footer {
     bottom: auto;
     margin-top: 20px; }
 
   .controls ul {
+    padding-left: 0;
     margin-bottom: 0; }
     .controls ul li {
-      margin-left: 0 !important; }
+      margin: 0 0 40px 0 !important; }
+      .controls ul li.expanded {
+        margin-bottom: 20px !important; }
       .controls ul li .back-button, .controls ul li .compact-button {
         display: none !important; }
       .controls ul li .primary-button {
-        display: inline-block !important; } }
+        display: block !important;
+        margin: auto;
+        max-width: 180px; }
+    .controls ul .content {
+      position: initial;
+      margin: 20px auto 0 auto; } }
 body {
   background-color: #252C37;
   font-family: 'Karla', sans-serif;
