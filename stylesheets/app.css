@@ -49,29 +49,37 @@ i {
     display: inline-block;
     position: relative; }
 
-a.button {
+button, .button {
   display: inline-block;
-  min-width: 180px;
-  min-height: 42px;
-  padding: 10px 10px 10px 50px;
+  padding: 10px;
   text-decoration: none;
   color: #D0D6E0;
   letter-spacing: .1em;
-  font-size: 14px;
-  border: 1px solid #F8B1B1;
-  border-radius: 30px;
-  position: relative; }
-  a.button.small {
-    min-width: 0;
-    padding: 12px 20px 12px 20px; }
-  a.button.blue {
-    border-color: #BEE7F0; }
-    a.button.blue i {
-      border-color: #74D1EA; }
-  a.button i {
-    border: 3px solid #FF585D;
-    left: 3px;
-    padding: 14px; }
+  font-size: 14px; }
+  button.hexagon, .button.hexagon {
+    padding: 7px 20px 7px 20px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../assets/images/hex-button-border@2x.png");
+    background-size: 100% 100%; }
+  button.round, .button.round {
+    min-width: 180px;
+    min-height: 42px;
+    padding-left: 50px;
+    border: 1px solid #F8B1B1;
+    border-radius: 30px;
+    position: relative; }
+    button.round.small, .button.round.small {
+      min-width: 0;
+      padding: 12px 20px 12px 20px; }
+    button.round.blue, .button.round.blue {
+      border-color: #BEE7F0; }
+      button.round.blue i, .button.round.blue i {
+        border-color: #74D1EA; }
+    button.round i, .button.round i {
+      border: 3px solid #FF585D;
+      left: 3px;
+      padding: 14px; }
 
 .controls ul {
   list-style: none;
@@ -376,7 +384,7 @@ body.section-expanded .controls {
   position: absolute;
   left: 110px;
   top: 60px;
-  padding: 20px 30px 20px 30px;
+  padding: 20px 40px 20px 40px;
   border: 1px solid #F8B1B1;
   border-radius: 0 0 50px 0; }
 
@@ -384,9 +392,10 @@ body.section-expanded .controls {
   display: block; }
 
 #register-section .content {
-  padding-left: 40px;
-  padding-right: 40px;
   max-width: 360px; }
+  #register-section .content button, #register-section .content .button {
+    display: block;
+    margin: auto; }
 
 #faq-section .content {
   padding: 5px 15px 15px 15px;

@@ -188,7 +188,7 @@ body.section-expanded {
     left: 110px;
     top: 60px;
 
-    padding: 20px 30px 20px 30px;
+    padding: 20px 40px 20px 40px;
 
     border: 1px solid $red-light;
     border-radius: 0 0 50px 0;
@@ -200,9 +200,12 @@ body.section-expanded {
 
 
 #register-section .content {
-    padding-left: 40px;
-    padding-right: 40px;
     max-width: 360px;
+
+    button, .button {
+        display: block;
+        margin: auto;
+    }
 }
 
 #faq-section {
