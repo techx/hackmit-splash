@@ -221,6 +221,9 @@ footer {
       .fixed-view .top .spinner, .fixed-view .top .controls {
         flex-basis: 100%; }
 
+  .spinner {
+    max-width: 400px; }
+
   .scrolling-view .lead-bottom {
     text-align: center;
     padding-left: 10px;
