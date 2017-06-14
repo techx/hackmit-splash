@@ -210,6 +210,19 @@ body.section-expanded {
 
     border: 1px solid $red-light;
     border-radius: 0 0 50px 0;
+
+    overflow: hidden;
+
+    &::-webkit-scrollbar
+    {
+        width: 0px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: $red;
+    }
 }
 
 .controls .expanded .content {
@@ -250,7 +263,15 @@ body.section-expanded {
         margin-left: 20px;
     }
 
-    .expanded .answer {
-        display: block;
+    .expanded {
+        .question:before {
+            margin-left: 0.5px;
+            font-size: 8px;
+            content: '\25BC';
+        }
+
+        .answer {
+            display: block;
+        }
     }
 }

@@ -12,6 +12,13 @@
 		.forEach(function (question) {
 			question.addEventListener('click', (function() {
 
+				// Hide all expanded FAQ sections
+                Array
+                    .from(document.querySelectorAll('#faq-section .expanded'))
+                    .forEach(function (element) {
+                        element.classList.remove('expanded');
+                    });
+
 				var parentClasses = question.parentElement.classList;
 
 				if (parentClasses.contains('expanded'))

@@ -413,7 +413,13 @@ body.section-expanded .controls {
   top: 60px;
   padding: 20px 40px 20px 40px;
   border: 1px solid #F8B1B1;
-  border-radius: 0 0 50px 0; }
+  border-radius: 0 0 50px 0;
+  overflow: hidden; }
+  .controls .content::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent; }
+  .controls .content::-webkit-scrollbar-thumb {
+    background-color: #FF585D; }
 
 .controls .expanded .content {
   display: block; }
@@ -439,6 +445,10 @@ body.section-expanded .controls {
 #faq-section .answer {
   display: none;
   margin-left: 20px; }
+#faq-section .expanded .question:before {
+  margin-left: 0.5px;
+  font-size: 8px;
+  content: '\25BC'; }
 #faq-section .expanded .answer {
   display: block; }
 
