@@ -39,6 +39,10 @@ $mobile-body-side-padding: 20px;
 		}
 	}
 
+	.spinner {
+		max-width: 400px;
+	}
+
 
 	.scrolling-view .lead-bottom {
 		text-align: center;
@@ -53,6 +57,17 @@ $mobile-body-side-padding: 20px;
 		.right {
             display: none;
         }
+	}
+
+	header .left {
+		background-image: url(../assets/images/border-top-left-mobile@2x.png);
+
+		.brand {
+			position: absolute;
+			font-size: 20px;
+			left: 13px;
+			bottom: 13px;
+		}
 	}
 
 	footer {

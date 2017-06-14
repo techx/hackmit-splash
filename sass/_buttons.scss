@@ -83,40 +83,58 @@ i {
 // General button styles
 /////////////////////////////////
 
-a.button {
+button, .button {
     display: inline-block;
-    min-width: 180px;
-    min-height: 42px;
-    padding: $button-padding $button-padding $button-padding 50px;
+    padding: $button-padding;
 
     text-decoration: none;
     color: $white;
+
     letter-spacing: .1em;
     font-size: 14px;
 
-    border: 1px solid $red-light;
-    border-radius: 30px;
+    &.hexagon {
+        padding:
+            0.7 * $button-padding
+            2 * $button-padding
+            0.7 * $button-padding
+            2 * $button-padding;
+        border: none;
 
-    position: relative;
-
-    &.small {
-        min-width: 0;
-        padding: 12px 20px 12px 20px;
+        background-color: transparent;
+        background-image: url('../assets/images/hex-button-border@2x.png');
+        background-size: 100% 100%;
     }
 
-    &.blue {
-        border-color: $blue-light;
+    &.round {
+        min-width: 180px;
+        min-height: 42px;
+        padding-left: 50px;
 
-        i {
-            border-color: $blue;
+        border: 1px solid $red-light;
+        border-radius: 30px;
+
+        position: relative;
+
+        &.small {
+            min-width: 0;
+            padding: 12px 20px 12px 20px;
         }
-    }
 
-    // By default, the icon will be on the left
-    i {
-        border: 3px solid $red;
-        left: 3px;
-        padding: 14px;
+        &.blue {
+            border-color: $blue-light;
+
+            i {
+                border-color: $blue;
+            }
+        }
+
+        // By default, the icon will be on the left
+        i {
+            border: 3px solid $red;
+            left: 3px;
+            padding: 14px;
+        }
     }
 }
 
