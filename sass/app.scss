@@ -57,6 +57,9 @@ a {
 
 // Vertically center content
 .fixed-view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     height: 100%;
@@ -70,6 +73,9 @@ a {
 // Top content
 
 .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -170,9 +176,11 @@ a {
 
 @keyframes rotation {
     from {
+        -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
     to {
+        -ms-transform: rotate(359deg);
         transform: rotate(359deg);
     }
 }
@@ -315,6 +323,9 @@ body.section-expanded {
     }
 
     .speaker {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         align-items: center;
     }

@@ -101,7 +101,11 @@ $mobile-body-side-padding: 20px;
 			}
 		}
 
+		// Place speaker content boxes side by side
 		.above-right-wrapper {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
 			display: flex;
 			justify-content: center;
 		}
