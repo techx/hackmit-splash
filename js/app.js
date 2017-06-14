@@ -30,12 +30,12 @@
 
 	function hideAllSections() {
 		// Reset buttons to default view and hide main content sections
-		document.querySelectorAll('.controls li.expanded').forEach(function(element) {
+		Array.from(document.querySelectorAll('.controls li.expanded')).forEach(function(element) {
 			element.classList.remove('expanded');
 		});
 
 		// The primary button should no longer go back now that sections are hidden
-		document.querySelectorAll('.primary-button').forEach(function(element) {
+		Array.from(document.getElementsByClassName('primary-button')).forEach(function(element) {
             var nextSection = element.parentElement.getAttribute('id').replace('-section', '');
             element.setAttribute('href', '#'+nextSection);
         });
