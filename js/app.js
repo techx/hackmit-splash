@@ -112,8 +112,6 @@
             // inspired by https://codepen.io/JMChristensen/pen/Ablch?editors=1111
             var spinnerDoc = spinnerElement.contentDocument;
             var timer = spinnerDoc.getElementById("timer");
-            console.log(spinnerDoc); 
-            console.log(timer);
             var r = timer.getAttribute("r");
             var c = Math.PI * (r * 2); 
             
