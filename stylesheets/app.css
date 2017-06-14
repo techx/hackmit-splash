@@ -92,19 +92,6 @@ button, .button {
     margin-right: 25px; }
   .controls ul .primary-button:hover {
     color: #D0D6E0; }
-  .controls ul .primary-button:active {
-    padding-top: 8.2px;
-    padding-bottom: 8.2px;
-    color: #252C37;
-    background-color: #FF585D;
-    box-shadow: 1px -1px 0 #F8B1B1, -1px -1px 0 #F8B1B1, -1px 1px 0 #F8B1B1, 1px 1px 0 #F8B1B1;
-    border: 3px solid #252C37;
-    text-align: center;
-    padding-left: 0px; }
-    .controls ul .primary-button:active i {
-      right: 3px;
-      left: auto;
-      top: 1.2px; }
 
 body.section-expanded .controls li {
   margin-bottom: 64px; }
@@ -207,7 +194,21 @@ footer {
 
 @media screen and (min-width: 769px) {
   .mobile-only {
-    display: none; } }
+    display: none; }
+
+  .primary-button:active {
+    padding-top: 8.2px;
+    padding-bottom: 8.2px;
+    color: #252C37;
+    background-color: #FF585D;
+    box-shadow: 1px -1px 0 #F8B1B1, -1px -1px 0 #F8B1B1, -1px 1px 0 #F8B1B1, 1px 1px 0 #F8B1B1;
+    border: 3px solid #252C37;
+    text-align: center;
+    padding-left: 0px; }
+    .primary-button:active i {
+      right: 3px;
+      left: auto;
+      top: 1.2px; } }
 @media screen and (max-width: 768px) {
   .desktop-only {
     display: none !important; }
@@ -267,9 +268,17 @@ footer {
         display: block !important;
         margin: auto;
         max-width: 180px; }
+    .controls ul .above-right-wrapper {
+      display: flex;
+      justify-content: center; }
+    .controls ul .right {
+      margin-left: 10px; }
+      .controls ul .right .content {
+        border-radius: 0 0 50px 0; }
+    .controls ul .above, .controls ul .right, .controls ul .content {
+      position: static; }
     .controls ul .content {
-      position: initial;
-      margin: 20px auto 0 auto; } }
+      margin: 20px auto 0 auto !important; } }
 body {
   background-color: #252C37;
   font-family: 'Karla', sans-serif;
@@ -405,7 +414,6 @@ body.section-expanded .controls {
 .controls li {
   position: relative;
   width: 100%; }
-
 .controls .content {
   display: none;
   position: absolute;
@@ -413,14 +421,35 @@ body.section-expanded .controls {
   top: 60px;
   padding: 20px 40px 20px 40px;
   border: 1px solid #F8B1B1;
-  border-radius: 0 0 50px 0;
-  overflow: hidden; }
+  border-radius: 0 0 50px 0; }
   .controls .content::-webkit-scrollbar {
     width: 0px;
     background-color: transparent; }
   .controls .content::-webkit-scrollbar-thumb {
     background-color: #FF585D; }
-
+.controls .above {
+  position: absolute;
+  top: -100%;
+  left: 85px; }
+  .controls .above .content {
+    position: static;
+    max-width: 175px;
+    margin-top: -115px;
+    padding: 15px 20px 15px 15px;
+    line-height: 1;
+    text-align: right;
+    border-radius: 50px 0 0 0; }
+.controls .right {
+  position: absolute;
+  top: -250px;
+  right: 20px;
+  left: 272px; }
+  .controls .right .content {
+    position: static;
+    z-index: 99999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0 50px 0 0; }
 .controls .expanded .content {
   display: block; }
 
@@ -434,7 +463,7 @@ body.section-expanded .controls {
   padding: 5px 15px 15px 15px;
   max-width: 500px;
   max-height: 200px;
-  overflow-y: scroll; }
+  overflow-y: auto; }
 #faq-section .question {
   margin-top: 15px;
   cursor: pointer;
@@ -451,5 +480,32 @@ body.section-expanded .controls {
   content: '\25BC'; }
 #faq-section .expanded .answer {
   display: block; }
+
+#speakers-section .content {
+  padding-left: 15px;
+  padding-right: 15px; }
+#speakers-section .speaker {
+  display: flex;
+  align-items: center; }
+#speakers-section img {
+  width: 50px;
+  height: 50px;
+  background-color: #515B6B;
+  border: 3px solid #FF585D;
+  border-radius: 100%; }
+#speakers-section .info {
+  flex-basis: 66%;
+  padding-left: 10px;
+  text-transform: uppercase; }
+#speakers-section h1 {
+  margin: 0;
+  font-size: 16px; }
+#speakers-section h5 {
+  margin: 0;
+  color: #F8B1B1; }
+#speakers-section p {
+  margin: 10px 0 15px 5px; }
+  #speakers-section p:last-child {
+    margin-bottom: 0px; }
 
 /*# sourceMappingURL=app.css.map */

@@ -5,6 +5,10 @@ $mobile-body-side-padding: 20px;
 	.mobile-only {
 		display: none;
 	}
+
+	.primary-button:active {
+		@include button-active();
+	}
 }
 
 // Below break-med width (mobile)
@@ -97,9 +101,35 @@ $mobile-body-side-padding: 20px;
 			}
 		}
 
-		.content {
-			position: initial;
-			margin: 20px auto 0 auto;
+		.above-right-wrapper {
+			display: flex;
+			justify-content: center;
 		}
+
+		.right {
+			margin-left: 10px;
+
+			.content {
+				border-radius: 0 0 $content-border-radius 0;
+			}
+		}
+
+		.above, .right, .content {
+			position: static;
+		}
+
+		.content {
+			margin: 20px auto 0 auto !important;
+		}
+
+		//.above .content {
+		//	//margin-top: 20px;
+		//}
 	}
 }
+
+//@media screen and (max-width: 850px) and (min-width: $break-med) {
+//	#speakers-section .above {
+//		display: none;
+//	}
+//}

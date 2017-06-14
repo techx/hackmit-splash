@@ -194,39 +194,71 @@ body.section-expanded {
 }
 
 
-.controls li {
-    position: relative;
-    width: 100%;
-}
-
-.controls .content {
-    display: none;  // Hide sections by default
-
-    position: absolute;
-    left: 110px;
-    top: 60px;
-
-    padding: 20px 40px 20px 40px;
-
-    border: 1px solid $red-light;
-    border-radius: 0 0 50px 0;
-
-    overflow: hidden;
-
-    &::-webkit-scrollbar
-    {
-        width: 0px;
-        background-color: transparent;
+.controls {
+    li {
+        position: relative;
+        width: 100%;
     }
 
-    &::-webkit-scrollbar-thumb
-    {
-        background-color: $red;
-    }
-}
+    .content {
+        display: none; // Hide sections by default
 
-.controls .expanded .content {
-    display: block;  // Reveal section
+        position: absolute;
+        left: 110px;
+        top: 60px;
+
+        padding: 20px 40px 20px 40px;
+
+        border: 1px solid $red-light;
+        border-radius: 0 0 $content-border-radius 0;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $red;
+        }
+    }
+
+    .above {
+        position: absolute;
+        top: -100%;
+        left: 85px;
+
+        .content {
+            position: static;
+            max-width: 175px;
+
+            margin-top: -115px;
+            padding: 15px 20px 15px 15px;
+
+            line-height: 1;
+            text-align: right;
+
+            border-radius: $content-border-radius 0 0 0;
+        }
+    }
+
+    .right {
+        position: absolute;
+        top: -250px;
+        right: 20px;
+        left: 272px;
+
+        .content {
+            position: static;
+            z-index: 99999;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border-radius: 0 $content-border-radius 0 0;
+        }
+    }
+
+    .expanded .content {
+        display: block; // Reveal section
+    }
 }
 
 
@@ -244,7 +276,7 @@ body.section-expanded {
         padding: 5px 15px 15px 15px;
         max-width: 500px;
         max-height: 200px;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     .question {
@@ -272,6 +304,52 @@ body.section-expanded {
 
         .answer {
             display: block;
+        }
+    }
+}
+
+#speakers-section {
+    .content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .speaker {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+
+        background-color: $gray;
+        border: 3px solid $red;
+        border-radius: 100%;
+    }
+
+    .info {
+        flex-basis: 66%;
+        padding-left: 10px;
+
+        text-transform: uppercase;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    h5 {
+        margin: 0;
+        color: $red-light;
+    }
+
+    p {
+        margin: 10px 0 15px 5px;
+
+        &:last-child {
+            margin-bottom: 0px;
         }
     }
 }

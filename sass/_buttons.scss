@@ -196,10 +196,6 @@ button, .button {
     .primary-button:hover {
         color: $white;
     }
-
-    .primary-button:active {
-        @include button-active();
-    }
 }
 
 body.section-expanded .controls {

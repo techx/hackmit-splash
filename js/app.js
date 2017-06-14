@@ -3,6 +3,8 @@
 
 	'use strict';
 
+	var break_med = 768; // px
+
 	////////////////////
 	// FAQ TOGGLES
 	////////////////////
@@ -78,6 +80,23 @@
     // });
     window.addEventListener('hashchange', router);
 	router();
+
+    /////////////////////////////////////
+    // SPEAKERS RIGHT PANE ALIGNMENT
+    /////////////////////////////////////
+    function resize() {
+        // For desktop only, position and squish the speakers pane
+        if (window.innerWidth > break_med) {
+            var top = 300 - window.innerHeight/2 - 250;
+            var speakers_element = document.querySelector('#speakers-section .right');
+            var speakers_content = speakers_element.querySelector('#speakers-section .content');
+            speakers_element.style.top = top + "px";
+            speakers_content.style.maxHeight = (window.innerHeight - 130) + "px";
+        }
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
 
 	////////////////////
 	// COUNTDOWN
