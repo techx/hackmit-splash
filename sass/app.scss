@@ -363,4 +363,18 @@ body.section-expanded {
             margin-bottom: 0px;
         }
     }
+
+    .blue {
+        img {
+          border-color: $blue;
+        }
+
+      h1 {
+          @include stroke($black, $blue);
+      }
+
+      h5 {
+          color: $blue-light;
+      }
+    }
 }

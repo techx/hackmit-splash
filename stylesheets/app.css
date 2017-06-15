@@ -294,6 +294,12 @@ footer {
       margin-left: 10px; }
       .controls ul .right .content {
         border-radius: 0 0 50px 0; }
+    .controls ul .above {
+      flex-basis: 33%; }
+      .controls ul .above .content {
+        max-width: none; }
+    .controls ul .right {
+      flex-basis: 66%; }
     .controls ul .above, .controls ul .right, .controls ul .content {
       position: static; }
     .controls ul .content {
@@ -537,5 +543,12 @@ body.section-expanded .controls {
   margin: 10px 0 15px 5px; }
   #speakers-section p:last-child {
     margin-bottom: 0px; }
+#speakers-section .blue img {
+  border-color: #74D1EA; }
+#speakers-section .blue h1 {
+  color: #252C37;
+  text-shadow: 1px -1px 0 #74D1EA, -1px -1px 0 #74D1EA, -1px 1px 0 #74D1EA, 1px 1px 0 #74D1EA; }
+#speakers-section .blue h5 {
+  color: #BEE7F0; }
 
 /*# sourceMappingURL=app.css.map */

@@ -118,6 +118,18 @@ $mobile-body-side-padding: 20px;
 			}
 		}
 
+        .above {
+            flex-basis: 33%;
+
+            .content {
+                max-width: none;
+            }
+        }
+
+        .right {
+            flex-basis: 66%;
+        }
+
 		.above, .right, .content {
 			position: static;
 		}
