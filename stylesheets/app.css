@@ -128,7 +128,7 @@ body:not(.section-expanded) .controls .button-primary {
 header, footer {
   position: absolute;
   width: 100%;
-  height: 48px; }
+  height: 56px; }
   header .mid, header .left, header .right, footer .mid, footer .left, footer .right {
     position: absolute;
     height: 32px; }
@@ -164,11 +164,11 @@ header {
 footer {
   bottom: 0; }
   footer .mid, footer .left, footer .right {
-    bottom: 16px; }
+    bottom: 24px; }
   footer .mid {
     border-bottom: 0.5px solid #BEE7F0; }
   footer .left, footer .right {
-    bottom: 11.38462px; }
+    bottom: 19.38462px; }
     footer .left:after, footer .right:after {
       bottom: 4px; }
   footer .left {
@@ -191,6 +191,22 @@ footer {
   .social li {
     padding: 0 2px 0 2px;
     display: inline-block; }
+
+.copyright {
+  color: rgba(208, 214, 224, 0.6);
+  text-align: right;
+  font-size: 9px;
+  line-height: 1.1em;
+  position: relative;
+  margin-top: 24px;
+  margin-right: 10px;
+  z-index: 100;
+  /* I'm sorry - Noah */ }
+  .copyright a {
+    color: rgba(208, 214, 224, 0.6); }
+  .copyright a:hover {
+    color: rgba(208, 214, 224, 0.6);
+    cursor: pointer; }
 
 @media screen and (min-width: 769px) {
   .mobile-only {
@@ -215,7 +231,7 @@ footer {
 
   body {
     height: 100%;
-    padding: 48px 20px 0 20px; }
+    padding: 56px 20px 0 20px; }
 
   .mobile-dates {
     text-align: center; }

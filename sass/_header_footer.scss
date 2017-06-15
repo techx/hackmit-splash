@@ -2,7 +2,7 @@
 
 $hf-side-height: 32px;                      // height of flared out sides of header/footer
 $hf-side-width: 345.5px * ($hf-side-height / 52px);     // width of flared out sides of header/footer
-$hf-offset: 16px;                           // distance from top/bottom of screen to header or footer
+$hf-offset: 24px;                           // distance from top/bottom of screen to header or footer
 $hf-height: $hf-side-height + $hf-offset;   // height of header and footer
 
 header, footer {
@@ -111,5 +111,24 @@ footer {
     li {
         padding: 0 2px 0 2px;
         display: inline-block;
+    }
+}
+
+.copyright {
+    color: $light;
+    text-align: right;
+    font-size: 9px;
+    line-height: 1.1em;
+    position: relative;
+    margin-top: $hf-offset;
+    margin-right: 10px;
+    z-index: 100; /* I'm sorry - Noah */
+
+    a {
+        color: $light; 
+    }
+    a:hover {
+        color: $light; 
+        cursor: pointer;
     }
 }
