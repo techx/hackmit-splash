@@ -390,8 +390,7 @@ a {
 .brand:before {
   color: #252C37;
   text-shadow: 1px -1px 0 #FF585D, -1px -1px 0 #FF585D, -1px 1px 0 #FF585D, 1px 1px 0 #FF585D;
-  content: 'HACK';
-  padding-right: 8px; }
+  content: 'HACK'; }
 
 .brand:after {
   color: #252C37;

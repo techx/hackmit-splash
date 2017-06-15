@@ -125,7 +125,7 @@ a {
 .brand:before {
     @include stroke($black, $red);
     content: 'HACK';
-    padding-right: 8px;
+    //padding-right: 8px;
 }
 
 .brand:after {
