@@ -285,11 +285,16 @@ body.section-expanded {
         max-width: 500px;
         max-height: 200px;
         overflow-y: auto;
+        z-index: 100;
+
+        > div {
+            cursor: pointer;
+        }
     }
 
     .question {
-        margin-top: 15px;
-        cursor: pointer;
+        margin: 10px 0 10px 0;
+        padding: 5px 0 5px 0;
         font-size: 12px;
 
         &:before {

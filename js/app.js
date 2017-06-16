@@ -10,23 +10,24 @@
 	////////////////////
 
 	Array
-		.from(document.getElementsByClassName('question'))
-		.forEach(function (question) {
-			question.addEventListener('click', (function() {
-
+		.from(document.querySelectorAll('#faq-section .content > div'))
+		.forEach(function (question_answer) {
+            question_answer.addEventListener('click', (function(event) {
 				// Hide all expanded FAQ sections
-                Array
-                    .from(document.querySelectorAll('#faq-section .expanded'))
-                    .forEach(function (element) {
-                        element.classList.remove('expanded');
-                    });
+                // Array
+                 //    .from(document.querySelectorAll('#faq-section .expanded'))
+                 //    .forEach(function (element) {
+                 //        element.classList.remove('expanded');
+                 //    });
 
-				var parentClasses = question.parentElement.classList;
+                console.log(event.target);
 
-				if (parentClasses.contains('expanded'))
-					parentClasses.remove('expanded');
-				else
-					parentClasses.add('expanded');
+                // var classes = event.target.classList;
+
+                if (question_answer.classList.contains('expanded'))
+                    question_answer.classList.remove('expanded');
+                else
+                    question_answer.classList.add('expanded');
 
 			}).bind(this));
 		});

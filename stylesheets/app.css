@@ -149,7 +149,7 @@ header, footer {
     width: 100%; }
   header .left, footer .left {
     left: 0;
-    z-index: 999; }
+    z-index: 100; }
   header .right, footer .right {
     right: 0;
     z-index: 99; }
@@ -492,10 +492,13 @@ body.section-expanded .controls {
   padding: 5px 15px 15px 15px;
   max-width: 500px;
   max-height: 200px;
-  overflow-y: auto; }
+  overflow-y: auto;
+  z-index: 100; }
+  #faq-section .content > div {
+    cursor: pointer; }
 #faq-section .question {
-  margin-top: 15px;
-  cursor: pointer;
+  margin: 10px 0 10px 0;
+  padding: 5px 0 5px 0;
   font-size: 12px; }
   #faq-section .question:before {
     color: #FF585D;
