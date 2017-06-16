@@ -143,6 +143,10 @@ button, .button {
             padding: 14px;
         }
     }
+
+    &.primary-button {
+        font-size: 16px;
+    }
 }
 
 @mixin button-red() {

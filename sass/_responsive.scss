@@ -3,12 +3,12 @@ $mobile-body-side-padding: 20px;
 // Above break-med width (desktop)
 @media screen and (min-width: $break-med + 1) {
 	.mobile-only {
-		display: none;
+		display: none !important;
 	}
 
-	.primary-button:active {
-		@include button-active();
-	}
+	//.primary-button:active {
+	//	@include button-active();
+	//}
 }
 
 // Below break-med width (mobile)
@@ -146,6 +146,10 @@ $mobile-body-side-padding: 20px;
 		//.above .content {
 		//	//margin-top: 20px;
 		//}
+
+		#faq-section .content {
+			max-height: none;
+		}
 	}
 }
 

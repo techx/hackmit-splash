@@ -10,7 +10,7 @@ body {
 
     font-family: 'Karla', sans-serif;
     color: $white;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: .025em;
 }
 
@@ -36,15 +36,15 @@ h4, h5, h6 {
 }
 
 h3 {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 h4 {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 h5 {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 a {
@@ -221,12 +221,19 @@ body.section-expanded {
         border-radius: 0 0 $content-border-radius 0;
 
         &::-webkit-scrollbar {
-            width: 0px;
-            background-color: transparent;
+            width: 14px;
+            background-color: $red-light;
+            border-left: 1px solid $black;
+            border-right: 12px solid $black;
         }
 
         &::-webkit-scrollbar-thumb {
             background-color: $red;
+            border-right: 11px solid $black;
+
+            &:window-inactive, &:-moz-window-inactive {
+                background-color: transparent;
+            }
         }
     }
 
@@ -283,9 +290,13 @@ body.section-expanded {
     .content {
         padding: 5px 15px 15px 15px;
         max-width: 500px;
-        max-height: 200px;
-        overflow-y: auto;
+        max-height: 210px;
+
         z-index: 100;
+
+        overflow-y: auto;
+
+        border-radius: 0 0 0 $content-border-radius;
 
         > div {
             cursor: pointer;
@@ -295,7 +306,7 @@ body.section-expanded {
     .question {
         margin: 10px 0 10px 0;
         padding: 5px 0 5px 0;
-        font-size: 12px;
+        font-size: 14px;
 
         &:before {
             color: $red;
@@ -310,9 +321,11 @@ body.section-expanded {
 
     .expanded {
         .question:before {
-            margin-left: 0.5px;
-            font-size: 8px;
+            position: relative;
+            margin-left: 1.5px;
+            top: -1px;
             content: '\25BC';
+            font-size: 9px;
         }
 
         .answer {
@@ -339,7 +352,7 @@ body.section-expanded {
         width: 50px;
         height: 50px;
 
-        background-color: $gray;
+        //background-color: $gray;
         border: 3px solid $red;
         border-radius: 100%;
     }
@@ -381,5 +394,14 @@ body.section-expanded {
       h5 {
           color: $blue-light;
       }
+    }
+}
+
+#sponsors-section .above {
+    top: calc(-100% - 50px);
+
+    .content {
+        max-width: 240px;
+        margin-top: 0;
     }
 }
