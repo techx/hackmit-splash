@@ -103,32 +103,37 @@ $mobile-body-side-padding: 20px;
 
 		// Place speaker content boxes side by side
 		.above-right-wrapper {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			justify-content: center;
+			//display: -webkit-box;
+			//display: -ms-flexbox;
+			//display: -webkit-flex;
+			//display: flex;
+			//justify-content: center;
 		}
 
 		.right {
-			margin-left: 10px;
+			//margin-left: 10px;
 
 			.content {
-				border-radius: 0 0 $content-border-radius 0;
+                margin-top: 15px !important;
+                border-radius: 0 0 $content-border-radius 0;
 			}
 		}
 
         .above {
-            flex-basis: 33%;
+            //flex-basis: 33%;
 
             .content {
+                padding-top: 15px;
+                padding-bottom: 15px;
                 max-width: none;
+                border-radius: 0 $content-border-radius 0 0 !important;
+                text-align: left;
             }
         }
 
-        .right {
-            flex-basis: 66%;
-        }
+        //.right {
+        //    flex-basis: 66%;
+        //}
 
 		.above, .right, .content {
 			position: static;

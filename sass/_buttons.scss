@@ -102,8 +102,15 @@ button, .button {
         border: none;
 
         background-color: transparent;
+
         background-image: url('../assets/images/hex-button-border@2x.png');
         background-size: 100% 100%;
+        font-size: 12px;
+        color: $black;
+
+        &[disabled], &.disabled {
+          background-image: url('../assets/images/hex-button-border-disabled@2x.png');
+        }
     }
 
     &.round {
