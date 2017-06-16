@@ -44,6 +44,13 @@ i {
     //             transform: rotate(90deg);
     // }
 
+    &.medium {
+        background-image: url("../assets/images/icons/medium-m-gray-200px.png");
+        background-size: 85%;
+        background-position-y: 0;
+        margin-left: 4px;
+    }
+
     &.mail {
         background-image: url("../assets/images/icons/Mail Icon@2x.png");
     }
@@ -64,6 +71,10 @@ i {
 /////////////////////////////////
 // Social buttons
 /////////////////////////////////
+
+.social {
+    margin-left: -4px;
+}
 
 .social a {
     display: inline-block;
@@ -95,10 +106,10 @@ button, .button {
 
     &.hexagon {
         padding:
-            0.7 * $button-padding
-            2 * $button-padding
-            0.7 * $button-padding
-            2 * $button-padding;
+                0.7 * $button-padding
+                2 * $button-padding
+                0.7 * $button-padding
+                2 * $button-padding;
         border: none;
 
         background-color: transparent;
@@ -109,7 +120,7 @@ button, .button {
         color: $black;
 
         &[disabled], &.disabled {
-          background-image: url('../assets/images/hex-button-border-disabled@2x.png');
+            background-image: url('../assets/images/hex-button-border-disabled@2x.png');
         }
     }
 
@@ -159,11 +170,11 @@ button, .button {
 
     background-color: $red;
 
-    box-shadow: 
-         1px -1px 0 $red-light,
-        -1px -1px 0 $red-light,  
-        -1px  1px 0 $red-light,
-         1px  1px 0 $red-light;
+    box-shadow:
+            1px -1px 0 $red-light,
+            -1px -1px 0 $red-light,
+            -1px  1px 0 $red-light,
+            1px  1px 0 $red-light;
 
     border: 3px solid $black;
 }

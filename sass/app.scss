@@ -209,6 +209,8 @@ body.section-expanded {
     }
 
     .content {
+        //transition: opacity 1s;
+        //opacity: 0;
         display: none; // Hide sections by default
 
         position: absolute;
@@ -273,6 +275,7 @@ body.section-expanded {
 
     .expanded .content {
         display: block; // Reveal section
+        //opacity: 1;
     }
 }
 

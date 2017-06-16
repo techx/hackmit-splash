@@ -29,6 +29,11 @@ i {
     background-image: url("../assets/images/icons/Sponsors Icon@2x.png"); }
   i.back {
     background-image: url("../assets/images/icons/Back Icon@2x.png"); }
+  i.medium {
+    background-image: url("../assets/images/icons/medium-m-gray-200px.png");
+    background-size: 85%;
+    background-position-y: 0;
+    margin-left: 4px; }
   i.mail {
     background-image: url("../assets/images/icons/Mail Icon@2x.png"); }
   i.twitter {
@@ -37,6 +42,9 @@ i {
     background-image: url("../assets/images/icons/Facebook Icon@2x.png"); }
   i.instagram {
     background-image: url("../assets/images/icons/Instagram Icon@2x.png"); }
+
+.social {
+  margin-left: -4px; }
 
 .social a {
   display: inline-block;
