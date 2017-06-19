@@ -125,7 +125,6 @@ a {
 .brand:before {
     @include stroke($black, $red);
     content: 'HACK';
-    //padding-right: 8px;
 }
 
 .brand:after {
@@ -163,6 +162,7 @@ a {
 #outer-spinner {
     -webkit-animation: rotation 45s infinite linear;
             animation: rotation 45s infinite linear;
+    z-index: 1;
 }
 
 @-webkit-keyframes rotation {
@@ -206,6 +206,10 @@ body.section-expanded {
     li {
         position: relative;
         width: 100%;
+
+        a {
+            z-index: 50;
+        }
     }
 
     .content {

@@ -417,7 +417,8 @@ a {
 
 #outer-spinner {
   -webkit-animation: rotation 45s infinite linear;
-  animation: rotation 45s infinite linear; }
+  animation: rotation 45s infinite linear;
+  z-index: 1; }
 
 @-webkit-keyframes rotation {
   from {
@@ -441,6 +442,8 @@ body.section-expanded .controls {
 .controls li {
   position: relative;
   width: 100%; }
+  .controls li a {
+    z-index: 50; }
 .controls .content {
   display: none;
   position: absolute;

@@ -75,6 +75,11 @@
 		}
 	}
 
+    // document.querySelector('.spinner').addEventListener('click', function () {
+	 //    console.log('click');
+    //     location.hash = "#!";
+    // });
+
 	// Call the router on page start, and whenever the URL hash changes
 	// Array.from(document.getElementsByTagName('a')).forEach(function (a) {
     //    a.addEventListener('click', router);
