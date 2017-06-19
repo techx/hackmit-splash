@@ -564,4 +564,7 @@ body.section-expanded .controls {
     max-width: 240px;
     margin-top: 0; }
 
+#spinner {
+  pointer-events: none; }
+
 /*# sourceMappingURL=app.css.map */
