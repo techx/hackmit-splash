@@ -131,8 +131,25 @@
 		}
 		else {
 			countdownElement.innerHTML = launchMessage;
+
+            var stuff = document.getElementById("stuff");
+            stuff.style.display = "inherit";
+            fadeIn(stuff, 100);
 		}
 	}
+
+    function fadeIn(elem, speed){
+        if(elem.style){
+            elem.style.opacity= '0';
+        }
+        window.fadetimer= setInterval(function(){
+            elem.style.opacity= +(elem.style.opacity)+.02;
+            if(elem.style.opacity> 1){
+                clearInterval(fadetimer);
+            }
+        },
+        speed);
+    }
 
     function updateDial(spinner, days, shouldAnimate) {
         if(typeof(shouldAnimate) == "undefined")

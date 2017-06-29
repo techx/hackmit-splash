@@ -416,3 +416,20 @@ body.section-expanded {
 #spinner {
     pointer-events: none;
 }
+
+.fire-container {
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    z-index: 102; 
+    overflow: visible;
+    pointer-events: none;
+    background: none !important;
+    display: none;
+    opacity: 0;
+}
+
+.fire-video {
+    width: 100%;
+    -webkit-filter: brightness(2);
+}
