@@ -1,3 +1,8 @@
+/* 
+
+    ( ͡° ͜ʖ ͡°)━☆ﾟ.*･｡ﾟ
+
+*/
 
 (function() {
 
@@ -124,7 +129,7 @@
     /* Update DOM */ 	
 	function updateCountdown(countdownElement, days) {
         var remainingMessage = " DAYS REMAINING";
-        var launchMessage = "<marquee><a href='http://delorean.codes'>delorean.codes</a></marquee>";
+        var launchMessage = "<a href='http://delorean.codes'>delorean.codes</a>";
         
 		if (days > 0) {
 			countdownElement.innerHTML = days + remainingMessage;
