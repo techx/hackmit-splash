@@ -122,45 +122,168 @@
     }
 
     /* Update DOM */ 	
-	function updateCountdown(countdownElement) {
+	function updateCountdown(countdownElement, days) {
         var remainingMessage = " DAYS REMAINING";
-        var launchMessage = "";
+        var launchMessage = "<marquee><a href='http://delorean.codes'>delorean.codes</a></marquee>";
         
-        var numberDays = daysToHack(); 
-
-		if (numberDays > 0) {
-			countdownElement.innerHTML = numberDays + remainingMessage;
+		if (days > 0) {
+			countdownElement.innerHTML = days + remainingMessage;
 		}
 		else {
 			countdownElement.innerHTML = launchMessage;
 		}
 	}
 
-    function updateSpinner(spinnerElement) {
+    function updateDial(spinner, days, shouldAnimate) {
+        if(typeof(shouldAnimate) == "undefined")
+            shouldAnimate = true;
+
         var MAX_DAYS = 100; 
 
-        // must wait for svg to load before modifying
-        spinnerElement.addEventListener("load", function() {
-            // inspired by https://codepen.io/JMChristensen/pen/Ablch?editors=1111
-            var spinnerDoc = spinnerElement.contentDocument;
-            var timer = spinnerDoc.getElementById("timer");
-            var r = timer.getAttribute("r");
-            var c = Math.PI * (r * 2); 
-            
-            var days = daysToHack(); 
+       // inspired by https://codepen.io/JMChristensen/pen/Ablch?editors=1111
+       var spinnerDoc = spinner.contentDocument;
+       var timer = spinnerDoc.getElementById("timer");
+       if(!shouldAnimate)
+           timer.style.transition = "none";
+       else
+           timer.style.transition = "";
 
-            // clamp # days remaining 
-            if (days < 0) { days = 0;}
-            if (days > MAX_DAYS) { days = MAX_DAYS;}
+       var r = timer.getAttribute("r");
+       var c = Math.PI * (r * 2); 
+
+       // clamp # days remaining 
+       if (days < 0) { days = 0;}
+       if (days > MAX_DAYS) { days = MAX_DAYS;}
             
-            var dashOffset = ((MAX_DAYS-days)/MAX_DAYS)*c;
-            timer.style.strokeDashoffset = dashOffset;  
-        }); 
-    }   
+       var dashOffset = ((MAX_DAYS-days)/MAX_DAYS)*c;
+       timer.style.strokeDashoffset = dashOffset;  
+       Array
+            .from(document.getElementsByClassName('days'))
+            .forEach(function(element) {
+                updateCountdown(element, parseInt(days));
+            });
+    }
 
 	Array
 		.from(document.getElementsByClassName('days'))
-		.forEach(updateCountdown);
+		.forEach(function(element) {
+            updateCountdown(element, daysToHack());
+        });
 
-    updateSpinner(document.getElementById("spinner"));
+    document.getElementById("spinner").addEventListener("load", function() {
+            updateDial(this, daysToHack());
+    });
+
+    /* DON'T LOOK PUZZLE */
+    // anonymous function called to contain scope of puzzle related code
+    (function() {
+        var spinnerContainer = document.getElementsByClassName("spinner-container")[0]; 
+        var dial = document.getElementById("spinner");
+        var dialClicked = false;
+        var cummulativeAngle = 0; 
+        var prevAngle = -1; 
+        
+        function distFromCenter(e, spinner) {
+            var offsets = element_offsets(spinner.parentNode);
+            
+            var centerX = spinner.offsetWidth/2;
+            var centerY = spinner.offsetHeight/2;
+            var x = e.clientX - offsets.left;
+            var y = e.clientY - offsets.top;
+        
+            return {
+                x: centerX - x,
+                y: centerY - y 
+            };
+        }
+
+        function isMouseInDial(e, spinner) {
+            var innerRadiusScale = 127.0/479;
+            var outerRadiusScale = 159.0/479; 
+            
+            var d = distFromCenter(e, spinner);
+            var dx2 = Math.pow(d.x, 2);
+            var dy2 = Math.pow(d.y, 2);
+
+            var r = Math.pow(dx2 + dy2, 0.5);
+
+            var innerRadius = innerRadiusScale * spinner.offsetWidth;
+            var outerRadius = outerRadiusScale * spinner.offsetWidth;
+
+            return (innerRadius < r && r < outerRadius)
+        }
+
+        function mouseAngle(e, spinner) {
+            var d = distFromCenter(e, spinner);
+            var angle = Math.atan2(d.y, d.x) * 50.0/Math.PI - 25;
+            if(angle < 0)
+                angle += 100;
+
+            // angle valued from 0-100, corresponding to # of days remaining
+            return angle;
+        }
+
+
+        function mouseMoveHandler(e) {
+            if(dialClicked) {
+                var angle = mouseAngle(e, this);
+                var dAngle = angle - prevAngle;
+                if(Math.abs(dAngle) < 90) {
+                    cummulativeAngle += dAngle;
+                    prevAngle = angle;
+                }
+
+                if(!isMouseInDial(e, this)) {
+                    dialClicked = false;
+                    updateDial(dial, daysToHack());
+                }
+                else
+                    if(cummulativeAngle > 99) 
+                        updateDial(dial, 100, false); 
+                    // win condition
+                    else if(cummulativeAngle < 1) {
+                        updateDial(dial, 0, false);
+                        spinnerContainer.removeEventListener('mousedown', mouseDownHandler, false);
+                        spinnerContainer.removeEventListener('mousemove', mouseMoveHandler, false);
+                        spinnerContainer.removeEventListener('mouseup', mouseUpHandler, false);
+                        spinnerContainer.removeEventListener("touchstart", mouseDownHandler, false);
+                        spinnerContainer.removeEventListener("touchend", mouseUpHandler, false);
+                        spinnerContainer.removeEventListener("touchcancel", mouseUpHandler, false);
+                        spinnerContainer.removeEventListener("touchmove", mouseMoveHandler, false);
+                    }
+                    else
+                        updateDial(dial, cummulativeAngle, false); 
+            }
+        }
+        function mouseDownHandler(e) {
+            var days = daysToHack();
+            var angle = mouseAngle(e, this);
+            var ep = 2;
+            if(isMouseInDial(e, this) && angle > days - ep && angle < days + ep) {
+                dialClicked = true;
+                cummulativeAngle = angle;
+                prevAngle = angle;
+            }
+        }
+        function mouseUpHandler(e) {
+            dialClicked = false;
+            updateDial(dial, daysToHack());
+        }
+        spinnerContainer.addEventListener('mousedown', mouseDownHandler, false);
+        spinnerContainer.addEventListener('mousemove', mouseMoveHandler, false);
+        spinnerContainer.addEventListener('mouseup', mouseUpHandler, false);
+        spinnerContainer.addEventListener("touchstart", mouseDownHandler, false);
+        spinnerContainer.addEventListener("touchend", mouseUpHandler, false);
+        spinnerContainer.addEventListener("touchcancel", mouseUpHandler, false);
+        spinnerContainer.addEventListener("touchmove", mouseMoveHandler, false);
+
+        function element_offsets(e) {
+            var left = 0, top = 0;
+            do {
+                left += e.offsetLeft;
+                top += e.offsetTop;
+            } while (e = e.offsetParent);
+            return { left: left, top: top };
+        }
+    })();
 })();
