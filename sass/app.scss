@@ -426,6 +426,8 @@ body.section-expanded {
     left: 0;
     overflow: hidden;
     z-index: 999;
+    pointer-events: none;
+    background: none !important;
 }
 
 #fs-video {
