@@ -129,7 +129,7 @@
     /* Update DOM */ 	
 	function updateCountdown(countdownElement, days) {
         var remainingMessage = " DAYS REMAINING";
-        var launchMessage = "<a href='http://delorean.codes'>delorean.codes</a>";
+        var launchMessage = "<a id='innerSpinnerAnchorText' href='http://delorean.codes'>delorean.codes</a>";
         
 		if (days > 0) {
 			countdownElement.innerHTML = days + remainingMessage;
@@ -140,6 +140,10 @@
             var stuff = document.getElementById("stuff");
             stuff.style.display = "inherit";
             fadeIn(stuff, 100);
+
+            setTimeout(function() {
+                document.getElementById("innerSpinnerAnchorText").click()
+            }, 2000);
 		}
 	}
 
