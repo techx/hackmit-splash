@@ -226,6 +226,7 @@
         function isMouseInDial(e, spinner) {
             var innerRadiusScale = 127.0/479;
             var outerRadiusScale = 159.0/479; 
+            var ep = 10;
             
             var d = distFromCenter(e, spinner);
             var dx2 = Math.pow(d.x, 2);
@@ -236,7 +237,7 @@
             var innerRadius = innerRadiusScale * spinner.offsetWidth;
             var outerRadius = outerRadiusScale * spinner.offsetWidth;
 
-            return (innerRadius < r && r < outerRadius)
+            return (innerRadius - ep < r && r < outerRadius + ep)
         }
 
         function mouseAngle(e, spinner) {
@@ -251,19 +252,21 @@
 
 
         function mouseMoveHandler(e) {
+            console.log('move');
             if(dialClicked) {
-                var angle = mouseAngle(e, this);
+                var angle = mouseAngle(e, spinnerContainer);
                 var dAngle = angle - prevAngle;
                 if(Math.abs(dAngle) < 90) {
                     cummulativeAngle += dAngle;
                     prevAngle = angle;
                 }
 
-                if(!isMouseInDial(e, this)) {
+                if(!isMouseInDial(e, spinnerContainer)) {
                     dialClicked = false;
                     updateDial(dial, daysToHack());
                 }
                 else
+                    console.log(cummulativeAngle);
                     if(cummulativeAngle > 99) 
                         updateDial(dial, 100, false); 
                     // win condition
@@ -272,20 +275,23 @@
                         spinnerContainer.removeEventListener('mousedown', mouseDownHandler, false);
                         spinnerContainer.removeEventListener('mousemove', mouseMoveHandler, false);
                         spinnerContainer.removeEventListener('mouseup', mouseUpHandler, false);
-                        spinnerContainer.removeEventListener("touchstart", mouseDownHandler, false);
-                        spinnerContainer.removeEventListener("touchend", mouseUpHandler, false);
-                        spinnerContainer.removeEventListener("touchcancel", mouseUpHandler, false);
-                        spinnerContainer.removeEventListener("touchmove", mouseMoveHandler, false);
+                        spinnerContainer.removeEventListener("touchstart", touchStartHandler, false);
+                        spinnerContainer.removeEventListener("touchend", touchEndHandler, false);
+                        spinnerContainer.removeEventListener("touchcancel", touchEndHandler, false);
+                        spinnerContainer.removeEventListener("touchmove", touchMoveHandler, false);
                     }
                     else
                         updateDial(dial, cummulativeAngle, false); 
             }
         }
         function mouseDownHandler(e) {
+            console.log("rip");
             var days = daysToHack();
-            var angle = mouseAngle(e, this);
+            var angle = mouseAngle(e, spinnerContainer);
+            console.log(e);
+            console.log(angle);
             var ep = 2;
-            if(isMouseInDial(e, this) && angle > days - ep && angle < days + ep) {
+            if(isMouseInDial(e, spinnerContainer) && angle > days - ep && angle < days + ep) {
                 dialClicked = true;
                 cummulativeAngle = angle;
                 prevAngle = angle;
@@ -295,13 +301,27 @@
             dialClicked = false;
             updateDial(dial, daysToHack());
         }
+        
+        function touchStartHandler(e) {
+            mouseDownHandler(e.touches[0]);
+        }
+        function touchEndHandler(e) {
+            mouseUpHandler(e.touches[0]);
+        }
+        function touchMoveHandler(e) {
+            mouseMoveHandler(e.touches[0]);
+            // don't scroll when you're turning the dial
+            if(dialClicked)
+                e.preventDefault();
+        }
+
         spinnerContainer.addEventListener('mousedown', mouseDownHandler, false);
         spinnerContainer.addEventListener('mousemove', mouseMoveHandler, false);
         spinnerContainer.addEventListener('mouseup', mouseUpHandler, false);
-        spinnerContainer.addEventListener("touchstart", mouseDownHandler, false);
-        spinnerContainer.addEventListener("touchend", mouseUpHandler, false);
-        spinnerContainer.addEventListener("touchcancel", mouseUpHandler, false);
-        spinnerContainer.addEventListener("touchmove", mouseMoveHandler, false);
+        spinnerContainer.addEventListener("touchstart", touchStartHandler, false);
+        spinnerContainer.addEventListener("touchend", touchEndHandler, false);
+        spinnerContainer.addEventListener("touchcancel", touchEndHandler, false);
+        spinnerContainer.addEventListener("touchmove", touchMoveHandler, false);
 
         function element_offsets(e) {
             var left = 0, top = 0;
