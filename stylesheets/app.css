@@ -70,9 +70,16 @@ button, .button {
     background-color: transparent;
     background-image: url("../assets/images/hex-button-border@2x.png");
     background-size: 100% 100%;
-    font-size: 12px;
-    color: #252C37; }
+    font-size: 14px;
+    text-align: center;
+    max-width: 160px; }
     button.hexagon[disabled], button.hexagon.disabled, .button.hexagon[disabled], .button.hexagon.disabled {
+      color: #252C37;
+      background-image: url("../assets/images/hex-button-border-disabled@2x.png"); }
+    button.hexagon:hover, .button.hexagon:hover {
+      color: #D0D6E0; }
+    button.hexagon:active, .button.hexagon:active {
+      color: #252C37;
       background-image: url("../assets/images/hex-button-border-disabled@2x.png"); }
   button.round, .button.round {
     min-width: 180px;
@@ -600,7 +607,6 @@ body.section-expanded .controls {
 @media (max-width: 768px) {
   #fs-container, #fs-video {
     display: none; } }
-
 .fire-container {
   position: absolute;
   width: 100%;
