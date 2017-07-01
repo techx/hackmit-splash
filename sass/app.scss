@@ -3,7 +3,7 @@
 @import 'header_footer';
 @import 'responsive';
 
-// Basics & Typeography
+// Basics & Typography
 
 body {
     background-color: $black;
@@ -68,7 +68,6 @@ a {
         flex-basis: 100%;
     }
 }
-
 
 // Top content
 
@@ -417,11 +416,64 @@ body.section-expanded {
     pointer-events: none;
 }
 
+// Full screen video
+
+#fs-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 999;
+    pointer-events: none;
+    background: none !important;
+    opacity: 1;
+}
+
+#fs-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#splash {
+    visibility: hidden;
+    opacity: 0;
+}
+
+//#spinner {
+//    visibility: hidden;
+//}
+
+@media (min-aspect-ratio: 16/9) {
+    #fs-video {
+        height: 200%;
+        top: -50%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #fs-video {
+        width: 200%;
+        left: -50%;
+    }
+}
+
+@media (max-width: $break-med) {
+
+    #fs-container, #fs-video {
+        display: none;
+    }
+
+}
+
 .fire-container {
     position: absolute;
     width: 100%;
     bottom: -10px;
-    z-index: 102; 
+    z-index: 102;
     overflow: visible;
     pointer-events: none;
     background: none !important;

@@ -52,15 +52,19 @@
 	<meta property="og:image:type" content="image/png"/>
 	<meta name="twitter:image:width" content="512"/>
 	<meta name="twitter:image:height" content="512"/>
+
 </head>
 <body>
+
+    <span id="splash">
+
 	<header>
 		<div class="left"><h1 class="mobile-only brand">MIT</h1></div>
 		<div class="mid"></div>
 		<div class="right"></div>
         <div class="copyright desktop-only">
-            <a href="https://code.hackmit.org">Open source</a>. Copyright (c) 2017 HackMIT. <br>
-            Released under CC BY-SA. 
+            <!--<a href="https://code.hackmit.org">Open source</a>. Copyright (c) 2017 HackMIT. <br>-->
+            <!--Released under CC BY-SA. -->
         </div>
 	</header>
 
@@ -82,7 +86,7 @@
 
 				<p>It is the year MMXVII. 1000 hackers gather at the Massachusetts Institute of Technology for its annual undergraduate student hackathon.</p>
 
-				<p>They represent <span class="red">Red Faction</span> and <span class="blue">Blue Faction</span>. But over 24 hours, they will work together to envision and develop the technology of tomorrow.</p>
+				<p>They represent the <span class="red">Red Faction</span> and the <span class="blue">Blue Faction</span>. But over 24 hours, they will work together to envision and develop the technology of tomorrow.</p>
 			</div>
 
 			<a class="spinner middle aligned content" href="#!" draggable="false">
@@ -210,6 +214,30 @@
                             </div>
                             <div>
                                 <h4 class="question">
+                                    What are factions?
+                                </h4>
+                                <p class="answer">
+                                    We created factions to encourage hackers to have fun and interact with each other outside of normal teams when you’re not working on your projects.  The Red Faction and Blue Faction are hackathon-wide groups  that collectively complete challenges at HackMIT 2017 for points.  The faction with the most points will win and get a surprise upon the conclusion of the hackathon.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="question">
+                                    How do I choose a faction?
+                                </h4>
+                                <p class="answer">
+                                    You can choose your faction when you register and confirm your spot!
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="question">
+                                    Can team members belong to different factions?
+                                </h4>
+                                <p class="answer">
+                                    Yes, factions do not limit your forming of individual teams.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="question">
                                     Is there an admissions puzzle again?
                                 </h4>
                                 <p class="answer">
@@ -303,6 +331,17 @@
 		</div>
 	</footer>
 
+    </span>
+
+    <div id="fs-container">
+        <video muted id="fs-video" style="display:none">
+            <source src="assets/videos/splash-intro-compressed.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/zepto-fx.js"></script>
+    <script type="text/javascript" src="js/video.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
