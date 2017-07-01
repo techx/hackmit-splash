@@ -195,9 +195,13 @@
             updateCountdown(element, daysToHack());
         });
 
-    document.getElementById("spinner").addEventListener("load", function() {
-            updateDial(this, daysToHack());
-    });
+    //document.getElementById("spinner").addEventListener("load", function() {
+    //        updateDial(this, daysToHack());
+    //        console.log("load");
+    //});
+    window.onload = function() {
+        updateDial(document.getElementById("spinner"), daysToHack());
+    };
 
     /* DON'T LOOK PUZZLE */
     // anonymous function called to contain scope of puzzle related code
