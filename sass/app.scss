@@ -428,6 +428,7 @@ body.section-expanded {
     z-index: 999;
     pointer-events: none;
     background: none !important;
+    opacity: 1;
 }
 
 #fs-video {
@@ -436,6 +437,15 @@ body.section-expanded {
     height: 100%;
     z-index: 999;
 }
+
+#splash {
+    visibility: hidden;
+    opacity: 0;
+}
+
+//#spinner {
+//    visibility: hidden;
+//}
 
 @media (min-aspect-ratio: 16/9) {
     #fs-video {
