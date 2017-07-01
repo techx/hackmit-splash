@@ -25,7 +25,6 @@
                  //        element.classList.remove('expanded');
                  //    });
 
-                console.log(event.target);
 
                 // var classes = event.target.classList;
 
@@ -252,7 +251,6 @@
 
 
         function mouseMoveHandler(e) {
-            console.log('move');
             if(dialClicked) {
                 var angle = mouseAngle(e, spinnerContainer);
                 var dAngle = angle - prevAngle;
@@ -266,7 +264,6 @@
                     updateDial(dial, daysToHack());
                 }
                 else
-                    console.log(cummulativeAngle);
                     if(cummulativeAngle > 99) 
                         updateDial(dial, 100, false); 
                     // win condition
@@ -285,11 +282,8 @@
             }
         }
         function mouseDownHandler(e) {
-            console.log("rip");
             var days = daysToHack();
             var angle = mouseAngle(e, spinnerContainer);
-            console.log(e);
-            console.log(angle);
             var ep = 2;
             if(isMouseInDial(e, spinnerContainer) && angle > days - ep && angle < days + ep) {
                 dialClicked = true;
