@@ -53,6 +53,22 @@
 	<meta name="twitter:image:width" content="512"/>
 	<meta name="twitter:image:height" content="512"/>
 
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '1248563001937607'); // Insert your pixel ID here.
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1248563001937607&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->
+
 </head>
 <body>
 
@@ -107,7 +123,7 @@
 						<section class="content">
 							<h5>Apply for HackMIT by July 31st!</h5>
 
-                            <a href="//my-staging.hackmit.org" class="hexagon button">REGISTER</a>
+                            <a href="//my-staging.hackmit.org" class="hexagon button" id="register-button">REGISTER</a>
 						</section>
 					</li>
 					<li id="faq-section">
@@ -352,5 +368,12 @@
         ga('create', 'UA-63828172-1', 'auto');
         ga('send', 'pageview');
     </script>
+		<script>
+		// Facebook pixel
+		$( '#register-button' ).click(function() {
+			fbq('track', 'openRegistration');
+		});
+
+		</script>
 </body>
 </html>
