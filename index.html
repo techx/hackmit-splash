@@ -2,24 +2,24 @@
 <html>
 <!--
              __---~~~~--__                      __--~~~~---__
-            `\---~~~~~~~~\\                    //~~~~~~~~---/'  
-              \/~~~~~~~~~\||                  ||/~~~~~~~~~\/ 
+            `\---~~~~~~~~\\                    //~~~~~~~~---/'
+              \/~~~~~~~~~\||                  ||/~~~~~~~~~\/
                           `\\                //'
                             `\\            //'
                               ||          ||      Hey Doc!
-                    ______--~~~~~~~~~~~~~~~~~~--______              
-               ___ // _-~                        ~-_ \\ ___  
-              `\__)\/~                              ~\/(__/'          
-               _--`-___                            ___-'--_        
-             /~     `\ ~~~~~~~~------------~~~~~~~~ /'     ~\        
-            /|        `\         ________         /'        |\     
-           | `\   ______`\_      \------/      _/'______   /' |          
-           |   `\_~-_____\ ~-________________-~ /_____-~_/'   |  
-           `.     ~-__________________________________-~     .'       
+                    ______--~~~~~~~~~~~~~~~~~~--______
+               ___ // _-~                        ~-_ \\ ___
+              `\__)\/~                              ~\/(__/'
+               _--`-___                            ___-'--_
+             /~     `\ ~~~~~~~~------------~~~~~~~~ /'     ~\
+            /|        `\         ________         /'        |\
+           | `\   ______`\_      \------/      _/'______   /' |
+           |   `\_~-_____\ ~-________________-~ /_____-~_/'   |
+           `.     ~-__________________________________-~     .'
             `.      [_______/------|~~|------\_______]      .'
-             `\--___((____)(________\/________)(____))___--/'           
+             `\--___((____)(________\/________)(____))___--/'
               |>>>>>>||                            ||<<<<<<|
-              `\<<<<</'                            `\>>>>>/' 
+              `\<<<<</'                            `\>>>>>/'
 -->
 <head lang="en">
 	<meta charset="utf-8">
@@ -28,7 +28,7 @@
 	<link rel="shortcut icon" href="assets/images/icons/favicon.ico">
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/g/semantic-ui@2.2.1(components/reset.min.css+components/grid.min.css+semantic.min.css)">
-	<link href="https://fonts.googleapis.com/css?family=Karla|Poppins:400,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Karla|Poppins:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="stylesheets/app.css">
 
 	<title>HACKMIT 2017</title>
@@ -52,6 +52,22 @@
 	<meta property="og:image:type" content="image/png"/>
 	<meta name="twitter:image:width" content="512"/>
 	<meta name="twitter:image:height" content="512"/>
+
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '1248563001937607'); // Insert your pixel ID here.
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1248563001937607&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->
 
 </head>
 <body>
@@ -92,7 +108,7 @@
 			<a class="spinner middle aligned content" href="#!" draggable="false">
                 <div class="spinner-container">
                     <img id="outer-spinner" src="assets/images/outer-spinner.svg" draggable="false"/>
-                    <object data="assets/images/spinner.svg" type="image/svg+xml" id="spinner" 
+                    <object data="assets/images/spinner.svg" type="image/svg+xml" id="spinner"
                         width="100%" height="100%"></object>
                 </div>
 			</a>
@@ -107,7 +123,7 @@
 						<section class="content">
 							<h5>Apply for HackMIT by July 31st!</h5>
 
-                            <a href="//my.hackmit.org" class="hexagon button">REGISTER</a>
+                            <a href="//my.hackmit.org" class="hexagon button" id="register-button">REGISTER</a>
 						</section>
 					</li>
 					<li id="faq-section">
@@ -352,5 +368,12 @@
         ga('create', 'UA-63828172-1', 'auto');
         ga('send', 'pageview');
     </script>
+		<script>
+		// Facebook pixel
+		$( '#register-button' ).click(function() {
+			fbq('track', 'Lead');
+		});
+
+		</script>
 </body>
 </html>
