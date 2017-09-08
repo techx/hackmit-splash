@@ -272,7 +272,7 @@ body.section-expanded {
             z-index: 99999;
             overflow-y: auto;
             overflow-x: hidden;
-            border-radius: 0 $content-border-radius 0 0;
+            border-radius: 0 0 0 $content-border-radius;
         }
     }
 
@@ -403,12 +403,60 @@ body.section-expanded {
     }
 }
 
-#sponsors-section .above {
-    top: calc(-100% - 50px);
+#sponsors-section {
+    .above {
+        /* TODO: add scrollbar to logo pane */
+        top: calc(-100% - 55px);
 
-    .content {
-        max-width: 240px;
-        margin-top: 0;
+        .content {
+            margin-top: 0;
+        }
+    }
+
+    &.expanded .right .content {
+        display: flex;
+    }
+
+    .right .content {
+        max-height: 460px;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        padding: 5px 5px 5px 5px;
+        margin: 5px 5px 5px 5px;
+
+        //background-color: #FFFFFF;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        //mix-blend-mode: multiply;
+        -webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);
+
+        &.platinum, &.custom {
+            width: 145px;
+            height: 145px;
+        }
+
+        &.gold {
+            width: 125px;
+            height: 125px;
+        }
+
+        &.silver {
+            width: 110px;
+            height: 110px;
+        }
+
+        &.bronze {
+            width: 90px;
+            height: 90px;
+        }
     }
 }
 
@@ -442,10 +490,6 @@ body.section-expanded {
     visibility: hidden;
     opacity: 0;
 }
-
-//#spinner {
-//    visibility: hidden;
-//}
 
 @media (min-aspect-ratio: 16/9) {
     #fs-video {
