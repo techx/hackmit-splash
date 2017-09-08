@@ -293,7 +293,7 @@ footer {
         max-width: 180px; }
     .controls ul .right .content {
       margin-top: 15px !important;
-      border-radius: 0 0 50px 0; }
+      border-radius: 0 0 0 50px; }
     .controls ul .above .content {
       padding-top: 15px;
       padding-bottom: 15px;
@@ -491,7 +491,7 @@ body.section-expanded .controls {
     z-index: 99999;
     overflow-y: auto;
     overflow-x: hidden;
-    border-radius: 0 50px 0 0; }
+    border-radius: 0 0 0 50px; }
 .controls .expanded .content {
   display: block; }
 
@@ -566,10 +566,38 @@ body.section-expanded .controls {
   color: #BEE7F0; }
 
 #sponsors-section .above {
-  top: calc(-100% - 50px); }
+  /* TODO: add scrollbar to logo pane */
+  top: calc(-100% - 55px); }
   #sponsors-section .above .content {
-    max-width: 240px;
     margin-top: 0; }
+#sponsors-section.expanded .right .content {
+  display: flex; }
+#sponsors-section .right .content {
+  max-height: 460px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+#sponsors-section .logo {
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1); }
+  #sponsors-section .logo.platinum, #sponsors-section .logo.custom {
+    width: 145px;
+    height: 145px; }
+  #sponsors-section .logo.gold {
+    width: 125px;
+    height: 125px; }
+  #sponsors-section .logo.silver {
+    width: 110px;
+    height: 110px; }
+  #sponsors-section .logo.bronze {
+    width: 90px;
+    height: 90px; }
 
 #spinner {
   pointer-events: none; }
