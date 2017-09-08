@@ -154,7 +154,7 @@ header, footer {
     position: absolute;
     height: 32px; }
   header .left, header .right, footer .left, footer .right {
-    width: 212.6153846154px;
+    width: 212.61538px;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #252C37; }
@@ -189,7 +189,7 @@ footer {
   footer .mid {
     border-bottom: 0.5px solid #BEE7F0; }
   footer .left, footer .right {
-    bottom: 19.3846153846px; }
+    bottom: 19.38462px; }
     footer .left:after, footer .right:after {
       bottom: 4px; }
   footer .left {
@@ -580,9 +580,9 @@ body.section-expanded .controls {
   align-items: center; }
 #sponsors-section .logo {
   background-color: transparent;
-  padding: 5px 5px 5px 5px;
-  margin: 5px 5px 5px 5px;
-  background-size: contain;
+  margin: 5px;
+  padding: 5px;
+  background-size: calc(100% - 10px) auto;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-filter: brightness(0) invert(1);
