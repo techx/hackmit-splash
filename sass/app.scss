@@ -427,16 +427,16 @@ body.section-expanded {
     }
 
     .logo {
+        background-color: transparent;
         padding: 5px 5px 5px 5px;
         margin: 5px 5px 5px 5px;
 
-        //background-color: #FFFFFF;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
-        //mix-blend-mode: multiply;
         -webkit-filter: brightness(0) invert(1);
                 filter: brightness(0) invert(1);
+        transition: .25s;
 
         &.platinum, &.custom {
             width: 145px;
@@ -457,6 +457,11 @@ body.section-expanded {
             width: 90px;
             height: 90px;
         }
+    }
+
+    .logo:hover {
+        -webkit-filter: brightness(1);
+        background-color: white;
     }
 }
 
