@@ -428,10 +428,10 @@ body.section-expanded {
 
     .logo {
         background-color: transparent;
-        padding: 5px 5px 5px 5px;
-        margin: 5px 5px 5px 5px;
+        margin: 5px;
+        padding: 5px;
 
-        background-size: contain;
+        background-size: calc(100% - 10px) auto;
         background-repeat: no-repeat;
         background-position: center center;
         -webkit-filter: brightness(0) invert(1);
