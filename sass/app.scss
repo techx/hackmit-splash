@@ -433,6 +433,7 @@ body.section-expanded {
         background-size: calc(100% - 10px) auto;
         background-repeat: no-repeat;
         background-position: center center;
+
         -webkit-filter: brightness(0) invert(1);
                 filter: brightness(0) invert(1);
         transition: .25s;
