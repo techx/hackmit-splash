@@ -154,7 +154,7 @@ header, footer {
     position: absolute;
     height: 32px; }
   header .left, header .right, footer .left, footer .right {
-    width: 212.61538px;
+    width: 212.6153846154px;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #252C37; }
@@ -189,7 +189,7 @@ footer {
   footer .mid {
     border-bottom: 0.5px solid #BEE7F0; }
   footer .left, footer .right {
-    bottom: 19.38462px; }
+    bottom: 19.3846153846px; }
     footer .left:after, footer .right:after {
       bottom: 4px; }
   footer .left {
@@ -293,7 +293,7 @@ footer {
         max-width: 180px; }
     .controls ul .right .content {
       margin-top: 15px !important;
-      border-radius: 0 0 50px 0; }
+      border-radius: 0 0 0 50px; }
     .controls ul .above .content {
       padding-top: 15px;
       padding-bottom: 15px;
@@ -491,7 +491,7 @@ body.section-expanded .controls {
     z-index: 99999;
     overflow-y: auto;
     overflow-x: hidden;
-    border-radius: 0 50px 0 0; }
+    border-radius: 0 0 0 50px; }
 .controls .expanded .content {
   display: block; }
 
@@ -566,10 +566,41 @@ body.section-expanded .controls {
   color: #BEE7F0; }
 
 #sponsors-section .above {
-  top: calc(-100% - 50px); }
+  /* TODO: add scrollbar to logo pane */
+  top: calc(-100% - 55px); }
   #sponsors-section .above .content {
-    max-width: 240px;
     margin-top: 0; }
+#sponsors-section.expanded .right .content {
+  display: flex; }
+#sponsors-section .right .content {
+  max-height: 460px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+#sponsors-section .logo {
+  margin: 5px;
+  padding: 5px;
+  background-size: calc(100% - 10px) auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+  transition: .25s; }
+  #sponsors-section .logo.platinum, #sponsors-section .logo.custom {
+    width: 145px;
+    height: 145px; }
+  #sponsors-section .logo.gold {
+    width: 125px;
+    height: 125px; }
+  #sponsors-section .logo.silver {
+    width: 110px;
+    height: 110px; }
+  #sponsors-section .logo.bronze {
+    width: 90px;
+    height: 90px; }
+#sponsors-section .logo:hover {
+  -webkit-filter: brightness(1); }
 
 #spinner {
   pointer-events: none; }
