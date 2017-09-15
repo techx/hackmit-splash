@@ -128,13 +128,10 @@
     /* Update DOM */ 	
 	function updateCountdown(countdownElement, days) {
         var remainingMessage = " DAYS REMAINING";
-        var launchMessage = "<a id='innerSpinnerAnchorText' href='http://delorean.codes'>delorean.codes</a>";
+        var launchMessage = "HackMIT is here!";
         
-		if (days > 0) {
-			countdownElement.innerHTML = days + remainingMessage;
-		}
-		else {
-			countdownElement.innerHTML = launchMessage;
+		if (days == 100) {
+            countdownElement.innerHTML = "<a id='innerSpinnerAnchorText' href='http://delorean.codes'>delorean.codes</a>";
 
             var stuff = document.getElementById("stuff");
             stuff.style.display = "inherit";
@@ -143,6 +140,21 @@
             setTimeout(function() {
                 document.getElementById("innerSpinnerAnchorText").click()
             }, 2000);
+
+		}
+        else if(days > 0) {
+			countdownElement.innerHTML = days + remainingMessage;
+        }
+		else {
+			countdownElement.innerHTML = launchMessage;
+
+            // var stuff = document.getElementById("stuff");
+            // stuff.style.display = "inherit";
+            // fadeIn(stuff, 100);
+
+            // setTimeout(function() {
+            //     document.getElementById("innerSpinnerAnchorText").click()
+            // }, 2000);
 		}
 	}
 
@@ -267,12 +279,10 @@
                     dialClicked = false;
                     updateDial(dial, daysToHack());
                 }
-                else
-                    if(cummulativeAngle > 99) 
+                else {
+                    // new win condition 
+                    if(cummulativeAngle > 99) { 
                         updateDial(dial, 100, false); 
-                    // win condition
-                    else if(cummulativeAngle < 1) {
-                        updateDial(dial, 0, false);
                         spinnerContainer.removeEventListener('mousedown', mouseDownHandler, false);
                         spinnerContainer.removeEventListener('mousemove', mouseMoveHandler, false);
                         spinnerContainer.removeEventListener('mouseup', mouseUpHandler, false);
@@ -281,8 +291,12 @@
                         spinnerContainer.removeEventListener("touchcancel", touchEndHandler, false);
                         spinnerContainer.removeEventListener("touchmove", touchMoveHandler, false);
                     }
+                    else if(cummulativeAngle < 1) {
+                        updateDial(dial, 0, false);
+                    }
                     else
                         updateDial(dial, cummulativeAngle, false); 
+                }
             }
         }
         function mouseDownHandler(e) {
