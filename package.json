@@ -1,0 +1,27 @@
+{
+  "name": "hackmit-splash-2018",
+  "version": "0.0.1",
+  "description": "Splash page for HackMIT 2018!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techx/hackmit-splash-2018.git"
+  },
+  "author": "",
+  "license": "CC BY-SA",
+  "bugs": {
+    "url": "https://github.com/techx/hackmit-splash-2018/issues"
+  },
+  "homepage": "https://github.com/techx/hackmit-splash-2018#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-header": "^2.0.5",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1"
+  }
+}
