@@ -1,0 +1,46 @@
+// _reset.scss
+// Reset styles for consistent display across browsers
+
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// Reset all elements to normalized settings
+html, body, div,
+nav, header, main, section, footer,
+h1, h2, h3, p, a, img,
+form, input,
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  outline: none;
+  vertical-align: baseline;
+  background: transparent;
+  line-height: inherit;
+}
+:focus {
+  outline: none;
+}
+
+// link resets
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover, &:link, &:visited, &:active, &:focus {
+    text-decoration: none;
+  }
+}
