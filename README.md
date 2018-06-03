@@ -12,3 +12,8 @@ Splash page for HackMIT 2018!
  - [Mobile View]()
 
 ## TODO
+ - Responsive Stuff (after we get a mobile view ^)
+ - Place text in between buildings
+ - Place signs
+ - Place Logo
+ - Sign Animations
