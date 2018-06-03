@@ -1,6 +1,9 @@
 .parallax {
     position: relative;
     height: 100%;
+    background-image: url('../assets/backgrounds/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .layer {
     background-position: bottom center;
@@ -11,10 +14,13 @@
 }
 #layer-1 {
     background-image: url('../assets/backgrounds/skyline1.svg');
+    transform: translate3d(0px, 80px, 0px);
 }
 #layer-2 {
     background-image: url('../assets/backgrounds/skyline2.svg');
+    transform: translate3d(0px, 120px, 0px);
 }
 #layer-3 {
     background-image: url('../assets/backgrounds/skyline3.svg');
+    transform: translate3d(0px, 300px, 0px);
 }
