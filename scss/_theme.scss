@@ -1,2 +1,39 @@
-// SITE THEME
 // colors
+$pink: #ff36bf;
+$blue: #36faea;
+$green: #b9f734;
+$red: #ec3e5b;
+$background: #180724;
+$textcolor: #edfaf0;
+
+// fonts
+@font-face {
+    font-family: "BrandonGrotesque";
+    src: url('../fonts/Brandon_reg.otf') format('opentype');
+}
+@font-face {
+    font-family: "BrandonGrotesque";
+    font-style: italic, oblique;
+    src: url('../fonts/Brandon_reg_it.otf') format('opentype');
+}
+@font-face {
+    font-family: "BrandonGrotesque";
+    font-weight: bold;
+    src: url('../fonts/Brandon_bld.otf') format('opentype');
+}
+@font-face {
+    font-family: "BrandonGrotesqueBlack";
+    src: url('../fonts/Brandon_blk.otf') format('opentype');
+}
+@font-face {
+    font-family: "BrandonGrotesqueBlack";
+    font-style: italic, oblique;
+    src: url('../fonts/Brandon_blk_it.otf') format('opentype');
+}
+$body-font: "BrandonGrotesque", sans-serif;
+$header-font: "BrandonGrotesqueBlack", sans-serif;
+$font-size-hm: 3.5rem, 3rem, 2.5rem, 2rem;
+$font-size-ht: 6rem, 4rem, 3rem, 2rem;
+$font-size-hd: 6rem, 4rem, 3rem, 2rem;
+$font-weight-h: 
+$letter-spacing-h: 
