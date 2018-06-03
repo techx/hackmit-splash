@@ -2,7 +2,8 @@
 
 // import base
 @import "./_reset.scss";
-@import "./_theme.scss";
 @import "./_responsive.scss";
+@import "./_theme.scss";
 
 // import rules
+@import "./parallax.scss";

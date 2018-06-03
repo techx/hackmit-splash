@@ -39,3 +39,108 @@ a {
   text-decoration: none; }
   a:hover, a:link, a:visited, a:active, a:focus {
     text-decoration: none; }
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("../fonts/Brandon_reg.otf") format("opentype"); }
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  font-style: italic, oblique;
+  src: url("../fonts/Brandon_reg_it.otf") format("opentype"); }
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  font-weight: bold;
+  src: url("../fonts/Brandon_bld.otf") format("opentype"); }
+
+@font-face {
+  font-family: "BrandonGrotesqueBlack";
+  src: url("../fonts/Brandon_blk.otf") format("opentype"); }
+
+@font-face {
+  font-family: "BrandonGrotesqueBlack";
+  font-style: italic, oblique;
+  src: url("../fonts/Brandon_blk_it.otf") format("opentype"); }
+
+html {
+  color: #edfaf0;
+  font-family: "BrandonGrotesque", sans-serif;
+  height: 100%;
+  line-height: 1.5; }
+
+::selection {
+  background: #36faea;
+  text-shadow: none; }
+
+body {
+  font-size: 1rem; }
+
+h1 {
+  font-family: "BrandonGrotesqueBlack", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.06rem; }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 3.5rem; } }
+  @media screen and (min-width: 769px), print {
+    h1 {
+      font-size: 6rem; } }
+  @media screen and (min-width: 1008px) {
+    h1 {
+      font-size: 6rem; } }
+
+h2 {
+  font-family: "BrandonGrotesqueBlack", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.05rem; }
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 3rem; } }
+  @media screen and (min-width: 769px), print {
+    h2 {
+      font-size: 4rem; } }
+  @media screen and (min-width: 1008px) {
+    h2 {
+      font-size: 4rem; } }
+
+h3 {
+  font-family: "BrandonGrotesqueBlack", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0; }
+  @media screen and (max-width: 768px) {
+    h3 {
+      font-size: 2.5rem; } }
+  @media screen and (min-width: 769px), print {
+    h3 {
+      font-size: 3rem; } }
+  @media screen and (min-width: 1008px) {
+    h3 {
+      font-size: 3rem; } }
+
+h4 {
+  font-family: "BrandonGrotesqueBlack", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0; }
+  @media screen and (max-width: 768px) {
+    h4 {
+      font-size: 2rem; } }
+  @media screen and (min-width: 769px), print {
+    h4 {
+      font-size: 2rem; } }
+  @media screen and (min-width: 1008px) {
+    h4 {
+      font-size: 2rem; } }
+
+.layer {
+  background-position: bottom center;
+  width: 100%; }
+
+#layer-1 {
+  background-image: url("../assets/backgrounds/skyline1.svg"); }
+
+#layer-2 {
+  background-image: url("../assets/backgrounds/skyline2.svg"); }
+
+#layer-3 {
+  background-image: url("../assets/backgrounds/skyline3.svg"); }
