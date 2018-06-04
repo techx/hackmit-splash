@@ -8,68 +8,68 @@ $text-white: #edfaf0;
 
 // fonts
 @font-face {
-    font-family: "BrandonGrotesque";
-    src: url('../fonts/Brandon_reg.otf') format('opentype');
+  font-family: "BrandonGrotesque";
+  src: url("../fonts/Brandon_reg.otf") format("opentype");
 }
 @font-face {
-    font-family: "BrandonGrotesque";
-    font-style: italic, oblique;
-    src: url('../fonts/Brandon_reg_it.otf') format('opentype');
+  font-family: "BrandonGrotesque";
+  font-style: italic, oblique;
+  src: url("../fonts/Brandon_reg_it.otf") format("opentype");
 }
 @font-face {
-    font-family: "BrandonGrotesque";
-    font-weight: bold;
-    src: url('../fonts/Brandon_bld.otf') format('opentype');
+  font-family: "BrandonGrotesque";
+  font-weight: bold;
+  src: url("../fonts/Brandon_bld.otf") format("opentype");
 }
 @font-face {
-    font-family: "BrandonGrotesqueBlack";
-    src: url('../fonts/Brandon_blk.otf') format('opentype');
+  font-family: "BrandonGrotesqueBlack";
+  src: url("../fonts/Brandon_blk.otf") format("opentype");
 }
 @font-face {
-    font-family: "BrandonGrotesqueBlack";
-    font-style: italic, oblique;
-    src: url('../fonts/Brandon_blk_it.otf') format('opentype');
+  font-family: "BrandonGrotesqueBlack";
+  font-style: italic, oblique;
+  src: url("../fonts/Brandon_blk_it.otf") format("opentype");
 }
 $body-font: "BrandonGrotesque", sans-serif;
 $header-font: "BrandonGrotesqueBlack", sans-serif;
 $font-size-hm: 3.5rem, 3rem, 2.5rem, 2rem; // random
 $font-size-ht: 6rem, 4rem, 3rem, 2rem; //  random
 $font-size-hd: 6rem, 4rem, 3rem, 2rem; // random
-$font-weight-h: 800, 800, 700, 500; // random 
+$font-weight-h: 800, 800, 700, 500; // random
 $letter-spacing-h: 0.06rem, 0.05rem, 0, 0; // random
 
 html {
-    color: $text-white;
-    font-family: $body-font;
-    height: 100%;
-    line-height: 1.5;
+  color: $text-white;
+  font-family: $body-font;
+  height: 100%;
+  line-height: 1.5;
 }
 
 ::selection {
-    background: $blue;
-    text-shadow: none;
+  background: $blue;
+  text-shadow: none;
 }
 
 body {
-    font-size: 1rem;
-    height: 100%;
-    background-color: $bg-color;
+  font-size: 1rem;
+  height: 100%;
+  background-color: $bg-color;
 }
 
 @for $index from 1 through 4 {
-    h#{$index} {
-        font-family: $header-font;
-        font-weight: nth($font-weight-h, $index);
-        letter-spacing: nth($letter-spacing-h, $index);
+  h#{$index} {
+    font-family: $header-font;
+    font-weight: nth($font-weight-h, $index);
+    letter-spacing: nth($letter-spacing-h, $index);
 
-        @include mobile {
-        font-size: nth($font-size-hm, $index);
-        }
-        @include tablet {
-        font-size: nth($font-size-ht, $index);
-        }
-        @include desktop {
-        font-size: nth($font-size-hd, $index);
-        }
+    @include mobile {
+      font-size: nth($font-size-hm, $index);
     }
+    @include tablet {
+      font-size: nth($font-size-ht, $index);
+    }
+    @include desktop {
+      font-size: nth($font-size-hd, $index);
+    }
+  }
 }
