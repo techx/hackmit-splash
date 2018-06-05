@@ -1,0 +1,16 @@
+.blurb {
+    position: absolute;
+    width: 25vw;
+    max-width: 25vw;
+    z-index: 3;
+    // margin-left: -12.5vw;
+    left: 50vw;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.test {
+    width: 75%;
+    display: block;
+    margin: auto;
+    padding-top: 60px;
+}

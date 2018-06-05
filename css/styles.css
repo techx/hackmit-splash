@@ -46,22 +46,12 @@ a {
 
 @font-face {
   font-family: "BrandonGrotesque";
-  font-style: italic, oblique;
-  src: url("../fonts/Brandon_reg_it.otf") format("opentype"); }
-
-@font-face {
-  font-family: "BrandonGrotesque";
   font-weight: bold;
   src: url("../fonts/Brandon_bld.otf") format("opentype"); }
 
 @font-face {
   font-family: "BrandonGrotesqueBlack";
   src: url("../fonts/Brandon_blk.otf") format("opentype"); }
-
-@font-face {
-  font-family: "BrandonGrotesqueBlack";
-  font-style: italic, oblique;
-  src: url("../fonts/Brandon_blk_it.otf") format("opentype"); }
 
 html {
   color: #edfaf0;
@@ -101,10 +91,10 @@ h2 {
       font-size: 3rem; } }
   @media screen and (min-width: 769px), print {
     h2 {
-      font-size: 4rem; } }
+      font-size: 2rem; } }
   @media screen and (min-width: 1008px) {
     h2 {
-      font-size: 4rem; } }
+      font-size: 2rem; } }
 
 h3 {
   font-family: "BrandonGrotesqueBlack", sans-serif;
@@ -189,3 +179,18 @@ h4 {
 .floor {
   position: relative;
   margin-bottom: -10px; }
+
+.blurb {
+  position: absolute;
+  width: 25vw;
+  max-width: 25vw;
+  z-index: 3;
+  left: 50vw;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.test {
+  width: 75%;
+  display: block;
+  margin: auto;
+  padding-top: 60px; }
