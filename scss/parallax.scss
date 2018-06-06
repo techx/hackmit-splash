@@ -45,18 +45,18 @@
 }
 
 #layer-1 {
-  background-image: url("../assets/backgrounds/skyline1.svg");
+  background-image: url("../assets/backgrounds/perspective1.svg");
   transform: translateZ(-1px) translateY(-15vh) scale(2);
   // transform: translate3d(0px, 80px, 0px);
 }
 #layer-2 {
-  background-image: url("../assets/backgrounds/skyline2.svg");
-  transform: translateZ(-0.5px) translateY(-10vh) scale(1.5);
+  background-image: url("../assets/backgrounds/perspective2.svg");
+  transform: translateZ(-0.5px) translateY(-5vh) scale(1.5);
   // transform: translate3d(0px, 120px, 0px);
 }
 #layer-3 {
-  background-image: url("../assets/backgrounds/skyline3.svg");
-  transform: translateZ(0px);
+  background-image: url("../assets/backgrounds/perspective3.svg");
+  transform: translateZ(0px) translateY(10vh);
   // transform: translate3d(0px, 300px, 0px);
 }
 

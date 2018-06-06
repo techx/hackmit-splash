@@ -162,16 +162,16 @@ h4 {
   background-repeat: repeat-x; }
 
 #layer-1 {
-  background-image: url("../assets/backgrounds/skyline1.svg");
+  background-image: url("../assets/backgrounds/perspective1.svg");
   transform: translateZ(-1px) translateY(-15vh) scale(2); }
 
 #layer-2 {
-  background-image: url("../assets/backgrounds/skyline2.svg");
-  transform: translateZ(-0.5px) translateY(-10vh) scale(1.5); }
+  background-image: url("../assets/backgrounds/perspective2.svg");
+  transform: translateZ(-0.5px) translateY(-5vh) scale(1.5); }
 
 #layer-3 {
-  background-image: url("../assets/backgrounds/skyline3.svg");
-  transform: translateZ(0px); }
+  background-image: url("../assets/backgrounds/perspective3.svg");
+  transform: translateZ(0px) translateY(10vh); }
 
 .streetview {
   margin-top: -1px; }
@@ -182,14 +182,15 @@ h4 {
 
 .blurb {
   position: absolute;
-  width: 25vw;
-  max-width: 25vw;
+  width: 22vw;
+  max-width: 22vw;
   z-index: 3;
   left: 50vw;
   top: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
-.test {
+.logo {
   width: 75%;
   display: block;
   margin: auto;

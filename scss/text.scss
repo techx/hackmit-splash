@@ -1,14 +1,15 @@
 .blurb {
     position: absolute;
-    width: 25vw;
-    max-width: 25vw;
+    width: 22vw;
+    max-width: 22vw;
     z-index: 3;
     // margin-left: -12.5vw;
     left: 50vw;
     top: 50%;
     transform: translate(-50%, -50%);
+    text-align: center
 }
-.test {
+.logo {
     width: 75%;
     display: block;
     margin: auto;
