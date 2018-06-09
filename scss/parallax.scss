@@ -39,15 +39,15 @@
 
 #layer-1 {
   background-image: url("../assets/backgrounds/perspective1.svg");
-  transform: translateZ(-1px) translateY(-10vh) translateX(0px) scale(2.08);
+  transform: translateZ(-1px) translateY(-10vh) scale(2.08); // was scale(2)
 }
 #layer-2 {
   background-image: url("../assets/backgrounds/perspective2.svg");
-  transform: translateZ(-0.5px) translateY(-5vh) translateX(0px) scale(1.52);
+  transform: translateZ(-0.5px) translateY(-5vh) scale(1.52); // was scale(1.5)
 }
 #layer-3 {
   background-image: url("../assets/backgrounds/perspective3.svg");
-  transform: translateZ(0px) translateY(10vh) translateX(0px);
+  transform: translateZ(0px) translateY(10vh);
 }
 
 .streetview { // bottom half of page
