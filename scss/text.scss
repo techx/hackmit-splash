@@ -15,36 +15,38 @@
     margin: auto;
     padding-top: 60px;
 }
-.heading {
-    left: 50vw;
-    transform: translate(-50%, 0%);
-    width: 50%;
+.heading { // "Welcome to HACKMIT 2018"
+    width: 600px; // same as header width
     position: relative;
     z-index: 1;
+    text-align: center;
+    color: $green;
+    font-size: 70px;
+    line-height: 1; // avoids awkward gap between lines
+    margin-top: 20px; // manually set to match bgd
 }
-.test {
-    // left: 50vw;
-    // transform: translate(-50%, 0%);
+.header { // Wraps the sign at the top
+    left: calc(50vw - 300px); // 50vw - width/2
     margin: 0 auto;
     background-image: url("../assets/graphics/sign_no_words.svg");
-    // background-image: url("../assets/backgrounds/perspective1.svg");
-//   transform: translateZ(-1px) translateY(-15vh) scale(2);
     background-position: top center;
     background-repeat: no-repeat;
-    width: 50%;
-    height: 50%;
-    position: relative;
-    // z-index: 1;
+    width: 600px; // should think about this more in terms of responsiveness
+    // width: 50%;
+    height: 300px;
+    position: absolute;
 }
-.navbar {
+.navbar { // Wraps the links above the header sign
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     padding-top: 10px;
     width: 80%;
     margin: 0 auto;
-    // position: relative;
-    // z-index: 1;
-    // left: 50vw;
-    // transform: translate(-50%, 0%);
-    text-align: justify;
+    height: calc(3em - 1px);
+    color: $bg-color;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 .navbar-hack {
     width: 100%;
