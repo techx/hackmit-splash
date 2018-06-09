@@ -195,3 +195,19 @@ h4 {
   display: block;
   margin: auto;
   padding-top: 60px; }
+
+.sign {
+  position: absolute;
+  z-index: 2; }
+
+.sign-left {
+  float: left; }
+
+.sign-right {
+  left: 62%; }
+
+.sign-bottom {
+  padding-top: 70%; }
+
+.sign-top {
+  padding-top: 60%; }
