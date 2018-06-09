@@ -57,7 +57,8 @@ html {
   color: #edfaf0;
   font-family: "BrandonGrotesque", sans-serif;
   height: 100%;
-  line-height: 1.5; }
+  line-height: 1.5;
+  overflow-x: hidden; }
 
 ::selection {
   background: #36faea;
@@ -88,10 +89,10 @@ h2 {
   letter-spacing: 0.05rem; }
   @media screen and (max-width: 768px) {
     h2 {
-      font-size: 3rem; } }
+      font-size: 1rem; } }
   @media screen and (min-width: 769px), print {
     h2 {
-      font-size: 2rem; } }
+      font-size: 1rem; } }
   @media screen and (min-width: 1008px) {
     h2 {
       font-size: 2rem; } }
@@ -102,13 +103,13 @@ h3 {
   letter-spacing: 0; }
   @media screen and (max-width: 768px) {
     h3 {
-      font-size: 2.5rem; } }
+      font-size: 1rem; } }
   @media screen and (min-width: 769px), print {
     h3 {
-      font-size: 3rem; } }
+      font-size: 1rem; } }
   @media screen and (min-width: 1008px) {
     h3 {
-      font-size: 3rem; } }
+      font-size: 2rem; } }
 
 h4 {
   font-family: "BrandonGrotesqueBlack", sans-serif;
@@ -116,10 +117,10 @@ h4 {
   letter-spacing: 0; }
   @media screen and (max-width: 768px) {
     h4 {
-      font-size: 2rem; } }
+      font-size: 1rem; } }
   @media screen and (min-width: 769px), print {
     h4 {
-      font-size: 2rem; } }
+      font-size: 1rem; } }
   @media screen and (min-width: 1008px) {
     h4 {
       font-size: 2rem; } }
@@ -195,3 +196,29 @@ h4 {
   display: block;
   margin: auto;
   padding-top: 60px; }
+
+.heading {
+  left: 50vw;
+  transform: translate(-50%, 0%);
+  width: 50%;
+  position: relative;
+  z-index: 1; }
+
+.test {
+  margin: 0 auto;
+  background-image: url("../assets/graphics/sign_no_words.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 50%;
+  position: relative; }
+
+.navbar {
+  padding-top: 10px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify; }
+
+.navbar-hack {
+  width: 100%;
+  display: inline-block; }
