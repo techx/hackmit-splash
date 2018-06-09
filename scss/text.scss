@@ -1,0 +1,52 @@
+.blurb {
+    position: absolute;
+    width: 22vw;
+    max-width: 22vw;
+    z-index: 3;
+    // margin-left: -12.5vw;
+    left: 50vw;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center
+}
+.logo {
+    width: 75%;
+    display: block;
+    margin: auto;
+    padding-top: 60px;
+}
+.heading {
+    left: 50vw;
+    transform: translate(-50%, 0%);
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+.test {
+    // left: 50vw;
+    // transform: translate(-50%, 0%);
+    margin: 0 auto;
+    background-image: url("../assets/graphics/sign_no_words.svg");
+    // background-image: url("../assets/backgrounds/perspective1.svg");
+//   transform: translateZ(-1px) translateY(-15vh) scale(2);
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    // z-index: 1;
+}
+.navbar {
+    padding-top: 10px;
+    width: 80%;
+    margin: 0 auto;
+    // position: relative;
+    // z-index: 1;
+    // left: 50vw;
+    // transform: translate(-50%, 0%);
+    text-align: justify;
+}
+.navbar-hack {
+    width: 100%;
+    display: inline-block;
+}
