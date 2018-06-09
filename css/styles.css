@@ -197,28 +197,18 @@ h4 {
   margin: auto;
   padding-top: 60px; }
 
-.heading {
-  left: 50vw;
-  transform: translate(-50%, 0%);
-  width: 50%;
-  position: relative;
-  z-index: 1; }
+.sign {
+  position: absolute;
+  z-index: 2; }
 
-.test {
-  margin: 0 auto;
-  background-image: url("../assets/graphics/sign_no_words.svg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  width: 50%;
-  height: 50%;
-  position: relative; }
+.sign-left {
+  float: left; }
 
-.navbar {
-  padding-top: 10px;
-  width: 80%;
-  margin: 0 auto;
-  text-align: justify; }
+.sign-right {
+  left: 62%; }
 
-.navbar-hack {
-  width: 100%;
-  display: inline-block; }
+.sign-bottom {
+  padding-top: 70%; }
+
+.sign-top {
+  padding-top: 60%; }
