@@ -175,8 +175,15 @@ h4 {
   background: #180724;
   margin-top: -1px; }
 
-.floor {
+.streetview #buildings {
   position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-top: -10vh; }
+
+#floor {
+  position: relative;
+  margin-top: -5.2vw;
   margin-bottom: -10px; }
 
 .blurb {
@@ -213,7 +220,8 @@ h4 {
   background-repeat: no-repeat;
   width: 600px;
   height: 300px;
-  position: absolute; }
+  position: absolute;
+  font-family: inherit; }
 
 .navbar {
   display: flex;
@@ -242,7 +250,7 @@ h4 {
   left: 62%; }
 
 .sign-bottom {
-  padding-top: 70%; }
+  padding-top: 60%; }
 
 .sign-top {
-  padding-top: 60%; }
+  padding-top: 50%; }

@@ -35,6 +35,7 @@
     // width: 50%;
     height: 300px;
     position: absolute;
+    font-family: inherit; //TODO: should be Lovelo Black
 }
 .navbar { // Wraps the links above the header sign
     display: flex;

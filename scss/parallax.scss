@@ -55,7 +55,16 @@
   margin-top: -1px;
 }
 
-.floor {
+.streetview #buildings {
   position: relative;
+  // bottom: -5.2vw;
+  width: 100%;
+  z-index: 1;
+  margin-top: -10vh; // move streetview closer to skyline
+}
+
+#floor {
+  position: relative;
+  margin-top: -5.2vw;
   margin-bottom: -10px; // deletes a weird gap
 }
