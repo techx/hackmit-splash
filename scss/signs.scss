@@ -10,6 +10,11 @@
       bottom: 0;
   }
   height: 12%;
+  transition: 0.25s all ease;
+  opacity: 1;
+  &.hide {
+      opacity: 0;
+  }
 }
 .sign {
     width: 100%;
@@ -61,7 +66,7 @@
 }
 
 .expanded-sign {
-    background-color: $pink;
+    // background-color: $pink;
     position: fixed;
     overflow: hidden;
     width: 100vw;

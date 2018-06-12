@@ -18,6 +18,11 @@
         padding-top: 20px;
         max-width: 80vw;
     }
+    transition: 0.25s all ease;
+    opacity: 1;
+    &.hide {
+        opacity: 0;
+    }
 }
 @mixin header-size {
     @include desktop {

@@ -195,7 +195,9 @@ h4 {
 
 .blurb {
   z-index: 3;
-  text-align: center; }
+  text-align: center;
+  transition: 0.25s all ease;
+  opacity: 1; }
   @media screen and (min-width: 769px), print {
     .blurb {
       position: absolute;
@@ -211,6 +213,8 @@ h4 {
       width: 80vw;
       padding-top: 20px;
       max-width: 80vw; } }
+  .blurb.hide {
+    opacity: 0; }
 
 .logo {
   width: 75%;
@@ -317,7 +321,9 @@ h4 {
 .sign-link {
   position: absolute;
   z-index: 2;
-  height: 12%; }
+  height: 12%;
+  transition: 0.25s all ease;
+  opacity: 1; }
   .sign-link:after {
     position: absolute;
     content: "";
@@ -325,6 +331,8 @@ h4 {
     right: 0;
     top: 0;
     bottom: 0; }
+  .sign-link.hide {
+    opacity: 0; }
 
 .sign {
   width: 100%;
@@ -382,7 +390,6 @@ h4 {
       bottom: 30%; } }
 
 .expanded-sign {
-  background-color: #ff36bf;
   position: fixed;
   overflow: hidden;
   width: 100vw;
