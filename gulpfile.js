@@ -17,7 +17,7 @@ var banner = ['/*!\n',
 
 // Compiles SCSS files from /scss into /css
 gulp.task('sass', function() {
-  return gulp.src('scss/styles.scss')
+  return gulp.src(['scss/styles.scss', 'scss/animation.scss'])
     .pipe(sass())
     .pipe(header(banner, {
       pkg: pkg
@@ -30,7 +30,7 @@ gulp.task('sass', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
-  return gulp.src('css/styles.css')
+  return gulp.src(['css/styles.css', 'css/animation.css'])
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
@@ -44,7 +44,7 @@ gulp.task('minify-css', ['sass'], function() {
 });
 
 // Default task
-gulp.task('default', ['sass', 'minify-css']);
+gulp.task('default', ['sass', 'animation-sass', 'minify-css']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {

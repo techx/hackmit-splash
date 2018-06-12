@@ -1,21 +1,63 @@
-.sign {
-//  width: 40%;
+.sign-link {
   position: absolute;
   z-index: 2;
+  &:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+  }
+  height: 12%;
 }
-.sign-left {
-    //right: 62%;
-    float: left;
+.sign {
+    width: 100%;
+    display: block;
 }
-
-.sign-right {
-    left: 62%;
-}
-
 .sign-bottom {
-    padding-top: 60%;
+    margin-top: 60%;
+    @include mobile {
+        margin-top: 0;
+        bottom: 10%;
+    }
+}
+.sign-top {
+    margin-top: 50%;
+    @include mobile {
+        margin-top: 0;
+        bottom: 20%;
+    }
 }
 
-.sign-top {
-    padding-top: 50%;
+#speakers-sign-link {
+    width: 40%; right:62.5%;
+}
+#faq-sign-link {
+    width:19.5%; right:82.5%;
+}
+#sponsors-sign-link {
+    width:40%; left:62.5%;
+}
+#register-sign-link {
+    width:35%; left:67.5%;
+    height: 11%;
+}
+
+.expanded-sign {
+    background-color: $pink;
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 0;
+    transition: 0.25s all ease;
+    display: none;
+    &.show1 {
+        &.show2 {
+            opacity: 1;
+        }
+        display: block;
+    }
 }

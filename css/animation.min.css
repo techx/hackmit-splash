@@ -1,0 +1,5 @@
+/*!
+ *  v0.0.1 (https://github.com/techx/hackmit-splash-2018#readme)
+ * Copyright 2018-2018 
+ * Licensed under CC BY-SA (https://github.com/techx/hackmit-splash-2018/blob/master/LICENSE)
+ */.flash-animation{animation:flash 2s infinite;-webkit-animation:flash 2s infinite;-moz-animation:flash 2s infinite;animation:flash 2s infinite}@-webkit-keyframes flash{0%{opacity:1}50%{opacity:.2}100%{opacity:1}}@-moz-keyframes flash{0%{opacity:1}50%{opacity:.2}100%{opacity:1}}@keyframes flash{0%{opacity:1}50%{opacity:.2}100%{opacity:1}}

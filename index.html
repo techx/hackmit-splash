@@ -11,36 +11,55 @@
     <!-- TWITTER CODE -->
 </head>
 <body>
+    <div id="#speakers-expanded" class="expanded-sign">
+      Speakers
+    </div>
+    <div id="#faq-expanded" class="expanded-sign">
+      FAQ
+    </div>
+    <div id="#sponsors-expanded" class="expanded-sign">
+      Sponsors
+    </div>
+    <div id="#register-expanded" class="expanded-sign">
+      Register
+    </div>
     <div class="parallax">
       <div class="background-skyline"></div>
       <div class="skyline">
         <div class="header">
-          <div class="navbar">
-            <a class="link">SPEAKERS</a>
-            <a class="link">FAQ</a>
-            <a class="link">SPONSORS</a>
-            <a class="link">REGISTER</a>
+          <div class="navbar navbar-desktop">
+            <a class="speakers-link" href="#">SPEAKERS</a>
+            <a class="faq-link" href="#">FAQ</a>
+            <a class="sponsors-link" href="#">SPONSORS</a>
+            <a class="register-link" href="#">REGISTER</a>
+          </div>
+          <div class="navbar navbar-mobile navbar-mobile-top">
+            <a class="speakers-link" href="#">SPEAKERS</a>
+            <a class="faq-link" href="#">FAQ</a>
           </div>
           <div class="heading">WELCOME TO HACKMIT 2018</div>
+          <div class="navbar navbar-mobile navbar-mobile-bottom">
+            <a class="sponsors-link" href="#">SPONSORS</a>
+            <a class="register-link" href="#">REGISTER</a>
+          </div>
         </div>
         <div class="layer" id="layer-1" data-speed="-0.50" data-offset="80"></div>
         <div class="layer" id="layer-2" data-speed="-0.25" data-offset="120"></div>
         <div class="layer" id="layer-3" data-speed="-0.10" data-offset="300"></div>
       </div>
       <div class="streetview">
-          <a><object data="assets/graphics/speakers.svg" class="sign sign-top" style="width: 40%; right:62.5%;"></object></a>
-          <a><object data="assets/graphics/faq.svg" class="sign sign-bottom" style="width:19.5%; right:82.5%;"></object></a>
-          <a><object data="assets/graphics/sponsors_1.svg" class="sign sign-top" style="width:40%; left:62.5%;"></object></a>
-          <img src="assets/graphics/greenx.svg" class="sign" style="width:9%; left:93.5%; padding-top: 70.5%;">
-          <a><object data="assets/graphics/register.svg" class="sign sign-bottom" style="width:35%; left:65%;"></object></a>
-
-          <img src="assets/backgrounds/buildings.png" id="buildings">
+          <a class="sign-link sign-top speakers-link" id="speakers-sign-link" href="#"><object id="speakers-sign" data="assets/graphics/speakers.svg" class="sign"></object></a>
+          <a class="sign-link sign-bottom faq-link" id="faq-sign-link" href="#"><object id="faq-sign" data="assets/graphics/faq.svg" class="sign"></object></a>
+          <a class="sign-link sign-top sponsors-link" id="sponsors-sign-link" href="#"><object id="sponsors-sign" data="assets/graphics/sponsors_1.svg" class="sign"></object></a>
+          <!--<img src="assets/graphics/greenx.svg" class="sign" style="width:9%; left:93.5%; padding-top: 70.5%;">-->
+          <a class="sign-link sign-bottom register-link" id="register-sign-link" href="#"><object id="register-sign" data="assets/graphics/registertext.svg" class="sign"></object></a>
           <div class="blurb">
             <h2>
                 Step into a world of boundless excitement and creation at the Massachusetts Institute of Technology September 15th-16th. Join 1,000 hackers as they hack and explore endless possibilities.
             </h2>
             <img src="assets/graphics/logo.svg" class="logo">
           </div>
+          <img src="assets/backgrounds/buildings.png" id="buildings">
       </div>
       <img src="assets/backgrounds/floor_3.svg" id="floor">
     </div>

@@ -45,6 +45,9 @@ a {
   a:hover, a:link, a:visited, a:active, a:focus {
     text-decoration: none; }
 
+body {
+  max-width: 100%; }
+
 @font-face {
   font-family: "BrandonGrotesque";
   src: url("../fonts/Brandon_reg.otf") format("opentype"); }
@@ -194,70 +197,184 @@ h4 {
   margin-bottom: -10px; }
 
 .blurb {
-  position: absolute;
-  width: 22vw;
-  max-width: 22vw;
   z-index: 3;
-  left: 50vw;
-  top: 50%;
-  transform: translate(-50%, -50%);
   text-align: center; }
+  @media screen and (min-width: 769px), print {
+    .blurb {
+      position: absolute;
+      width: 24vw;
+      max-width: 24vw;
+      left: 50vw;
+      top: 50%;
+      transform: translate(-50%, -50%); } }
+  @media screen and (max-width: 768px) {
+    .blurb {
+      position: relative;
+      margin: 0 auto;
+      width: 80vw;
+      padding-top: 20px;
+      max-width: 80vw; } }
 
 .logo {
   width: 75%;
   display: block;
   margin: auto;
   padding-top: 60px; }
+  @media screen and (max-width: 768px) {
+    .logo {
+      width: 22%;
+      padding-top: 4vh; } }
 
 .heading {
-  width: 600px;
+  width: 300px;
+  font-size: 35px;
   position: relative;
   z-index: 1;
   text-align: center;
   color: #b9f734;
-  font-size: 70px;
   line-height: 1;
-  margin-top: 20px; }
+  margin-top: 15px; }
+  @media screen and (min-width: 1008px) {
+    .heading {
+      width: 700px;
+      font-size: 82px; } }
+  @media screen and (min-width: 769px), print {
+    .heading {
+      width: 600px;
+      font-size: 70px; } }
+  @media screen and (min-width: 1008px) {
+    .heading {
+      margin-top: 27px; } }
+  @media screen and (min-width: 769px), print {
+    .heading {
+      margin-top: 20px; } }
 
 .header {
-  left: calc(50vw - 300px);
   margin: 0 auto;
   background-image: url("../assets/graphics/sign_no_words.svg");
   background-position: top center;
   background-repeat: no-repeat;
-  width: 600px;
+  width: 300px;
+  font-size: 35px;
   height: 300px;
   position: absolute;
-  font-family: inherit; }
+  font-family: inherit;
+  left: calc(50vw - 150px); }
+  @media screen and (min-width: 1008px) {
+    .header {
+      width: 700px;
+      font-size: 82px; } }
+  @media screen and (min-width: 769px), print {
+    .header {
+      width: 600px;
+      font-size: 70px; } }
+  @media screen and (min-width: 1008px) {
+    .header {
+      left: calc(50vw - 350px); } }
+  @media screen and (min-width: 769px), print {
+    .header {
+      left: calc(50vw - 300px); } }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 10px;
   width: 80%;
   margin: 0 auto;
-  height: calc(3em - 1px);
   color: #180724;
-  font-size: 1.4em;
   font-weight: bold; }
+
+@media screen and (min-width: 1008px) {
+  .navbar-desktop {
+    padding-top: 10px;
+    font-size: 1.4rem; } }
+
+@media screen and (min-width: 769px), print {
+  .navbar-desktop {
+    padding-top: 10px;
+    font-size: 1.4rem;
+    height: calc(4.2rem - 1px); } }
+
+@media screen and (max-width: 768px) {
+  .navbar-desktop {
+    display: none; } }
+
+.navbar-mobile {
+  font-size: 1.2rem; }
+  @media screen and (min-width: 769px), print {
+    .navbar-mobile {
+      display: none; } }
+
+.navbar-mobile-top {
+  height: calc(2.3rem - 1px); }
+
+.navbar-mobile-bottom {
+  height: calc(2.3rem - 1px); }
+  .navbar-mobile-bottom a {
+    z-index: 5; }
 
 .navbar-hack {
   width: 100%;
   display: inline-block; }
 
-.sign {
+.sign-link {
   position: absolute;
-  z-index: 2; }
+  z-index: 2;
+  height: 12%; }
+  .sign-link:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
 
-.sign-left {
-  float: left; }
-
-.sign-right {
-  left: 62%; }
+.sign {
+  width: 100%;
+  display: block; }
 
 .sign-bottom {
-  padding-top: 60%; }
+  margin-top: 60%; }
+  @media screen and (max-width: 768px) {
+    .sign-bottom {
+      margin-top: 0;
+      bottom: 10%; } }
 
 .sign-top {
-  padding-top: 50%; }
+  margin-top: 50%; }
+  @media screen and (max-width: 768px) {
+    .sign-top {
+      margin-top: 0;
+      bottom: 20%; } }
+
+#speakers-sign-link {
+  width: 40%;
+  right: 62.5%; }
+
+#faq-sign-link {
+  width: 19.5%;
+  right: 82.5%; }
+
+#sponsors-sign-link {
+  width: 40%;
+  left: 62.5%; }
+
+#register-sign-link {
+  width: 35%;
+  left: 67.5%;
+  height: 11%; }
+
+.expanded-sign {
+  background-color: #ff36bf;
+  position: fixed;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  opacity: 0;
+  transition: 0.25s all ease;
+  display: none; }
+  .expanded-sign.show1 {
+    display: block; }
+    .expanded-sign.show1.show2 {
+      opacity: 1; }

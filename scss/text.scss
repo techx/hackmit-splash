@@ -1,53 +1,119 @@
 .blurb {
-    position: absolute;
-    width: 22vw;
-    max-width: 22vw;
-    z-index: 3;
-    // margin-left: -12.5vw;
-    left: 50vw;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center
+    z-index: 3;    
+    text-align: center;
+    @include tablet {
+        position: absolute;
+        width: 24vw;
+        max-width: 24vw;
+        // margin-left: -12.5vw;
+        left: 50vw;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @include mobile {
+        // do something different
+        position: relative;
+        margin: 0 auto;
+        width: 80vw;
+        padding-top: 20px;
+        max-width: 80vw;
+    }
+}
+@mixin header-size {
+    @include desktop {
+        width: 700px;
+        font-size: 82px;
+    }
+    @include tablet {
+        width: 600px;
+        font-size: 70px;
+    }
+    width: 300px;
+    font-size: 35px;
 }
 .logo {
     width: 75%;
     display: block;
     margin: auto;
     padding-top: 60px;
+    @include mobile {
+        width: 22%;
+        padding-top: 4vh;
+    }
 }
 .heading { // "Welcome to HACKMIT 2018"
-    width: 600px; // same as header width
+    @include header-size();
     position: relative;
     z-index: 1;
     text-align: center;
     color: $green;
-    font-size: 70px;
     line-height: 1; // avoids awkward gap between lines
-    margin-top: 20px; // manually set to match bgd
+    
+    @include desktop {
+        margin-top: 27px; // manually set to match bgd
+    }
+    @include tablet {
+        margin-top: 20px; // manually set to match bgd
+    }
+    margin-top: 15px;
 }
 .header { // Wraps the sign at the top
-    left: calc(50vw - 300px); // 50vw - width/2
     margin: 0 auto;
     background-image: url("../assets/graphics/sign_no_words.svg");
     background-position: top center;
     background-repeat: no-repeat;
-    width: 600px; // should think about this more in terms of responsiveness
-    // width: 50%;
+    @include header-size();
     height: 300px;
     position: absolute;
     font-family: inherit; //TODO: should be Lovelo Black
+    @include desktop {
+        left: calc(50vw - 350px); // 50vw - width/2
+    }
+    @include tablet {
+        left: calc(50vw - 300px); // 50vw - width/2
+    }
+    left: calc(50vw - 150px); // 50vw - width/2
 }
 .navbar { // Wraps the links above the header sign
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-top: 10px;
     width: 80%;
     margin: 0 auto;
-    height: calc(3em - 1px);
     color: $bg-color;
-    font-size: 1.4em;
     font-weight: bold;
+}
+.navbar-desktop {
+    @include desktop { // TODO
+        padding-top: 10px;
+        font-size: 1.4rem;
+    }
+    @include tablet {
+        padding-top: 10px;
+        font-size: 1.4rem;
+        height: calc(4.2rem - 1px);
+    }
+    // height: calc(2.1rem - 1px);
+    // padding-top: 5px;    
+    // font-size: 0.7rem;
+    @include mobile {
+        display: none;
+    }
+}
+.navbar-mobile {
+    @include tablet {
+        display: none;
+    }
+    font-size: 1.2rem;
+}
+.navbar-mobile-top {
+    height: calc(2.3rem - 1px);
+}
+.navbar-mobile-bottom {
+    height: calc(2.3rem - 1px);
+    a {
+        z-index: 5;
+    }
 }
 .navbar-hack {
     width: 100%;
