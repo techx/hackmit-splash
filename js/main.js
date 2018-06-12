@@ -63,7 +63,7 @@ window.onload = function() {
                     signLink.addEventListener('click', function() {
                         // console.log("Click", this);
                         console.log('#' + name + '-expanded');
-                        var expandedSign = document.getElementById('#' + name + '-expanded');
+                        var expandedSign = document.getElementById(name + '-expanded');
                         if(expandedSign.classList.contains('show2')) { // hide
                             // console.log("HIDE");
                             // show the signs

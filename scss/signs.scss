@@ -82,3 +82,60 @@
         display: block;
     }
 }
+.expanded-bubble-left {
+    position: absolute;
+    @include desktop {
+
+    }
+    @include tablet {
+        width: 600px;
+        left: 20px;
+        bottom: 50px;
+    }
+    width: 300px;
+    left: 0px;
+    bottom: 20px;
+}
+.expanded-arrow-left {
+    position: absolute;
+    @include desktop {
+
+    }
+    @include tablet {
+        width: 200px;
+        left: 500px;
+        bottom: 345px;
+    }
+    width: 100px;
+    left: 240px;
+    bottom: 162px;
+}
+
+.expanded-bubble-right {
+    position: absolute;
+    @include desktop {
+
+    }
+    @include tablet {
+        width: 600px;
+        right: 20px;
+        bottom: 50px;
+    }
+    width: 300px;
+    right: 0px;
+    bottom: 20px;
+}
+.expanded-arrow-right {
+    position: absolute;
+    @include desktop {
+
+    }
+    @include tablet {
+        width: 200px;
+        right: 500px;
+        bottom: 345px;
+    }
+    width: 100px;
+    right: 240px;
+    bottom: 162px;
+}

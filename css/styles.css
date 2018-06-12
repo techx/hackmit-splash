@@ -402,3 +402,47 @@ h4 {
     display: block; }
     .expanded-sign.show1.show2 {
       opacity: 1; }
+
+.expanded-bubble-left {
+  position: absolute;
+  width: 300px;
+  left: 0px;
+  bottom: 20px; }
+  @media screen and (min-width: 769px), print {
+    .expanded-bubble-left {
+      width: 600px;
+      left: 20px;
+      bottom: 50px; } }
+
+.expanded-arrow-left {
+  position: absolute;
+  width: 100px;
+  left: 240px;
+  bottom: 162px; }
+  @media screen and (min-width: 769px), print {
+    .expanded-arrow-left {
+      width: 200px;
+      left: 500px;
+      bottom: 345px; } }
+
+.expanded-bubble-right {
+  position: absolute;
+  width: 300px;
+  right: 0px;
+  bottom: 20px; }
+  @media screen and (min-width: 769px), print {
+    .expanded-bubble-right {
+      width: 600px;
+      right: 20px;
+      bottom: 50px; } }
+
+.expanded-arrow-right {
+  position: absolute;
+  width: 100px;
+  right: 240px;
+  bottom: 162px; }
+  @media screen and (min-width: 769px), print {
+    .expanded-arrow-right {
+      width: 200px;
+      right: 500px;
+      bottom: 345px; } }
