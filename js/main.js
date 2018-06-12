@@ -61,35 +61,39 @@ window.onload = function() {
                 (function() {
                     var signLink = signLinks[k];
                     signLink.addEventListener('click', function() {
-                        // console.log("Click", this);
-                        console.log('#' + name + '-expanded');
                         var expandedSign = document.getElementById(name + '-expanded');
-                        if(expandedSign.classList.contains('show2')) { // hide
-                            // console.log("HIDE");
-                            // show the signs
-                            var smallSigns = document.getElementsByClassName('sign-link');
-                            for(var j=0; j<smallSigns.length; j++) {
-                                smallSigns[j].classList.remove('hide');
-                            }
-                            var blurb = document.getElementsByClassName('blurb')[0];
-                            blurb.classList.remove('hide');
-                            expandedSign.classList.remove('show2');
-                            setTimeout(function() {expandedSign.classList.remove('show1');}, 250);
-                        } else { // show
-                            // console.log("SHOW");
-                            // hide the signs
-                            var smallSigns = document.getElementsByClassName('sign-link');
-                            for(var j=0; j<smallSigns.length; j++) {
-                                smallSigns[j].classList.add('hide');
-                            }
-                            var blurb = document.getElementsByClassName('blurb')[0];
-                            blurb.classList.add('hide');
-                            expandedSign.classList.add('show1');
-                            setTimeout(function() {expandedSign.classList.add('show2')}, 1);
+                        console.log("SHOW");
+                        // hide the signs
+                        var smallSigns = document.getElementsByClassName('sign-link');
+                        for(var j=0; j<smallSigns.length; j++) {
+                            smallSigns[j].classList.add('hide');
                         }
+                        var blurb = document.getElementsByClassName('blurb')[0];
+                        blurb.classList.add('hide');
+                        expandedSign.classList.add('show1');
+                        setTimeout(function() {expandedSign.classList.add('show2')}, 1);
                     });
                 }());
             }
+        }());
+    }
+    for(var i = 0; i<signNames.length; i++) {
+        (function() {
+            var name = signNames[i];
+            var arrow = document.getElementById(name + '-arrow');
+            arrow.addEventListener('click', function() {
+                var expandedSign = document.getElementById(name + '-expanded');
+                console.log("HIDE");
+                // show the signs
+                var smallSigns = document.getElementsByClassName('sign-link');
+                for(var j=0; j<smallSigns.length; j++) {
+                    smallSigns[j].classList.remove('hide');
+                }
+                var blurb = document.getElementsByClassName('blurb')[0];
+                blurb.classList.remove('hide');
+                expandedSign.classList.remove('show2');
+                setTimeout(function() {expandedSign.classList.remove('show1');}, 250);
+            });
         }());
     }
 }

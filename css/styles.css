@@ -415,6 +415,7 @@ h4 {
       bottom: 50px; } }
 
 .expanded-arrow-left {
+  cursor: pointer;
   position: absolute;
   width: 100px;
   left: 240px;
@@ -437,6 +438,7 @@ h4 {
       bottom: 50px; } }
 
 .expanded-arrow-right {
+  cursor: pointer;
   position: absolute;
   width: 100px;
   right: 240px;

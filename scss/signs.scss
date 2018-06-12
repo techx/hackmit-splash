@@ -97,6 +97,7 @@
     bottom: 20px;
 }
 .expanded-arrow-left {
+    cursor: pointer;
     position: absolute;
     @include desktop {
 
@@ -126,6 +127,7 @@
     bottom: 20px;
 }
 .expanded-arrow-right {
+    cursor: pointer;
     position: absolute;
     @include desktop {
 
