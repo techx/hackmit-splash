@@ -10,6 +10,12 @@ html {
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
   overflow-y: auto;
+  width: 100vw;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
