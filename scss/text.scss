@@ -70,7 +70,7 @@
     @include header-size();
     height: 300px;
     position: absolute;
-    font-family: inherit; //TODO: should be Lovelo Black
+    font-family: "LoveloBlack", sans-serif; //TODO: should be Lovelo Black
     @include desktop {
         left: calc(50vw - 350px); // 50vw - width/2
     }

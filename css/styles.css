@@ -58,6 +58,14 @@ a {
   font-family: "BrandonGrotesqueBlack";
   src: url("../fonts/Brandon_blk.otf") format("opentype"); }
 
+@font-face {
+  font-family: "LoveloBlack";
+  src: url("../fonts/Lovelo_Black.otf") format("opentype"); }
+
+@font-face {
+  font-family: "LoveloLine";
+  src: url("../fonts/Lovelo_Line_Light.otf") format("opentype"); }
+
 html {
   color: #edfaf0;
   font-family: "BrandonGrotesque", sans-serif;
@@ -259,7 +267,7 @@ h4 {
   font-size: 35px;
   height: 300px;
   position: absolute;
-  font-family: inherit;
+  font-family: "LoveloBlack", sans-serif;
   left: calc(50vw - 150px); }
   @media screen and (min-width: 1008px) {
     .header {
