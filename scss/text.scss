@@ -1,5 +1,6 @@
+// Blurb Text
 .blurb {
-    z-index: 3;    
+    z-index: 3;
     text-align: center;
     @include tablet {
         position: absolute;
@@ -18,12 +19,21 @@
         padding-top: 20px;
         max-width: 80vw;
     }
-    transition: 0.25s all ease;
-    opacity: 1;
-    &.hide {
-        opacity: 0;
+    @include animated();
+}
+.logo {
+    width: 75%;
+    display: block;
+    margin: auto;
+    padding-top: 60px;
+    @include mobile {
+        width: 22%;
+        padding-top: 4vh;
     }
 }
+
+// Header Size
+// TODO: Header Responsive Size
 @mixin header-size {
     @include desktop {
         width: 700px;
@@ -36,16 +46,6 @@
     width: 300px;
     font-size: 35px;
 }
-.logo {
-    width: 75%;
-    display: block;
-    margin: auto;
-    padding-top: 60px;
-    @include mobile {
-        width: 22%;
-        padding-top: 4vh;
-    }
-}
 .heading { // "Welcome to HACKMIT 2018"
     @include header-size();
     position: relative;
@@ -53,7 +53,7 @@
     text-align: center;
     color: $green;
     line-height: 1; // avoids awkward gap between lines
-    
+
     @include desktop {
         margin-top: 27px; // manually set to match bgd
     }
@@ -99,7 +99,7 @@
         height: calc(4.2rem - 1px);
     }
     // height: calc(2.1rem - 1px);
-    // padding-top: 5px;    
+    // padding-top: 5px;
     // font-size: 0.7rem;
     @include mobile {
         display: none;

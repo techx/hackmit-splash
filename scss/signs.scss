@@ -1,4 +1,5 @@
-.sign-link {
+// Sign Anchor Links
+.sign-link { // general styling
   position: absolute;
   z-index: 2;
   &:after {
@@ -10,24 +11,16 @@
       bottom: 0;
   }
   height: 12%;
-  transition: 0.25s all ease;
-  opacity: 1;
-  &.hide {
-      opacity: 0;
-  }
+  @include animated();
 }
-.sign {
-    width: 100%;
-    display: block;
-}
-.sign-bottom {
+.sign-bottom { // Lower signs
     margin-top: 60%;
     @include mobile {
         margin-top: 0;
         bottom: 10%;
     }
 }
-.sign-top {
+.sign-top { // Higher signs
     margin-top: 50%;
     @include mobile {
         margin-top: 0;
@@ -35,6 +28,12 @@
     }
 }
 
+// Sign Objects
+.sign { // style object tags
+    width: 100%;
+    display: block; // forces anchor to wrap object
+}
+// TODO: Mobile Sizing
 #speakers-sign-link {
     width: 40%; right:62.5%;
     @include mobile {
@@ -65,8 +64,8 @@
     }
 }
 
-.expanded-sign {
-    // background-color: $pink;
+// Expanded Bubbles
+.expanded-sign { // fixed div cover, general styling
     position: fixed;
     overflow: hidden;
     width: 100vw;
@@ -82,6 +81,8 @@
         display: block;
     }
 }
+
+// TODO: Responsive Sizing
 .expanded-bubble-left {
     position: absolute;
     @include desktop {

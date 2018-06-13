@@ -55,7 +55,8 @@ html {
 }
 
 ::selection {
-  background: $blue;
+  background: $text-white;
+  color: $bg-color;
   text-shadow: none;
 }
 
@@ -82,4 +83,12 @@ body {
       font-size: nth($font-size-hd, $index);
     }
   }
+}
+
+@mixin animated {
+  transition: 0.25s all ease;
+    opacity: 1;
+    &.hide {
+        opacity: 0;
+    }
 }
