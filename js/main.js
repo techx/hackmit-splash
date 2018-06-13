@@ -96,4 +96,12 @@ window.onload = function() {
             });
         }());
     }
+    var attribution_link = document.getElementById('attribution-link');
+    attribution_link.addEventListener('click', function() {
+        var attribution = document.getElementById('attribution');
+        if (attribution.style.display != 'none')
+            attribution.style.display = 'none';
+        else if (attribution.style.display == 'none')
+            attribution.style.display = 'inline';
+    });
 }

@@ -140,6 +140,52 @@ h4 {
     h4 {
       font-size: 2rem; } }
 
+.footer #floor {
+  margin-bottom: -10px; }
+
+.footer .content {
+  bottom: 5px;
+  float: bottom;
+  padding-bottom: 5px;
+  position: absolute;
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    .footer .content .left, .footer .content .right {
+      font-size: 1.5em; } }
+  @media screen and (min-width: 769px), print {
+    .footer .content .left, .footer .content .right {
+      font-size: 2em; } }
+  @media screen and (min-width: 1008px) {
+    .footer .content .left, .footer .content .right {
+      font-size: 3em; } }
+  .footer .content .left {
+    float: left;
+    padding-left: 10px; }
+  .footer .content .right {
+    float: right;
+    padding-right: 10px; }
+  .footer .content .center {
+    width: 33%;
+    margin-left: 33%;
+    margin-right: 33%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-align: center; }
+    @media screen and (max-width: 768px) {
+      .footer .content .center {
+        font-size: 0.6em; } }
+    @media screen and (min-width: 769px), print {
+      .footer .content .center {
+        font-size: 1.0em; } }
+    @media screen and (min-width: 1008px) {
+      .footer .content .center {
+        font-size: 1.3em; } }
+  .footer .content i {
+    padding-left: 10px;
+    padding-right: 10px; }
+
 .parallax {
   width: 100vw;
   position: relative;
@@ -199,10 +245,9 @@ h4 {
     .streetview #buildings {
       margin-top: -10vh; } }
 
-#floor {
+.footer {
   position: relative;
-  margin-top: -5.2vw;
-  margin-bottom: -10px; }
+  margin-top: -5.2vw; }
 
 .blurb {
   z-index: 3;

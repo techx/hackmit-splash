@@ -1,0 +1,55 @@
+.footer {
+    #floor {
+        margin-bottom: -10px; // deletes a weird gap
+    }
+    .content {
+        bottom: 5px;
+        float: bottom;
+        padding-bottom: 5px;
+        position: absolute;
+        width: 100%;
+        .left, .right {
+            @include mobile {
+                font-size: 1.5em;
+            }
+            @include tablet {
+                font-size: 2em;
+            }
+
+            @include desktop {
+                font-size: 3em;
+            }
+        }
+        .left {
+            float: left;
+            padding-left: 10px;
+        }
+        .right {
+            float: right; 
+            padding-right: 10px;
+        }
+        .center {
+            @include mobile {
+                font-size: 0.6em;
+            }
+            @include tablet {
+                font-size: 1.0em;
+            }
+            @include desktop {
+                font-size: 1.3em;
+            }
+            width: 33%;
+            margin-left: 33%;
+            margin-right: 33%;
+            right: 0;
+            bottom: 0; 
+            left: 0;
+            position: absolute; 
+            text-align: center;
+        }
+        i {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
