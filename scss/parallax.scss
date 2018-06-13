@@ -61,7 +61,9 @@
   // bottom: -5.2vw;
   width: 100%;
   z-index: 1;
-  margin-top: -10vh; // move streetview closer to skyline
+  @include tablet {
+    margin-top: -10vh; // move streetview closer to skyline
+  }
 }
 
 #floor {
