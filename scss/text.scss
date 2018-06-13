@@ -2,7 +2,7 @@
 .blurb {
     z-index: 3;
     text-align: center;
-    @include tablet {
+    @include tablet-portrait {
         position: absolute;
         width: 24vw;
         max-width: 24vw;
@@ -39,7 +39,7 @@
         width: 700px;
         font-size: 82px;
     }
-    @include tablet {
+    @include tablet-landscape {
         width: 600px;
         font-size: 70px;
     }
@@ -58,7 +58,7 @@
     @include desktop {
         margin-top: 27px; // manually set to match bgd
     }
-    @include tablet {
+    @include tablet-landscape {
         margin-top: 20px; // manually set to match bgd
     }
     // margin-top: 15px;
@@ -76,7 +76,7 @@
     @include desktop {
         left: calc(50vw - 350px); // 50vw - width/2
     }
-    @include tablet {
+    @include tablet-landscape {
         left: calc(50vw - 300px); // 50vw - width/2
     }
     left: calc(50vw - 40vw); // 50vw - width/2
@@ -91,27 +91,32 @@
     font-weight: bold;
 }
 .navbar-desktop {
-    @include desktop { // TODO
-        padding-top: 10px;
-        font-size: 1.4rem;
+    @include mobile {
+        display: none;
     }
-    @include tablet {
+    @include tablet-portrait {
+        display: none;
+    }
+    @include tablet-landscape {
+        display: flex;
         padding-top: 10px;
         font-size: 1.4rem;
         height: calc(4.2rem - 1px);
     }
+    @include desktop { // TODO
+        display: flex;
+        padding-top: 10px;
+        font-size: 1.4rem;
+    }
     // height: calc(2.1rem - 1px);
     // padding-top: 5px;
     // font-size: 0.7rem;
-    @include mobile {
-        display: none;
-    }
 }
 .navbar-mobile {
-    @include tablet {
+    font-size: 4vw;
+    @include tablet-landscape {
         display: none;
     }
-    font-size: 4vw;
 }
 .navbar-mobile-top {
     height: 9.2vw;

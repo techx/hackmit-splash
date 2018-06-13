@@ -40,11 +40,11 @@ $text-white: #edfaf0;
 // }
 $body-font: "BrandonGrotesque", sans-serif;
 $header-font: "BrandonGrotesqueBlack", sans-serif;
-$font-size-hm: 3.5rem, 1rem, 1rem, 1rem; // random
-$font-size-ht: 6rem, 1rem, 1rem, 1rem; //  random
-$font-size-hd: 6rem, 2rem, 2rem, 2rem; // random
-$font-weight-h: 800, 800, 700, 500; // random
-$letter-spacing-h: 0.06rem, 0.05rem, 0, 0; // random
+$font-size-hm: 3.5rem, 1.5rem; // random
+$font-size-ht: 6rem, 1rem; //  random
+$font-size-hd: 6rem, 2rem; // random
+$font-weight-h: 800, 800; // random
+$letter-spacing-h: 0.06rem, 0.05rem; // random
 
 html {
   color: $text-white;
@@ -67,7 +67,7 @@ body {
   overflow-x: hidden;
 }
 
-@for $index from 1 through 4 {
+@for $index from 2 through 2 {
   h#{$index} {
     font-family: $header-font;
     font-weight: nth($font-weight-h, $index);
@@ -76,7 +76,7 @@ body {
     @include mobile {
       font-size: nth($font-size-hm, $index);
     }
-    @include tablet {
+    @include tablet-landscape {
       font-size: nth($font-size-ht, $index);
     }
     @include desktop {

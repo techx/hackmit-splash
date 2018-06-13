@@ -1,62 +1,15 @@
-// Responsive Breakpoints
-// Inspired by Bulma (https://bulma.io/)
-
-$screen-gap: 24px;
-$screen-tablet: 769px;
-$screen-desktop: 960px + (2*$screen-gap);
-$screen-widescreen: 1152px + (2*$screen-gap);
-$screen-fullhd: 1344px +  (2*$screen-gap);
-
-@mixin mobile { // mobile screens
-  @media screen and (max-width: $screen-tablet - 1px) {
-    @content;
-  }
+@mixin mobile {
+  @media screen and (max-width: 599px) { @content; }
 }
-
-@mixin tablet { // tablet and larger
-  @media screen and (min-width: $screen-tablet), print {
-    @content;
-  }
+@mixin tablet-portrait {
+  @media screen and (min-width: 600px) { @content; }
 }
-
-@mixin tablet-only { // only tablet
-  @media screen and (min-width: $screen-tablet) and (max-width: $screen-desktop - 1px) {
-    @content;
-  }
+@mixin tablet-landscape {
+  @media screen and (min-width: 900px) { @content; }
 }
-
-@mixin touch { // mobile and tablet
-  @media screen and (max-width: $screen-desktop - 1px) {
-    @content;
-  }
+@mixin desktop {
+  @media screen and (min-width: 1200px) { @content; }
 }
-
-@mixin desktop { // desktop and up
-  @media screen and (min-width: $screen-desktop) {
-    @content;
-  }
-}
-
-@mixin desktop-only { // only desktop
-  @media screen and (min-width: $screen-desktop) and (max-width: $screen-widescreen - 1px) {
-    @content;
-  }
-}
-
-@mixin widescreen { // widescreen and up
-  @media screen and (min-width: $screen-widescreen) {
-    @content;
-  }
-}
-
-@mixin widescreen-only { // only widescreen
-  @media screen and (min-width: $screen-widescreen) and (max-width: $screen-fullhd - 1px) {
-    @content;
-  }
-}
-
-@mixin fullhd { // full-hd and up
-  @media screen and (min-width: $screen-fullhd) {
-    @content;
-  }
+@mixin big-desktop {
+  @media screen and (min-width: 1800px) { @content; }
 }

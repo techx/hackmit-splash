@@ -84,60 +84,18 @@ body {
   background-color: #180724;
   overflow-x: hidden; }
 
-h1 {
-  font-family: "BrandonGrotesqueBlack", sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.06rem; }
-  @media screen and (max-width: 768px) {
-    h1 {
-      font-size: 3.5rem; } }
-  @media screen and (min-width: 769px), print {
-    h1 {
-      font-size: 6rem; } }
-  @media screen and (min-width: 1008px) {
-    h1 {
-      font-size: 6rem; } }
-
 h2 {
   font-family: "BrandonGrotesqueBlack", sans-serif;
   font-weight: 800;
   letter-spacing: 0.05rem; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
+    h2 {
+      font-size: 1.5rem; } }
+  @media screen and (min-width: 900px) {
     h2 {
       font-size: 1rem; } }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 1200px) {
     h2 {
-      font-size: 1rem; } }
-  @media screen and (min-width: 1008px) {
-    h2 {
-      font-size: 2rem; } }
-
-h3 {
-  font-family: "BrandonGrotesqueBlack", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0; }
-  @media screen and (max-width: 768px) {
-    h3 {
-      font-size: 1rem; } }
-  @media screen and (min-width: 769px), print {
-    h3 {
-      font-size: 1rem; } }
-  @media screen and (min-width: 1008px) {
-    h3 {
-      font-size: 2rem; } }
-
-h4 {
-  font-family: "BrandonGrotesqueBlack", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0; }
-  @media screen and (max-width: 768px) {
-    h4 {
-      font-size: 1rem; } }
-  @media screen and (min-width: 769px), print {
-    h4 {
-      font-size: 1rem; } }
-  @media screen and (min-width: 1008px) {
-    h4 {
       font-size: 2rem; } }
 
 .footer #floor {
@@ -149,13 +107,13 @@ h4 {
   padding-bottom: 5px;
   position: absolute;
   width: 100%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     .footer .content .left, .footer .content .right {
       font-size: 1.5em; } }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .footer .content .left, .footer .content .right {
       font-size: 2em; } }
-  @media screen and (min-width: 1008px) {
+  @media screen and (min-width: 1200px) {
     .footer .content .left, .footer .content .right {
       font-size: 3em; } }
   .footer .content .left {
@@ -173,13 +131,13 @@ h4 {
     left: 0;
     position: absolute;
     text-align: center; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 599px) {
       .footer .content .center {
         font-size: 0.6em; } }
-    @media screen and (min-width: 769px), print {
+    @media screen and (min-width: 900px) {
       .footer .content .center {
         font-size: 1.0em; } }
-    @media screen and (min-width: 1008px) {
+    @media screen and (min-width: 1200px) {
       .footer .content .center {
         font-size: 1.3em; } }
   .footer .content i {
@@ -243,7 +201,7 @@ h4 {
   position: relative;
   width: 100%;
   z-index: 1; }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 600px) {
     .streetview #buildings {
       margin-top: -10vh; } }
 
@@ -268,7 +226,7 @@ h4 {
   text-align: center;
   transition: 0.25s all ease;
   opacity: 1; }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 600px) {
     .blurb {
       position: absolute;
       width: 24vw;
@@ -276,7 +234,7 @@ h4 {
       left: 50vw;
       top: 50%;
       transform: translate(-50%, -50%); } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     .blurb {
       position: relative;
       margin: 0 auto;
@@ -291,7 +249,7 @@ h4 {
   display: block;
   margin: auto;
   padding-top: 60px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     .logo {
       width: 22%;
       padding-top: 4vh; } }
@@ -305,18 +263,18 @@ h4 {
   color: #b9f734;
   line-height: 1;
   margin-top: 2vw; }
-  @media screen and (min-width: 1008px) {
+  @media screen and (min-width: 1200px) {
     .heading {
       width: 700px;
       font-size: 82px; } }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .heading {
       width: 600px;
       font-size: 70px; } }
-  @media screen and (min-width: 1008px) {
+  @media screen and (min-width: 1200px) {
     .heading {
       margin-top: 27px; } }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .heading {
       margin-top: 20px; } }
 
@@ -331,18 +289,18 @@ h4 {
   position: absolute;
   font-family: "LoveloBlack", sans-serif;
   left: calc(50vw - 40vw); }
-  @media screen and (min-width: 1008px) {
+  @media screen and (min-width: 1200px) {
     .header {
       width: 700px;
       font-size: 82px; } }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .header {
       width: 600px;
       font-size: 70px; } }
-  @media screen and (min-width: 1008px) {
+  @media screen and (min-width: 1200px) {
     .header {
       left: calc(50vw - 350px); } }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .header {
       left: calc(50vw - 300px); } }
 
@@ -355,24 +313,30 @@ h4 {
   color: #180724;
   font-weight: bold; }
 
-@media screen and (min-width: 1008px) {
+@media screen and (max-width: 599px) {
   .navbar-desktop {
-    padding-top: 10px;
-    font-size: 1.4rem; } }
+    display: none; } }
 
-@media screen and (min-width: 769px), print {
+@media screen and (min-width: 600px) {
   .navbar-desktop {
+    display: none; } }
+
+@media screen and (min-width: 900px) {
+  .navbar-desktop {
+    display: flex;
     padding-top: 10px;
     font-size: 1.4rem;
     height: calc(4.2rem - 1px); } }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
   .navbar-desktop {
-    display: none; } }
+    display: flex;
+    padding-top: 10px;
+    font-size: 1.4rem; } }
 
 .navbar-mobile {
   font-size: 4vw; }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .navbar-mobile {
       display: none; } }
 
@@ -406,14 +370,14 @@ h4 {
 
 .sign-bottom {
   margin-top: 60%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     .sign-bottom {
       margin-top: 0;
       bottom: 10%; } }
 
 .sign-top {
   margin-top: 50%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     .sign-top {
       margin-top: 0;
       bottom: 20%; } }
@@ -425,39 +389,39 @@ h4 {
 #speakers-sign-link {
   width: 40%;
   right: 62.5%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     #speakers-sign-link {
       width: 60%;
       right: 42.5%;
-      bottom: 38%; } }
+      bottom: 28%; } }
 
 #faq-sign-link {
   width: 19.5%;
   right: 82.5%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     #faq-sign-link {
       width: 30%;
       right: 73%;
-      bottom: 14%; } }
+      bottom: 12%; } }
 
 #sponsors-sign-link {
   width: 40%;
   left: 62.5%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     #sponsors-sign-link {
       width: 60%;
       left: 43.5%;
-      bottom: 2%; } }
+      bottom: 4%; } }
 
 #register-sign-link {
   width: 35%;
   left: 67.5%;
   height: 11%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 599px) {
     #register-sign-link {
       width: 54%;
       left: 49%;
-      bottom: 26%; } }
+      bottom: 20%; } }
 
 .expanded-sign {
   position: fixed;
@@ -476,45 +440,53 @@ h4 {
 .expanded-bubble-left {
   position: absolute;
   width: 80vw;
-  left: -2.5vw;
+  height: auto;
+  left: -1vw;
   bottom: 150px; }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .expanded-bubble-left {
-      width: 600px;
-      left: -25px;
-      bottom: 60px; } }
+      height: 80vh;
+      width: auto;
+      left: -20px;
+      bottom: 6vh; } }
 
 .expanded-arrow-left {
   cursor: pointer;
   position: absolute;
-  width: 20vw;
-  left: 56.5vw;
+  width: 30vw;
+  height: auto;
+  left: 61vw;
   bottom: calc(150px + 32.5vw); }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .expanded-arrow-left {
-      width: 150px;
-      left: 420px;
-      bottom: 303px; } }
+      height: 40vh;
+      width: auto;
+      left: calc(-20px + 106vh);
+      bottom: 62vh; } }
 
 .expanded-bubble-right {
   position: absolute;
   width: 80vw;
-  right: -2.5vw;
+  height: auto;
+  right: -1vw;
   bottom: 150px; }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .expanded-bubble-right {
-      width: 600px;
-      right: -25px;
-      bottom: 60px; } }
+      height: 80vh;
+      width: auto;
+      right: -20px;
+      bottom: 6vh; } }
 
 .expanded-arrow-right {
   cursor: pointer;
   position: absolute;
-  width: 20vw;
-  right: 56.5vw;
+  width: 30vw;
+  height: auto;
+  right: 61vw;
   bottom: calc(150px + 32.5vw); }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 900px) {
     .expanded-arrow-right {
-      width: 150px;
-      right: 420px;
-      bottom: 303px; } }
+      height: 40vh;
+      width: auto;
+      right: calc(-20px + 106vh);
+      bottom: 62vh; } }

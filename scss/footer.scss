@@ -12,7 +12,7 @@
             @include mobile {
                 font-size: 1.5em;
             }
-            @include tablet {
+            @include tablet-landscape {
                 font-size: 2em;
             }
 
@@ -32,7 +32,7 @@
             @include mobile {
                 font-size: 0.6em;
             }
-            @include tablet {
+            @include tablet-landscape {
                 font-size: 1.0em;
             }
             @include desktop {

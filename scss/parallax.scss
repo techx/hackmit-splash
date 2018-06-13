@@ -63,7 +63,7 @@
   // bottom: -5.2vw;
   width: 100%;
   z-index: 1;
-  @include tablet {
+  @include tablet-portrait {
     margin-top: -10vh; // move streetview closer to skyline
   }
 }
