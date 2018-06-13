@@ -238,14 +238,14 @@ h4 {
       padding-top: 4vh; } }
 
 .heading {
-  width: 300px;
-  font-size: 35px;
+  width: 80vw;
+  font-size: 10vw;
   position: relative;
   z-index: 1;
   text-align: center;
   color: #b9f734;
   line-height: 1;
-  margin-top: 15px; }
+  margin-top: 2vw; }
   @media screen and (min-width: 1008px) {
     .heading {
       width: 700px;
@@ -266,12 +266,12 @@ h4 {
   background-image: url("../assets/graphics/sign_no_words.svg");
   background-position: top center;
   background-repeat: no-repeat;
-  width: 300px;
-  font-size: 35px;
+  width: 80vw;
+  font-size: 10vw;
   height: 300px;
   position: absolute;
   font-family: "LoveloBlack", sans-serif;
-  left: calc(50vw - 150px); }
+  left: calc(50vw - 40vw); }
   @media screen and (min-width: 1008px) {
     .header {
       width: 700px;
@@ -312,16 +312,16 @@ h4 {
     display: none; } }
 
 .navbar-mobile {
-  font-size: 1.2rem; }
+  font-size: 4vw; }
   @media screen and (min-width: 769px), print {
     .navbar-mobile {
       display: none; } }
 
 .navbar-mobile-top {
-  height: calc(2.3rem - 1px); }
+  height: 9vw; }
 
 .navbar-mobile-bottom {
-  height: calc(2.3rem - 1px); }
+  height: 9.5vw; }
   .navbar-mobile-bottom a {
     z-index: 5; }
 
