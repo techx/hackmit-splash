@@ -86,7 +86,7 @@ body {
 }
 
 @mixin animated {
-  transition: 0.25s all ease;
+  transition: 0.50s all ease;
     opacity: 1;
     &.hide {
         opacity: 0;

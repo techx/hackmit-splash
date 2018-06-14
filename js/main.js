@@ -71,6 +71,7 @@ window.onload = function() {
                         var blurb = document.getElementsByClassName('blurb')[0];
                         blurb.classList.add('hide');
                         expandedSign.classList.add('show1');
+                        // expandedSign.classList.add('show2')
                         setTimeout(function() {expandedSign.classList.add('show2')}, 1);
                     });
                 }());
@@ -92,7 +93,7 @@ window.onload = function() {
                 var blurb = document.getElementsByClassName('blurb')[0];
                 blurb.classList.remove('hide');
                 expandedSign.classList.remove('show2');
-                setTimeout(function() {expandedSign.classList.remove('show1');}, 250);
+                setTimeout(function() {expandedSign.classList.remove('show1');}, 500);
             });
         }());
     }
