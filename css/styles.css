@@ -445,53 +445,29 @@ h2 {
 .expanded-bubble-left {
   position: absolute;
   width: 80vw;
-  height: auto;
-  left: -1vw;
-  bottom: 150px; }
-  @media screen and (min-width: 900px) {
-    .expanded-bubble-left {
-      height: 80vh;
-      width: auto;
-      left: -20px;
-      bottom: 6vh; } }
+  height: 80vh;
+  left: 0vw;
+  bottom: 10vh; }
 
 .expanded-arrow-left {
   cursor: pointer;
   position: absolute;
   width: 30vw;
-  height: auto;
+  height: 30vh;
   left: 61vw;
-  bottom: calc(150px + 32.5vw); }
-  @media screen and (min-width: 900px) {
-    .expanded-arrow-left {
-      height: 40vh;
-      width: auto;
-      left: calc(-20px + 106vh);
-      bottom: 62vh; } }
+  bottom: 72vh; }
 
 .expanded-bubble-right {
   position: absolute;
   width: 80vw;
-  height: auto;
-  right: -1vw;
-  bottom: 150px; }
-  @media screen and (min-width: 900px) {
-    .expanded-bubble-right {
-      height: 80vh;
-      width: auto;
-      right: -20px;
-      bottom: 6vh; } }
+  height: 80vh;
+  right: 0vw;
+  bottom: 10vh; }
 
 .expanded-arrow-right {
   cursor: pointer;
   position: absolute;
   width: 30vw;
-  height: auto;
+  height: 30vh;
   right: 61vw;
-  bottom: calc(150px + 32.5vw); }
-  @media screen and (min-width: 900px) {
-    .expanded-arrow-right {
-      height: 40vh;
-      width: auto;
-      right: calc(-20px + 106vh);
-      bottom: 62vh; } }
+  bottom: 72vh; }
