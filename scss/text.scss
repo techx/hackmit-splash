@@ -4,8 +4,8 @@
     text-align: center;
     @include tablet-portrait {
         position: absolute;
-        width: 24vw;
-        max-width: 24vw;
+        width: 25vw;
+        max-width: 25vw;
         // margin-left: -12.5vw;
         left: 50vw;
         top: 50%;
@@ -54,7 +54,8 @@
     text-align: center;
     color: $green;
     line-height: 1; // avoids awkward gap between lines
-
+    font-family: "LoveloLine", sans-serif;
+    font-weight: 700;
     @include desktop {
         margin-top: 27px; // manually set to match bgd
     }
@@ -65,6 +66,7 @@
     margin-top: 2vw;
 }
 .header { // Wraps the sign at the top
+    z-index: 15;
     margin: 0 auto;
     background-image: url("../assets/graphics/sign_no_words.svg");
     background-position: top center;
@@ -120,6 +122,9 @@
 }
 .navbar-mobile-top {
     height: 9.2vw;
+    a {
+        z-index: 5;
+    }
 }
 .navbar-mobile-bottom {
     height: 9.2vw;

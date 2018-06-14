@@ -229,8 +229,8 @@ h2 {
   @media screen and (min-width: 600px) {
     .blurb {
       position: absolute;
-      width: 24vw;
-      max-width: 24vw;
+      width: 25vw;
+      max-width: 25vw;
       left: 50vw;
       top: 50%;
       transform: translate(-50%, -50%); } }
@@ -262,6 +262,8 @@ h2 {
   text-align: center;
   color: #b9f734;
   line-height: 1;
+  font-family: "LoveloLine", sans-serif;
+  font-weight: 700;
   margin-top: 2vw; }
   @media screen and (min-width: 1200px) {
     .heading {
@@ -279,6 +281,7 @@ h2 {
       margin-top: 20px; } }
 
 .header {
+  z-index: 15;
   margin: 0 auto;
   background-image: url("../assets/graphics/sign_no_words.svg");
   background-position: top center;
@@ -342,6 +345,8 @@ h2 {
 
 .navbar-mobile-top {
   height: 9.2vw; }
+  .navbar-mobile-top a {
+    z-index: 5; }
 
 .navbar-mobile-bottom {
   height: 9.2vw; }
