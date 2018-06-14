@@ -223,9 +223,7 @@ h2 {
 
 .blurb {
   z-index: 3;
-  text-align: center;
-  transition: 0.50s all ease;
-  opacity: 1; }
+  text-align: center; }
   @media screen and (min-width: 600px) {
     .blurb {
       position: absolute;
@@ -241,8 +239,6 @@ h2 {
       width: 80vw;
       padding-top: 20px;
       max-width: 80vw; } }
-  .blurb.hide {
-    opacity: 0; }
 
 .logo {
   width: 75%;
@@ -360,9 +356,7 @@ h2 {
 .sign-link {
   position: absolute;
   z-index: 2;
-  height: 12%;
-  transition: 0.50s all ease;
-  opacity: 1; }
+  height: 12%; }
   .sign-link:after {
     position: absolute;
     content: "";
@@ -370,8 +364,6 @@ h2 {
     right: 0;
     top: 0;
     bottom: 0; }
-  .sign-link.hide {
-    opacity: 0; }
 
 .sign-bottom {
   margin-top: 60%; }
@@ -429,6 +421,7 @@ h2 {
       bottom: 20%; } }
 
 .expanded-sign {
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   overflow: hidden;
   width: 100vw;
@@ -436,13 +429,15 @@ h2 {
   z-index: 1000;
   opacity: 0;
   transition: 0.5s all ease;
-  display: none; }
+  display: none;
+  cursor: pointer; }
   .expanded-sign.show1 {
     display: block; }
     .expanded-sign.show1.show2 {
       opacity: 1; }
 
 .expanded-bubble-left {
+  cursor: auto;
   position: absolute;
   width: 80vw;
   height: 80vh;
@@ -458,6 +453,7 @@ h2 {
   bottom: 72vh; }
 
 .expanded-bubble-right {
+  cursor: auto;
   position: absolute;
   width: 80vw;
   height: 80vh;
