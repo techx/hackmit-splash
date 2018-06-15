@@ -35,9 +35,12 @@ window.onload = function() {
                     var signLink = signLinks[k];
                     signLink.addEventListener('click', function() {
                         var expandedSign = document.getElementById(name + '-expanded');
-                        console.log("SHOW");
+                        var sign = document.getElementById(name + '-sign-link');
+                        // console.log("SHOW");
+                        sign.classList.add('hide');
                         expandedSign.classList.add('show1');
                         setTimeout(function() {expandedSign.classList.add('show2')}, 1);
+
                     });
                 }());
             }
@@ -45,9 +48,14 @@ window.onload = function() {
     }
     for(var i=0; i<signNames.length; i++) {
         (function() {
-            var expandedDiv = document.getElementById(signNames[i] + '-expanded');
+            name = signNames[i]
+            var expandedDiv = document.getElementById(name + '-expanded');
+            var sign = document.getElementById(name + '-sign-link');
             expandedDiv.addEventListener('click', function(e) {
-                if(e.target.closest(".expanded-bubble-left") || e.target.closest(".expanded-bubble-right")) return;
+                if(e.target.closest(".expanded-bubble") || e.target.closest(".expanded-x")) return;
+                // console.log("HIDE");
+                console.log(sign);
+                sign.classList.remove('hide');
                 expandedDiv.classList.remove('show2');
                 setTimeout(function() {expandedDiv.classList.remove('show1');}, 500);
             });
@@ -61,4 +69,18 @@ window.onload = function() {
         else if (attribution.style.display == 'none')
             attribution.style.display = 'inline';
     });
+
+    ///////////////
+    // FAQ Toggle
+    ///////////////
+    Array
+		.from(document.querySelectorAll('.faq'))
+		.forEach(function (question_answer) {
+            question_answer.addEventListener('click', (function(event) {
+                if (question_answer.classList.contains('expanded'))
+                    question_answer.classList.remove('expanded');
+                else
+                    question_answer.classList.add('expanded');
+			}).bind(this));
+		});
 }
