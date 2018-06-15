@@ -2,22 +2,18 @@
 .blurb {
     z-index: 3;
     text-align: center;
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+    padding-top: 20px;
+    max-width: 80vw;
     @include tablet-portrait {
         position: absolute;
         width: 25vw;
         max-width: 25vw;
-        // margin-left: -12.5vw;
         left: 50vw;
         top: 50%;
         transform: translate(-50%, -50%);
-    }
-    @include mobile {
-        // do something different
-        position: relative;
-        margin: 0 auto;
-        width: 80vw;
-        padding-top: 20px;
-        max-width: 80vw;
     }
 }
 .logo {
@@ -34,17 +30,16 @@
 // Header Size
 // TODO: Header Responsive Size
 @mixin header-size {
-    @include desktop {
-        width: 700px;
-        font-size: 82px;
-    }
+    width: 80vw;
+    font-size: 10vw;
     @include tablet-landscape {
         width: 600px;
         font-size: 70px;
     }
-    width: 80vw;
-    // width: 300px;
-    font-size: 10vw;
+    @include desktop {
+        width: 700px;
+        font-size: 82px;
+    }
 }
 .heading { // "Welcome to HACKMIT 2018"
     @include header-size();
@@ -52,17 +47,17 @@
     z-index: 1;
     text-align: center;
     color: $green;
-    line-height: 1; // avoids awkward gap between lines
+    line-height: 10.1vw; // avoids awkward gap between lines
     font-family: "LoveloLine", sans-serif;
     font-weight: 700;
-    @include desktop {
-        margin-top: 27px; // manually set to match bgd
-    }
+    margin-top: 2vw;
     @include tablet-landscape {
+        line-height: 1;
         margin-top: 20px; // manually set to match bgd
     }
-    // margin-top: 15px;
-    margin-top: 2vw;
+    @include desktop {
+        margin-top: 25px; // manually set to match bgd
+    }
 }
 .header { // Wraps the sign at the top
     z-index: 15;
@@ -74,13 +69,13 @@
     height: 300px;
     position: absolute;
     font-family: "LoveloBlack", sans-serif; //TODO: should be Lovelo Black
-    @include desktop {
-        left: calc(50vw - 350px); // 50vw - width/2
-    }
+    left: calc(50vw - 40vw); // 50vw - width/2
     @include tablet-landscape {
         left: calc(50vw - 300px); // 50vw - width/2
     }
-    left: calc(50vw - 40vw); // 50vw - width/2
+    @include desktop {
+        left: calc(50vw - 350px); // 50vw - width/2
+    }
 }
 .navbar { // Wraps the links above the header sign
     display: flex;
@@ -92,12 +87,7 @@
     font-weight: bold;
 }
 .navbar-desktop {
-    @include mobile {
-        display: none;
-    }
-    @include tablet-portrait {
-        display: none;
-    }
+    display: none;
     @include tablet-landscape {
         display: flex;
         padding-top: 10px;
@@ -106,12 +96,9 @@
     }
     @include desktop { // TODO
         display: flex;
-        padding-top: 10px;
         font-size: 1.4rem;
+        height: 75px;
     }
-    // height: calc(2.1rem - 1px);
-    // padding-top: 5px;
-    // font-size: 0.7rem;
 }
 .navbar-mobile {
     font-size: 4vw;
@@ -120,7 +107,7 @@
     }
 }
 .navbar-mobile-top {
-    height: 9.2vw;
+    height: 9.5vw;
     a {
         z-index: 5;
     }
