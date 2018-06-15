@@ -98,51 +98,55 @@ h2 {
     h2 {
       font-size: 2rem; } }
 
-.footer #floor {
-  margin-bottom: -10px; }
-
-.footer .content {
-  bottom: 5px;
-  float: bottom;
-  padding-bottom: 5px;
-  position: absolute;
-  width: 100%; }
-  @media screen and (max-width: 599px) {
-    .footer .content .left, .footer .content .right {
-      font-size: 1.5em; } }
-  @media screen and (min-width: 900px) {
-    .footer .content .left, .footer .content .right {
-      font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
-    .footer .content .left, .footer .content .right {
-      font-size: 3em; } }
-  .footer .content .left {
-    float: left;
-    padding-left: 10px; }
-  .footer .content .right {
-    float: right;
-    padding-right: 10px; }
-  .footer .content .center {
-    width: 33%;
-    margin-left: 33%;
-    margin-right: 33%;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.footer {
+  font-family: "BrandonGrotesqueBlack", sans-serif; }
+  .footer #floor {
+    margin-bottom: -10px; }
+  .footer .content {
+    bottom: 5px;
+    float: bottom;
+    padding-bottom: 5px;
     position: absolute;
-    text-align: center; }
+    width: 100%; }
     @media screen and (max-width: 599px) {
-      .footer .content .center {
-        font-size: 0.6em; } }
+      .footer .content .left, .footer .content .right {
+        font-size: 1.5em; } }
     @media screen and (min-width: 900px) {
-      .footer .content .center {
-        font-size: 1.0em; } }
+      .footer .content .left, .footer .content .right {
+        font-size: 2em; } }
     @media screen and (min-width: 1200px) {
-      .footer .content .center {
-        font-size: 1.3em; } }
-  .footer .content i {
-    padding-left: 10px;
-    padding-right: 10px; }
+      .footer .content .left, .footer .content .right {
+        font-size: 3em; } }
+    .footer .content .left {
+      float: left;
+      padding-left: 10px; }
+    .footer .content .right {
+      float: right;
+      padding-right: 10px; }
+    .footer .content .center {
+      color: #CCC;
+      text-shadow: 0px 0px 8px #BBB;
+      line-height: 1.3;
+      width: 33%;
+      margin-left: 33%;
+      margin-right: 33%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      text-align: center; }
+      @media screen and (max-width: 599px) {
+        .footer .content .center {
+          font-size: 0.6em; } }
+      @media screen and (min-width: 900px) {
+        .footer .content .center {
+          font-size: 0.9em; } }
+      @media screen and (min-width: 1200px) {
+        .footer .content .center {
+          font-size: 1.2em; } }
+    .footer .content i {
+      padding-left: 10px;
+      padding-right: 10px; }
 
 .parallax {
   width: 100vw;
@@ -223,7 +227,12 @@ h2 {
 
 .blurb {
   z-index: 3;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  width: 80vw;
+  padding-top: 20px;
+  max-width: 80vw; }
   @media screen and (min-width: 600px) {
     .blurb {
       position: absolute;
@@ -232,13 +241,6 @@ h2 {
       left: 50vw;
       top: 50%;
       transform: translate(-50%, -50%); } }
-  @media screen and (max-width: 599px) {
-    .blurb {
-      position: relative;
-      margin: 0 auto;
-      width: 80vw;
-      padding-top: 20px;
-      max-width: 80vw; } }
 
 .logo {
   width: 75%;
@@ -257,24 +259,25 @@ h2 {
   z-index: 1;
   text-align: center;
   color: #b9f734;
-  line-height: 1;
+  line-height: 10.1vw;
   font-family: "LoveloLine", sans-serif;
   font-weight: 700;
   margin-top: 2vw; }
-  @media screen and (min-width: 1200px) {
-    .heading {
-      width: 700px;
-      font-size: 82px; } }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 600px) {
     .heading {
       width: 600px;
       font-size: 70px; } }
   @media screen and (min-width: 1200px) {
     .heading {
-      margin-top: 27px; } }
-  @media screen and (min-width: 900px) {
+      width: 700px;
+      font-size: 82px; } }
+  @media screen and (min-width: 600px) {
     .heading {
-      margin-top: 20px; } }
+      line-height: 1;
+      margin-top: 27px; } }
+  @media screen and (min-width: 1200px) {
+    .heading {
+      margin-top: 27px; } }
 
 .header {
   z-index: 15;
@@ -288,20 +291,20 @@ h2 {
   position: absolute;
   font-family: "LoveloBlack", sans-serif;
   left: calc(50vw - 40vw); }
-  @media screen and (min-width: 1200px) {
-    .header {
-      width: 700px;
-      font-size: 82px; } }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 600px) {
     .header {
       width: 600px;
       font-size: 70px; } }
   @media screen and (min-width: 1200px) {
     .header {
-      left: calc(50vw - 350px); } }
-  @media screen and (min-width: 900px) {
+      width: 700px;
+      font-size: 82px; } }
+  @media screen and (min-width: 600px) {
     .header {
       left: calc(50vw - 300px); } }
+  @media screen and (min-width: 1200px) {
+    .header {
+      left: calc(50vw - 350px); } }
 
 .navbar {
   display: flex;
@@ -312,35 +315,28 @@ h2 {
   color: #180724;
   font-weight: bold; }
 
-@media screen and (max-width: 599px) {
-  .navbar-desktop {
-    display: none; } }
-
-@media screen and (min-width: 600px) {
-  .navbar-desktop {
-    display: none; } }
-
-@media screen and (min-width: 900px) {
-  .navbar-desktop {
-    display: flex;
-    padding-top: 10px;
-    font-size: 1.4rem;
-    height: calc(4.2rem - 1px); } }
-
-@media screen and (min-width: 1200px) {
-  .navbar-desktop {
-    display: flex;
-    padding-top: 10px;
-    font-size: 1.4rem; } }
+.navbar-desktop {
+  display: none; }
+  @media screen and (min-width: 600px) {
+    .navbar-desktop {
+      display: flex;
+      padding-top: 10px;
+      font-size: 23px;
+      height: 68px; } }
+  @media screen and (min-width: 1200px) {
+    .navbar-desktop {
+      display: flex;
+      font-size: 23px;
+      height: 75px; } }
 
 .navbar-mobile {
   font-size: 4vw; }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 600px) {
     .navbar-mobile {
       display: none; } }
 
 .navbar-mobile-top {
-  height: 9.2vw; }
+  height: 9.5vw; }
   .navbar-mobile-top a {
     z-index: 5; }
 
