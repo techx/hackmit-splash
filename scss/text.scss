@@ -32,7 +32,7 @@
 @mixin header-size {
     width: 80vw;
     font-size: 10vw;
-    @include tablet-landscape {
+    @include tablet-portrait {
         width: 600px;
         font-size: 70px;
     }
@@ -51,12 +51,12 @@
     font-family: "LoveloLine", sans-serif;
     font-weight: 700;
     margin-top: 2vw;
-    @include tablet-landscape {
+    @include tablet-portrait {
         line-height: 1;
-        margin-top: 20px; // manually set to match bgd
+        margin-top: 27px; // manually set to match bgd
     }
     @include desktop {
-        margin-top: 25px; // manually set to match bgd
+        margin-top: 27px; // manually set to match bgd
     }
 }
 .header { // Wraps the sign at the top
@@ -70,7 +70,7 @@
     position: absolute;
     font-family: "LoveloBlack", sans-serif; //TODO: should be Lovelo Black
     left: calc(50vw - 40vw); // 50vw - width/2
-    @include tablet-landscape {
+    @include tablet-portrait {
         left: calc(50vw - 300px); // 50vw - width/2
     }
     @include desktop {
@@ -88,21 +88,21 @@
 }
 .navbar-desktop {
     display: none;
-    @include tablet-landscape {
+    @include tablet-portrait {
         display: flex;
         padding-top: 10px;
-        font-size: 1.4rem;
-        height: calc(4.2rem - 1px);
+        font-size: 23px;
+        height: 68px;
     }
     @include desktop { // TODO
         display: flex;
-        font-size: 1.4rem;
+        font-size: 23px;
         height: 75px;
     }
 }
 .navbar-mobile {
     font-size: 4vw;
-    @include tablet-landscape {
+    @include tablet-portrait {
         display: none;
     }
 }
