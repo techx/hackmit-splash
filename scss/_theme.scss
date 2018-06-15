@@ -85,10 +85,10 @@ body {
   }
 }
 
-// @mixin animated {
-//   transition: 0.50s all ease;
-//     opacity: 1;
-//     &.hide {
-//         opacity: 0;
-//     }
-// }
+@mixin animated {
+  transition: 0.50s all ease;
+    opacity: 1;
+    &.hide {
+        opacity: 0;
+    }
+}
