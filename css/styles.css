@@ -251,7 +251,7 @@ h2 {
     .logo {
       width: 30%;
       padding-top: 4vh; } }
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 365px) {
     .logo {
       padding-bottom: 6vh; } }
 
