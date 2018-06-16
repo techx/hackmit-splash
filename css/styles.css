@@ -241,17 +241,21 @@ h2 {
       left: 50vw;
       top: 50%;
       transform: translate(-50%, -50%); } }
-  .blurb .blurb-text {
-    font-weight: normal; }
-    @media screen and (min-width: 900px) {
-      .blurb .blurb-text {
-        display: none; } }
-  .blurb .blurb-text-desktop {
-    font-weight: normal;
-    display: none; }
-    @media screen and (min-width: 900px) {
-      .blurb .blurb-text-desktop {
-        display: block; } }
+
+.blurb-text {
+  font-weight: normal; }
+
+.blurb-mobile {
+  display: block; }
+  @media screen and (min-width: 900px) {
+    .blurb-mobile {
+      display: none; } }
+
+.blurb-desktop {
+  display: none; }
+  @media screen and (min-width: 900px) {
+    .blurb-desktop {
+      display: block; } }
 
 .logo {
   width: 75%;

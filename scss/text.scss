@@ -15,18 +15,20 @@
         top: 50%;
         transform: translate(-50%, -50%);
     }
-    .blurb-text {
-        font-weight: normal;
-        @include tablet-landscape {
-            display: none;
-        }
-    }
-    .blurb-text-desktop {
-        font-weight: normal;
+}
+.blurb-text {
+    font-weight: normal;
+}
+.blurb-mobile {
+    display: block;
+    @include tablet-landscape {
         display: none;
-        @include tablet-landscape {
-            display: block;
-        }
+    }
+}
+.blurb-desktop {
+    display: none;
+    @include tablet-landscape {
+        display: block;
     }
 }
 .logo {
