@@ -101,7 +101,7 @@
     overflow: hidden;
     .content {
         position: absolute;
-        overflow-y: scroll;
+        overflow-y: auto;
         width: 60vw;
         height: 60vh;
         left: 10vw;
