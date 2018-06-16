@@ -301,9 +301,15 @@
     width: 12vw;
     &.left {
         left: -2.8vw;
+        &.side {
+            left: 82vw;
+        }
     }
     &.right {
         right: -2.8vw;
+        &.side {
+            right: 82vw;
+        }
     }
     &.top {
         bottom: 50vh;

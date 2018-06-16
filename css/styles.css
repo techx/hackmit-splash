@@ -514,8 +514,12 @@ h2 {
   width: 12vw; }
   .expanded-x.left {
     left: -2.8vw; }
+    .expanded-x.left.side {
+      left: 82vw; }
   .expanded-x.right {
     right: -2.8vw; }
+    .expanded-x.right.side {
+      right: 82vw; }
   .expanded-x.top {
     bottom: 50vh; }
   .expanded-x.bottom {
