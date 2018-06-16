@@ -22,8 +22,11 @@
     margin: auto;
     padding-top: 60px;
     @include mobile {
-        width: 22%;
+        width: 30%;
         padding-top: 4vh;
+    }
+    @include mobile-small {
+        padding-bottom: 6vh;
     }
 }
 

@@ -117,6 +117,9 @@
         // background-color: green;
         font-family: "BrandonGrotesque", sans-serif;
         font-size: 1.5rem;
+        @include mobile {
+            font-size: 1.25rem;
+        }
         .faq {
             cursor: pointer;
             .question {
@@ -137,6 +140,10 @@
                 .answer {
                     display: block;
                     margin-left: 20px;
+                    font-size: 1.25rem;
+                    @include mobile {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
