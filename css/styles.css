@@ -86,8 +86,8 @@ body {
 
 h2 {
   font-family: "BrandonGrotesqueBlack", sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.05rem; }
+  font-weight: 500;
+  letter-spacing: 0.03rem; }
   @media screen and (max-width: 599px) {
     h2 {
       font-size: 1.5rem; } }
@@ -356,7 +356,7 @@ mark.pink {
   background: none;
   color: #ff36bf; }
 
-mark.teal {
+mark.blue {
   background: none;
   color: #36faea; }
 
@@ -494,11 +494,12 @@ mark.red {
         content: '';
         float: left;
         width: .9em;
-        height: .9em;
-        margin: 10px 5px 0 0;
+        height: .7em;
+        margin: 8px 5px 0 0;
         background: url("../assets/graphics/arrows.svg");
         background-repeat: no-repeat;
-        transform: rotate(-90deg); }
+        transform: rotate(-90deg);
+        transition-duration: .3s; }
         @media screen and (max-width: 599px) {
           .expanded-bubble .content .faq .question::before {
             margin: 5px 2px 0 0;
@@ -506,18 +507,8 @@ mark.red {
       .expanded-bubble .content .faq .answer {
         display: none; }
       .expanded-bubble .content .faq.expanded .question::before {
-        content: '';
-        float: left;
-        width: .9em;
-        height: .9em;
-        margin: 10px 5px 0 0;
-        background: url("../assets/graphics/arrows.svg");
-        background-repeat: no-repeat;
-        transform: rotate(0deg); }
-        @media screen and (max-width: 599px) {
-          .expanded-bubble .content .faq.expanded .question::before {
-            margin: 5px 2px 0 0;
-            width: .8em; } }
+        transform: rotate(0deg);
+        transition-duration: .3s; }
       .expanded-bubble .content .faq.expanded .answer {
         display: block;
         margin-left: 20px;
