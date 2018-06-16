@@ -520,6 +520,7 @@ mark.red {
           .expanded-bubble .content .faq.expanded .answer {
             font-size: 1rem; } }
   .expanded-bubble#red-expanded-bubble {
+    color: #ec3e5b;
     border: #fac7b9 0.5px solid;
     box-shadow: inset 0 0 0 0.5px #fac7b9, inset 0 0 0 1.25px #f6a594, inset 0 0 0 2px #f38b7a, inset 0 0 0 2.75px #f07062, inset 0 0 0 3.5px #ec4747, inset 0 0 0 2.5px rgba(92, 18, 23, 0.3), inset 0 0 0 4.25px rgba(92, 18, 23, 0.25), inset 0 0 0 5px rgba(92, 18, 23, 0.2), 0 0 0 0.5px #fac7b9, 0 0 0 1.25px #f6a594, 0 0 0 2px #f38b7a, 0 0 0 2.75px #f07062, 0 0 0 3.5px #ec4747, 0 0 0 2.5px rgba(92, 18, 23, 0.3), 0 0 0 4.25px rgba(92, 18, 23, 0.25), 0 0 0 5px rgba(92, 18, 23, 0.2); }
     @media screen and (max-width: 599px) {
@@ -527,6 +528,7 @@ mark.red {
         border: #fac7b9 0.25px solid;
         box-shadow: inset 0 0 0 0.25px #fac7b9, inset 0 0 0 0.625px #f6a594, inset 0 0 0 1px #f38b7a, inset 0 0 0 1.375px #f07062, inset 0 0 0 1.75px #ec4747, inset 0 0 0 1.25px rgba(92, 18, 23, 0.3), inset 0 0 0 2.125px rgba(92, 18, 23, 0.25), inset 0 0 0 2.5px rgba(92, 18, 23, 0.2), 0 0 0 0.25px #fac7b9, 0 0 0 0.625px #f6a594, 0 0 0 1px #f38b7a, 0 0 0 1.375px #f07062, 0 0 0 1.75px #ec4747, 0 0 0 1.25px rgba(92, 18, 23, 0.3), 0 0 0 2.125px rgba(92, 18, 23, 0.25), 0 0 0 2.5px rgba(92, 18, 23, 0.2); } }
   .expanded-bubble#green-expanded-bubble {
+    color: #b9f734;
     border: #eaf2ce 0.5px solid;
     box-shadow: inset 0 0 0 0.5px #eaf2ce, inset 0 0 0 1.25px #deebb1, inset 0 0 0 2px #d2e392, inset 0 0 0 2.75px #c3db69, inset 0 0 0 3.5px #b2d339, inset 0 0 0 2.5px rgba(178, 211, 57, 0.3), inset 0 0 0 4.25px rgba(178, 211, 57, 0.25), inset 0 0 0 5px rgba(178, 211, 57, 0.2), 0 0 0 0.5px #eaf2ce, 0 0 0 1.25px #deebb1, 0 0 0 2px #d2e392, 0 0 0 2.75px #c3db69, 0 0 0 3.5px #b2d339, 0 0 0 2.5px rgba(178, 211, 57, 0.3), 0 0 0 4.25px rgba(178, 211, 57, 0.25), 0 0 0 5px rgba(178, 211, 57, 0.2); }
     @media screen and (max-width: 599px) {
@@ -534,6 +536,7 @@ mark.red {
         border: #eaf2ce 0.25px solid;
         box-shadow: inset 0 0 0 0.25px #eaf2ce, inset 0 0 0 0.625px #deebb1, inset 0 0 0 1px #d2e392, inset 0 0 0 1.375px #c3db69, inset 0 0 0 1.75px #b2d339, inset 0 0 0 1.25px rgba(178, 211, 57, 0.3), inset 0 0 0 2.125px rgba(178, 211, 57, 0.25), inset 0 0 0 2.5px rgba(178, 211, 57, 0.2), 0 0 0 0.25px #eaf2ce, 0 0 0 0.625px #deebb1, 0 0 0 1px #d2e392, 0 0 0 1.375px #c3db69, 0 0 0 1.75px #b2d339, 0 0 0 1.25px rgba(178, 211, 57, 0.3), 0 0 0 2.125px rgba(178, 211, 57, 0.25), 0 0 0 2.5px rgba(178, 211, 57, 0.2); } }
   .expanded-bubble#blue-expanded-bubble {
+    color: #36faea;
     border: #92d7e6 0.5px solid;
     box-shadow: inset 0 0 0 0.5px #92d7e6, inset 0 0 0 1.5px #63cae0, inset 0 0 0 2px #26c0d8, inset 0 0 0 2.5px #31c2d9, inset 0 0 0 3.5px #00bbd5, inset 0 0 0 2.5px rgba(0, 186, 213, 0.3), inset 0 0 0 4.25px rgba(0, 186, 213, 0.25), inset 0 0 0 5px rgba(0, 186, 213, 0.2), 0 0 0 0.5px #92d7e6, 0 0 0 1.5px #63cae0, 0 0 0 2px #26c0d8, 0 0 0 2.5px #31c2d9, 0 0 0 3.5px #00bbd5, 0 0 0 2.5px rgba(0, 186, 213, 0.3), 0 0 0 4.25px rgba(0, 186, 213, 0.25), 0 0 0 5px rgba(0, 186, 213, 0.2); }
     @media screen and (max-width: 599px) {
@@ -541,6 +544,7 @@ mark.red {
         border: #92d7e6 0.25px solid;
         box-shadow: inset 0 0 0 0.25px #92d7e6, inset 0 0 0 0.75px #63cae0, inset 0 0 0 1px #26c0d8, inset 0 0 0 1.25px #31c2d9, inset 0 0 0 1.75px #00bbd5, inset 0 0 0 1.25px rgba(0, 186, 213, 0.3), inset 0 0 0 2.125px rgba(0, 186, 213, 0.25), inset 0 0 0 2.5px rgba(0, 186, 213, 0.2), 0 0 0 0.25px #92d7e6, 0 0 0 0.75px #63cae0, 0 0 0 1px #26c0d8, 0 0 0 1.25px #31c2d9, 0 0 0 1.75px #00bbd5, 0 0 0 1.25px rgba(0, 186, 213, 0.3), 0 0 0 2.125px rgba(0, 186, 213, 0.25), 0 0 0 2.5px rgba(0, 186, 213, 0.2); } }
   .expanded-bubble#pink-expanded-bubble {
+    color: #ff36bf;
     border: #f7d2e4 0.5px solid;
     box-shadow: inset 0 0 0 0.5px #f7d2e4, inset 0 0 0 1.25px #f4b8d4, inset 0 0 0 2px #f29fc5, inset 0 0 0 2.75px #f085b5, inset 0 0 0 3.5px #ed66a6, inset 0 0 0 2.5px rgba(235, 59, 149, 0.3), inset 0 0 0 4.25px rgba(235, 59, 149, 0.25), inset 0 0 0 5px rgba(235, 59, 149, 0.2), 0 0 0 0.5px #f7d2e4, 0 0 0 1.25px #f4b8d4, 0 0 0 2px #f29fc5, 0 0 0 2.75px #f085b5, 0 0 0 3.5px #ed66a6, 0 0 0 2.5px rgba(235, 59, 149, 0.3), 0 0 0 4.25px rgba(235, 59, 149, 0.25), 0 0 0 5px rgba(235, 59, 149, 0.2); }
     @media screen and (max-width: 599px) {
