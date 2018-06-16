@@ -124,7 +124,18 @@
             cursor: pointer;
             .question {
                 &::before {
-                    content: '+';
+                    content: '';
+                    float: left;
+                    width: .9em;
+                    height: .9em;
+                    margin: 10px 5px 0 0;
+                    background: url("../assets/graphics/arrows.svg");
+                    background-repeat: no-repeat;
+                    transform: rotate(-90deg);
+                    @include mobile {
+                        margin: 5px 2px 0 0;
+                        width: .8em;
+                    }
                 }
             }
             .answer {
@@ -133,8 +144,18 @@
             &.expanded {
                 .question {
                     &::before {
-                        content: '\25BC';
-                        font-size: 1rem;
+                        content: '';
+                        float: left;
+                        width: .9em;
+                        height: .9em;
+                        margin: 10px 5px 0 0;
+                        background: url("../assets/graphics/arrows.svg");
+                        background-repeat: no-repeat;
+                        transform: rotate(0deg);
+                        @include mobile {
+                            margin: 5px 2px 0 0;
+                            width: .8em;
+                        }
                     }
                 }
                 .answer {

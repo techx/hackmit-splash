@@ -491,12 +491,33 @@ mark.red {
     .expanded-bubble .content .faq {
       cursor: pointer; }
       .expanded-bubble .content .faq .question::before {
-        content: '+'; }
+        content: '';
+        float: left;
+        width: .9em;
+        height: .9em;
+        margin: 10px 5px 0 0;
+        background: url("../assets/graphics/arrows.svg");
+        background-repeat: no-repeat;
+        transform: rotate(-90deg); }
+        @media screen and (max-width: 599px) {
+          .expanded-bubble .content .faq .question::before {
+            margin: 5px 2px 0 0;
+            width: .8em; } }
       .expanded-bubble .content .faq .answer {
         display: none; }
       .expanded-bubble .content .faq.expanded .question::before {
-        content: '\25BC';
-        font-size: 1rem; }
+        content: '';
+        float: left;
+        width: .9em;
+        height: .9em;
+        margin: 10px 5px 0 0;
+        background: url("../assets/graphics/arrows.svg");
+        background-repeat: no-repeat;
+        transform: rotate(0deg); }
+        @media screen and (max-width: 599px) {
+          .expanded-bubble .content .faq.expanded .question::before {
+            margin: 5px 2px 0 0;
+            width: .8em; } }
       .expanded-bubble .content .faq.expanded .answer {
         display: block;
         margin-left: 20px;
