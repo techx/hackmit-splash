@@ -19,18 +19,18 @@
 .blurb-text {
     font-weight: normal;
 }
-// .blurb-mobile {
-//     display: block;
-//     @include tablet-landscape {
-//         display: none;
-//     }
-// }
-// .blurb-desktop {
-//     display: none;
-//     @include tablet-landscape {
-//         display: block;
-//     }
-// }
+.blurb-mobile {
+    display: block;
+    @include tablet-landscape {
+        display: none;
+    }
+}
+.blurb-desktop {
+    display: none;
+    @include tablet-landscape {
+        display: block;
+    }
+}
 .logo {
     width: 75%;
     display: block;

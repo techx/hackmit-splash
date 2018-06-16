@@ -245,6 +245,18 @@ h2 {
 .blurb-text {
   font-weight: normal; }
 
+.blurb-mobile {
+  display: block; }
+  @media screen and (min-width: 900px) {
+    .blurb-mobile {
+      display: none; } }
+
+.blurb-desktop {
+  display: none; }
+  @media screen and (min-width: 900px) {
+    .blurb-desktop {
+      display: block; } }
+
 .logo {
   width: 75%;
   display: block;
@@ -478,7 +490,7 @@ mark.red {
     height: 60vh;
     left: 10vw;
     bottom: 10vh;
-    font-family: "BrandonGrotesque", sans-serif;
+    font-family: "BrandonGrotesqueBlack", sans-serif;
     font-size: 1.5rem; }
     @media screen and (min-width: 600px) {
       .expanded-bubble .content {
