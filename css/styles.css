@@ -243,6 +243,15 @@ h2 {
       transform: translate(-50%, -50%); } }
   .blurb .blurb-text {
     font-weight: normal; }
+    @media screen and (min-width: 900px) {
+      .blurb .blurb-text {
+        display: none; } }
+  .blurb .blurb-text-desktop {
+    font-weight: normal;
+    display: none; }
+    @media screen and (min-width: 900px) {
+      .blurb .blurb-text-desktop {
+        display: block; } }
 
 .logo {
   width: 75%;

@@ -17,6 +17,16 @@
     }
     .blurb-text {
         font-weight: normal;
+        @include tablet-landscape {
+            display: none;
+        }
+    }
+    .blurb-text-desktop {
+        font-weight: normal;
+        display: none;
+        @include tablet-landscape {
+            display: block;
+        }
     }
 }
 .logo {
