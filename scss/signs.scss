@@ -100,6 +100,8 @@
     }
     overflow: hidden;
     .content {
+        font-family: "BrandonGrotesque", sans-serif;
+        font-weight: 400;
         position: absolute;
         overflow-y: auto;
         width: 60vw;
@@ -115,7 +117,6 @@
             left: calc(40vw - 350px);
         }
         // background-color: green;
-        font-family: "BrandonGrotesqueBlack", sans-serif;
         font-size: 1.5rem;
         @include mobile {
             font-size: 1.25rem;
@@ -123,6 +124,8 @@
         .faq {
             cursor: pointer;
             .question {
+                font-family: "BrandonGrotesqueBlack", sans-serif;
+                font-weight: 700;
                 &::before {
                     content: '';
                     float: left;
