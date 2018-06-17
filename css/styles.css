@@ -157,6 +157,8 @@ h2 {
   perspective: 1px;
   -webkit-perspective: 1px;
   -webkit-overflow-scrolling: touch; }
+  .parallax.hide {
+    overflow-y: hidden; }
 
 .skyline,
 .streetview {

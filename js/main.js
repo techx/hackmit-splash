@@ -44,6 +44,7 @@ window.onload = function() {
                 .forEach(function(signLink) {
                     signLink.addEventListener('click', (function() {
                         sign.classList.add('hide');
+                        document.body.classList.add('hide');
                         expandedDiv.classList.add('show1');
                         setTimeout(function() {expandedDiv.classList.add('show2')}, 1);
                     }).bind(this));
@@ -52,6 +53,7 @@ window.onload = function() {
             expandedDiv.addEventListener('click', (function(e) {
                 if(e.target.closest(".expanded-bubble") || e.target.closest(".expanded-x")) return;
                 sign.classList.remove('hide');
+                document.body.classList.remove('hide');
                 expandedDiv.classList.remove('show2');
                 setTimeout(function() {expandedDiv.classList.remove('show1');}, 500);
             }).bind(this));
