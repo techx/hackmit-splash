@@ -74,7 +74,7 @@
     position: absolute;
     content: "";
     background-color: $bg-color;
-    height: calc(100% - 30vh);
+    height: calc(100% - 25vh);
     width: 100%;
     @include tablet-portrait {
       transform: translateZ(-0.2px) translateY(30vh) scale(1.2);

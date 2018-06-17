@@ -218,7 +218,7 @@ h2 {
     position: absolute;
     content: "";
     background-color: #180724;
-    height: calc(100% - 30vh);
+    height: calc(100% - 25vh);
     width: 100%; }
     @media screen and (min-width: 600px) {
       .streetview::before {
