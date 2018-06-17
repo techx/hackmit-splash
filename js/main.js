@@ -1,13 +1,12 @@
 window.onload = function() {
-    var signs = document.getElementsByClassName('sign-link');
-    // console.log(signs);
-
-    for (var i = 0; i < signs.length; i++) {
-        (function() {
-            var signobj = signs[i].childNodes[0];
-            var sign = signobj.getSVGDocument();
-            signs[i].addEventListener('mouseover', function() {
-                // console.log("MOUSEOVER " + i);
+    ///////////////
+    // Glowing Signs
+    ///////////////
+    Array
+        .from(document.getElementsByClassName('sign-link'))
+        .forEach(function(signObj) {
+            var sign = signObj.childNodes[0].getSVGDocument();
+            signObj.addEventListener('mouseover', (function() {
                 var glow = sign.querySelectorAll('.glow');
                 for(var j=0; j<glow.length; j++) {
                     glow[j].classList.add('flash-animation');
@@ -16,10 +15,8 @@ window.onload = function() {
                 for(var j=0; j<glow.length; j++) {
                     glow[j].classList.add('flash-animation-dull');
                 }
-
-            });
-            signs[i].addEventListener('mouseleave', function() {
-                // console.log("MOUSELEAVE " + i)
+            }).bind(this));
+            signObj.addEventListener('mouseleave', (function() {
                 var glow = sign.querySelectorAll('.glow');
                 for(var j=0; j<glow.length; j++) {
                     glow[j].classList.remove('flash-animation');
@@ -30,47 +27,39 @@ window.onload = function() {
                     glow[j].classList.remove('flash-animation-dull');
                     glow[j].style.opacity = 1;
                 }
-            });
-        }());
-    }
+            }).bind(this));
+        });
 
+    ///////////////
+    // Sign Links
+    ///////////////
     var signNames = ['speakers', 'faq', 'sponsors', 'register'];
-    for(var i = 0; i<signNames.length; i++) {
-        (function() {
-            var name = signNames[i];
-            var signLinks = document.getElementsByClassName(name+'-link');
-            // console.log(name + ': ' + signLinks.length);
-            for(var k=0; k<signLinks.length; k++) {
-                (function() {
-                    var signLink = signLinks[k];
-                    signLink.addEventListener('click', function() {
-                        var expandedSign = document.getElementById(name + '-expanded');
-                        var sign = document.getElementById(name + '-sign-link');
-                        // console.log("SHOW");
-                        sign.classList.add('hide');
-                        expandedSign.classList.add('show1');
-                        setTimeout(function() {expandedSign.classList.add('show2')}, 1);
-
-                    });
-                }());
-            }
-        }());
-    }
-    for(var i=0; i<signNames.length; i++) {
-        (function() {
-            name = signNames[i]
-            var expandedDiv = document.getElementById(name + '-expanded');
+    signNames
+        .forEach(function(name) {
+            var expandedDiv = document.getElementById(name + '-expanded');            
             var sign = document.getElementById(name + '-sign-link');
-            expandedDiv.addEventListener('click', function(e) {
+            // SHOW when clicked
+            Array
+                .from(document.getElementsByClassName(name+'-link'))
+                .forEach(function(signLink) {
+                    signLink.addEventListener('click', (function() {
+                        sign.classList.add('hide');
+                        expandedDiv.classList.add('show1');
+                        setTimeout(function() {expandedDiv.classList.add('show2')}, 1);
+                    }).bind(this));
+                });
+            // HIDE when clicked
+            expandedDiv.addEventListener('click', (function(e) {
                 if(e.target.closest(".expanded-bubble") || e.target.closest(".expanded-x")) return;
-                // console.log("HIDE");
-                // console.log(sign);
                 sign.classList.remove('hide');
                 expandedDiv.classList.remove('show2');
                 setTimeout(function() {expandedDiv.classList.remove('show1');}, 500);
-            });
-        }());
-    }
+            }).bind(this));
+        });
+    
+    ///////////////
+    // Footer Toggle
+    ///////////////
     var attribution_link = document.getElementById('attribution-link');
     attribution_link.addEventListener('click', function() {
         var attribution = document.getElementById('attribution');
