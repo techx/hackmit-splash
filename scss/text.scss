@@ -89,6 +89,7 @@
     }
 }
 .navbar { // Wraps the links above the header sign
+    font-family: "BrandonGrotesqueBlack", sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -102,13 +103,13 @@
     @include tablet-portrait {
         display: flex;
         padding-top: 10px;
-        font-size: 23px;
-        height: 66px;
+        font-size: 25px;
+        height: 55px;
     }
     @include desktop { // TODO
         display: flex;
-        font-size: 23px;
-        height: 73px;
+        font-size: 25px;
+        height: 65px;
     }
 }
 .navbar-mobile {

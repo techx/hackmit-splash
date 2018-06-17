@@ -346,6 +346,7 @@ h2 {
       left: calc(50vw - 350px); } }
 
 .navbar {
+  font-family: "BrandonGrotesqueBlack", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -360,13 +361,13 @@ h2 {
     .navbar-desktop {
       display: flex;
       padding-top: 10px;
-      font-size: 23px;
-      height: 66px; } }
+      font-size: 25px;
+      height: 55px; } }
   @media screen and (min-width: 1200px) {
     .navbar-desktop {
       display: flex;
-      font-size: 23px;
-      height: 73px; } }
+      font-size: 25px;
+      height: 65px; } }
 
 .navbar-mobile {
   font-size: 4vw; }
