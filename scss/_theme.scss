@@ -65,6 +65,7 @@ body {
   height: 100%;
   background-color: $bg-color;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 @for $index from 2 through 2 {
