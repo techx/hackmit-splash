@@ -107,7 +107,7 @@
         width: 60vw;
         height: 60vh;
         left: 10vw;
-        bottom: 10vh;
+        bottom: 0vh;
         @include tablet-portrait {
             width: 550px;
             left: calc(40vw - 275px);
@@ -117,7 +117,7 @@
             left: calc(40vw - 350px);
         }
         // background-color: green;
-        font-size: 1.5rem;
+        font-size: 3rem;
         @include mobile {
             font-size: 1.25rem;
         }
@@ -125,6 +125,10 @@
             cursor: pointer;
             .question {
                 font-weight: 700;
+                font-size: 1.5rem;        
+                @include mobile {
+                    font-size: 1.25rem;
+                }
                 &::before {
                     content: '';
                     float: left;

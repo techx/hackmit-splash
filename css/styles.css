@@ -515,8 +515,8 @@ mark.red {
     width: 60vw;
     height: 60vh;
     left: 10vw;
-    bottom: 10vh;
-    font-size: 1.5rem; }
+    bottom: 0vh;
+    font-size: 3rem; }
     @media screen and (min-width: 600px) {
       .expanded-bubble .content {
         width: 550px;
@@ -531,7 +531,11 @@ mark.red {
     .expanded-bubble .content .faq {
       cursor: pointer; }
       .expanded-bubble .content .faq .question {
-        font-weight: 700; }
+        font-weight: 700;
+        font-size: 1.5rem; }
+        @media screen and (max-width: 599px) {
+          .expanded-bubble .content .faq .question {
+            font-size: 1.25rem; } }
         .expanded-bubble .content .faq .question::before {
           content: '';
           float: left;
