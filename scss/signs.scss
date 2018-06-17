@@ -107,7 +107,7 @@
         width: 60vw;
         height: 60vh;
         left: 10vw;
-        bottom: 0vh;
+        bottom: 10vh;
         @include tablet-portrait {
             width: 550px;
             left: calc(40vw - 275px);

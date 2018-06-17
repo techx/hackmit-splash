@@ -69,10 +69,8 @@ a {
 html {
   color: #edfaf0;
   font-family: "BrandonGrotesque", sans-serif;
-  height: 100%;
-  line-height: 1.5;
-  overflow-x: hidden;
-  overflow-y: hidden; }
+  min-height: 100%;
+  line-height: 1.5; }
 
 ::selection {
   background: #edfaf0;
@@ -81,9 +79,8 @@ html {
 
 body {
   font-size: 1rem;
-  height: calc(100% + 1px);
-  background-color: #180724;
-  overflow-x: hidden; }
+  min-height: 100%;
+  background-color: #180724; }
 
 h2 {
   font-family: "BrandonGrotesqueBlack", sans-serif;
@@ -515,7 +512,7 @@ mark.red {
     width: 60vw;
     height: 60vh;
     left: 10vw;
-    bottom: 0vh;
+    bottom: 10vh;
     font-size: 3rem; }
     @media screen and (min-width: 600px) {
       .expanded-bubble .content {
