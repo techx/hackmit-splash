@@ -249,7 +249,11 @@ h2 {
       transform: translate(-50%, -50%); } }
 
 .blurb-text {
-  font-weight: normal; }
+  font-family: "BrandonGrotesque";
+  font-weight: 400; }
+  .blurb-text .date {
+    font-family: "BrandonGrotesqueBlack";
+    font-weight: 700; }
 
 .logo {
   width: 75%;

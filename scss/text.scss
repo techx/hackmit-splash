@@ -17,7 +17,12 @@
     }
 }
 .blurb-text {
-    font-weight: normal;
+    font-family: "BrandonGrotesque";
+    font-weight: 400;
+    .date {
+        font-family: "BrandonGrotesqueBlack";
+        font-weight: 700;
+    }
 }
 .logo {
     width: 75%;
