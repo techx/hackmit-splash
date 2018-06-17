@@ -98,12 +98,12 @@
         display: flex;
         padding-top: 10px;
         font-size: 23px;
-        height: 68px;
+        height: 66px;
     }
     @include desktop { // TODO
         display: flex;
         font-size: 23px;
-        height: 75px;
+        height: 73px;
     }
 }
 .navbar-mobile {
@@ -113,13 +113,13 @@
     }
 }
 .navbar-mobile-top {
-    height: 9.5vw;
+    height: 9.1vw;
     a {
         z-index: 5;
     }
 }
 .navbar-mobile-bottom {
-    height: 9.5vw;
+    height: 9.3vw;
     a {
         z-index: 5;
     }

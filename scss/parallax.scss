@@ -70,7 +70,13 @@
 
 .footer {
   position: relative;
-  margin-top: -5.2vw;
+  margin-top: -6.2vw;
+  @include tablet-portrait {
+    margin-top: -5.6vw;
+  }
+  @include tablet-landscape {
+    margin-top: -5.2vw;
+  }
   // margin-bottom: -10px; // deletes a weird gap - moved to #floor in footer
 }
 

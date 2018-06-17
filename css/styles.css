@@ -211,7 +211,13 @@ h2 {
 
 .footer {
   position: relative;
-  margin-top: -5.2vw; }
+  margin-top: -6.2vw; }
+  @media screen and (min-width: 600px) {
+    .footer {
+      margin-top: -5.6vw; } }
+  @media screen and (min-width: 900px) {
+    .footer {
+      margin-top: -5.2vw; } }
 
 @media screen and (max-width: 600px) {
   .skyline {
@@ -328,12 +334,12 @@ h2 {
       display: flex;
       padding-top: 10px;
       font-size: 23px;
-      height: 68px; } }
+      height: 66px; } }
   @media screen and (min-width: 1200px) {
     .navbar-desktop {
       display: flex;
       font-size: 23px;
-      height: 75px; } }
+      height: 73px; } }
 
 .navbar-mobile {
   font-size: 4vw; }
@@ -342,12 +348,12 @@ h2 {
       display: none; } }
 
 .navbar-mobile-top {
-  height: 9.5vw; }
+  height: 9.1vw; }
   .navbar-mobile-top a {
     z-index: 5; }
 
 .navbar-mobile-bottom {
-  height: 9.5vw; }
+  height: 9.3vw; }
   .navbar-mobile-bottom a {
     z-index: 5; }
 
