@@ -155,7 +155,8 @@ h2 {
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 1px;
-  -webkit-perspective: 1px; }
+  -webkit-perspective: 1px;
+  -webkit-overflow-scrolling: touch; }
 
 .skyline,
 .streetview {
@@ -389,6 +390,45 @@ mark.green {
 mark.red {
   background: none;
   color: #ec3e5b; }
+
+.swing-animation {
+  animation: swing 2s infinite;
+  -webkit-animation: swing 2s infinite;
+  -moz-animation: swing 2s infinite;
+  animation: swing 2s cubic-bezier(0.4, 0, 0.6, 1) 1.25 both; }
+
+@-webkit-keyframes swing {
+  0% {
+    transform-origin: top;
+    transform: rotateX(-0.005deg); }
+  50% {
+    transform-origin: top;
+    transform: rotateX(0.005deg); }
+  100% {
+    transform-origin: top;
+    transform: rotateX(-0.005deg); } }
+
+@-moz-keyframes flash {
+  0% {
+    transform-origin: top;
+    transform: rotateX(-0.005deg); }
+  50% {
+    transform-origin: top;
+    transform: rotateX(0.005deg); }
+  100% {
+    transform-origin: top;
+    transform: rotateX(-0.005deg); } }
+
+@keyframes flash {
+  0% {
+    transform-origin: top;
+    transform: rotateX(-0.005deg); }
+  50% {
+    transform-origin: top;
+    transform: rotateX(0.005deg); }
+  100% {
+    transform-origin: top;
+    transform: rotateX(-0.005deg); } }
 
 .sign-link {
   position: absolute;
