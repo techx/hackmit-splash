@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
+var autoprefixer = require('gulp-autoprefixer');
 var rename = require("gulp-rename");
 var pkg = require('./package.json');
 
@@ -31,6 +32,10 @@ gulp.task('sass', function() {
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
   return gulp.src(['css/styles.css', 'css/animation.css'])
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions'],
+      cascade: false
+    }))
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))

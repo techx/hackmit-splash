@@ -24,5 +24,8 @@
     "gulp-header": "^2.0.5",
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^5.0.0"
   }
 }
