@@ -12,12 +12,22 @@ window.onload = function() {
                 for(var j=0; j<glow.length; j++) {
                     glow[j].classList.add('flash-animation');
                 }
+                var glow = sign.querySelectorAll('.glow-dull');
+                for(var j=0; j<glow.length; j++) {
+                    glow[j].classList.add('flash-animation-dull');
+                }
+
             });
             signs[i].addEventListener('mouseleave', function() {
                 console.log("MOUSELEAVE " + i)
                 var glow = sign.querySelectorAll('.glow');
                 for(var j=0; j<glow.length; j++) {
                     glow[j].classList.remove('flash-animation');
+                    glow[j].style.opacity = 1;
+                }
+                var glow = sign.querySelectorAll('.glow-dull');
+                for(var j=0; j<glow.length; j++) {
+                    glow[j].classList.remove('flash-animation-dull');
                     glow[j].style.opacity = 1;
                 }
             });
