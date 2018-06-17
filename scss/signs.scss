@@ -14,17 +14,17 @@
   @include animated();
 }
 .sign-bottom { // Lower signs
-    margin-top: 60%;
+    margin-top: 54%;
     @include mobile {
         margin-top: 0;
-        bottom: 10%;
+        bottom: 14%;
     }
 }
 .sign-top { // Higher signs
-    margin-top: 50%;
+    margin-top: 44%;
     @include mobile {
         margin-top: 0;
-        bottom: 20%;
+        bottom: 24%;
     }
 }
 
