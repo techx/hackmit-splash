@@ -52,6 +52,7 @@ html {
   height: 100%;
   line-height: 1.5;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 ::selection {
@@ -62,10 +63,10 @@ html {
 
 body {
   font-size: 1rem;
-  height: 100%;
+  height: calc(100% + 1px);
   background-color: $bg-color;
   overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }
 
 @for $index from 2 through 2 {

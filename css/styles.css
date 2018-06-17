@@ -71,7 +71,8 @@ html {
   font-family: "BrandonGrotesque", sans-serif;
   height: 100%;
   line-height: 1.5;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 ::selection {
   background: #edfaf0;
@@ -80,10 +81,9 @@ html {
 
 body {
   font-size: 1rem;
-  height: 100%;
+  height: calc(100% + 1px);
   background-color: #180724;
-  overflow-x: hidden;
-  overflow-y: hidden; }
+  overflow-x: hidden; }
 
 h2 {
   font-family: "BrandonGrotesqueBlack", sans-serif;
