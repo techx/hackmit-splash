@@ -169,7 +169,8 @@ h2 {
   background-size: cover;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  transform: scale(1.2); }
 
 .skyline {
   height: calc(100vh + 40px + 300px);
@@ -195,11 +196,19 @@ h2 {
 
 #layer-3 {
   background-image: url("../assets/backgrounds/perspective3.svg");
-  transform: translateZ(0px) translateY(10vh); }
+  transform: translateZ(-0.2px) translateY(10vh) scale(1.2); }
 
 .streetview {
-  background: #180724;
   margin-top: -1px; }
+  .streetview::before {
+    position: absolute;
+    content: "";
+    background-color: #180724;
+    height: calc(100% - 30vh);
+    width: 100%; }
+    @media screen and (min-width: 600px) {
+      .streetview::before {
+        transform: translateZ(-0.2px) translateY(30vh) scale(1.2); } }
 
 .streetview #buildings {
   position: relative;

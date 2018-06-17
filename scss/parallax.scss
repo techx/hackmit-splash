@@ -22,6 +22,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  transform: scale(1.2)
 }
 
 .skyline { // top half
@@ -50,11 +51,21 @@
 }
 #layer-3 {
   background-image: url("../assets/backgrounds/perspective3.svg");
-  transform: translateZ(0px) translateY(10vh);
+  transform: translateZ(-0.2px) translateY(10vh) scale(1.2);
 }
 
 .streetview { // bottom half of page
-  background: $bg-color;
+  // background: $bg-color;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $bg-color;
+    height: calc(100% - 30vh);
+    width: 100%;
+    @include tablet-portrait {
+      transform: translateZ(-0.2px) translateY(30vh) scale(1.2);
+    }
+  }
   margin-top: -1px;
 }
 

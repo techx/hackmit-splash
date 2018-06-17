@@ -1,13 +1,13 @@
 window.onload = function() {
     var signs = document.getElementsByClassName('sign-link');
-    console.log(signs);
+    // console.log(signs);
 
     for (var i = 0; i < signs.length; i++) {
         (function() {
             var signobj = signs[i].childNodes[0];
             var sign = signobj.getSVGDocument();
             signs[i].addEventListener('mouseover', function() {
-                console.log("MOUSEOVER " + i);
+                // console.log("MOUSEOVER " + i);
                 var glow = sign.querySelectorAll('.glow');
                 for(var j=0; j<glow.length; j++) {
                     glow[j].classList.add('flash-animation');
@@ -19,7 +19,7 @@ window.onload = function() {
 
             });
             signs[i].addEventListener('mouseleave', function() {
-                console.log("MOUSELEAVE " + i)
+                // console.log("MOUSELEAVE " + i)
                 var glow = sign.querySelectorAll('.glow');
                 for(var j=0; j<glow.length; j++) {
                     glow[j].classList.remove('flash-animation');
@@ -39,7 +39,7 @@ window.onload = function() {
         (function() {
             var name = signNames[i];
             var signLinks = document.getElementsByClassName(name+'-link');
-            console.log(name + ': ' + signLinks.length);
+            // console.log(name + ': ' + signLinks.length);
             for(var k=0; k<signLinks.length; k++) {
                 (function() {
                     var signLink = signLinks[k];
@@ -64,7 +64,7 @@ window.onload = function() {
             expandedDiv.addEventListener('click', function(e) {
                 if(e.target.closest(".expanded-bubble") || e.target.closest(".expanded-x")) return;
                 // console.log("HIDE");
-                console.log(sign);
+                // console.log(sign);
                 sign.classList.remove('hide');
                 expandedDiv.classList.remove('show2');
                 setTimeout(function() {expandedDiv.classList.remove('show1');}, 500);
