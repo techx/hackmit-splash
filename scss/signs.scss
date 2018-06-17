@@ -38,21 +38,21 @@
     width: 40%; right:62.5%;
     @include mobile {
         width: 60%; right: 42.5%;
-        bottom: 28%;
+        bottom: 22%;
     }
 }
 #faq-sign-link {
     width:19.5%; right:82.5%;
     @include mobile {
         width: 30%; right: 73%;
-        bottom: 12%;
+        bottom: 6%;
     }
 }
 #sponsors-sign-link {
     width:40%; left:62.5%;
     @include mobile {
         width: 60%; left: 43.5%;
-        bottom: 4%;
+        bottom: -2%;
     }
 }
 #register-sign-link {
@@ -60,7 +60,7 @@
     height: 11%;
     @include mobile {
         width: 54%; left: 49%;
-        bottom: 20%;
+        bottom: 14%;
     }
 }
 
@@ -100,7 +100,7 @@
     }
     overflow: hidden;
     .content {
-        font-family: "BrandonGrotesque", sans-serif;
+        font-family: "BrandonGrotesqueBlack", sans-serif;
         font-weight: 400;
         position: absolute;
         overflow-y: auto;
@@ -124,7 +124,6 @@
         .faq {
             cursor: pointer;
             .question {
-                font-family: "BrandonGrotesqueBlack", sans-serif;
                 font-weight: 700;
                 &::before {
                     content: '';
@@ -204,6 +203,7 @@
     }
     &#green-expanded-bubble {
         color: $green;
+        text-align: center;
         border: #eaf2ce 0.5px solid;
         box-shadow: inset 0 0 0 0.5px #eaf2ce, // cls-9
         inset 0 0 0 1.25px #deebb1, // cls-8
@@ -282,6 +282,7 @@
     }
     &#pink-expanded-bubble {
         color: $pink;
+        text-align: center;
         border: #f7d2e4 0.5px solid;
         box-shadow: inset 0 0 0 0.5px #f7d2e4, // cls-9
         inset 0 0 0 1.25px #f4b8d4, // cls-8
