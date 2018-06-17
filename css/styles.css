@@ -151,11 +151,14 @@ h2 {
 .parallax {
   width: 100vw;
   position: relative;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: 1px;
-  -webkit-perspective: 1px;
   -webkit-overflow-scrolling: touch; }
+  @supports (perspective: 1px) and (not (-webkit-overflow-scrolling: touch)) {
+    .parallax {
+      perspective: 1px;
+      -webkit-perspective: 1px; } }
   .parallax.hide {
     overflow-y: hidden; }
 
@@ -189,16 +192,24 @@ h2 {
   transition: transform 0.2s; }
 
 #layer-1 {
-  background-image: url("../assets/backgrounds/perspective1.svg");
-  transform: translateZ(-1px) translateY(-10vh) scale(2.08); }
+  background-image: url("../assets/backgrounds/perspective1.svg"); }
+  @supports (perspective: 1px) and (not (-webkit-overflow-scrolling: touch)) {
+    #layer-1 {
+      transform: translateZ(-1px) translateY(-10vh) scale(2.08); } }
 
 #layer-2 {
-  background-image: url("../assets/backgrounds/perspective2.svg");
-  transform: translateZ(-0.5px) translateY(-5vh) scale(1.52); }
+  background-image: url("../assets/backgrounds/perspective2.svg"); }
+  @supports (perspective: 1px) and (not (-webkit-overflow-scrolling: touch)) {
+    #layer-2 {
+      transform: translateZ(-0.5px) translateY(-5vh) scale(1.52); } }
 
 #layer-3 {
   background-image: url("../assets/backgrounds/perspective3.svg");
-  transform: translateZ(-0.2px) translateY(10vh) scale(1.2); }
+  margin-top: 12vh; }
+  @supports (perspective: 1px) and (not (-webkit-overflow-scrolling: touch)) {
+    #layer-3 {
+      transform: translateZ(-0.2px) translateY(10vh) scale(1.2);
+      margin-top: 0; } }
 
 .streetview {
   margin-top: -1px; }
@@ -235,12 +246,15 @@ h2 {
     height: calc(100vh); }
   .layer {
     height: calc(100vh); }
-  #layer-1 {
-    transform: translateZ(-1px) translateY(-15vh) scale(2.08); }
-  #layer-2 {
-    transform: translateZ(-0.5px) translateY(-10vh) scale(1.52); }
-  #layer-3 {
-    transform: translateZ(0px) translateY(0vh); } }
+  @supports (perspective: 1px) and (not (-webkit-overflow-scrolling: touch)) {
+    #layer-1 {
+      transform: translateZ(-1px) translateY(-15vh) scale(2.08); } }
+  @supports (perspective: 1px) and (not (-webkit-overflow-scrolling: touch)) {
+    #layer-2 {
+      transform: translateZ(-0.5px) translateY(-10vh) scale(1.52); } }
+  @supports (perspective: 1px) and (not (-webkit-overflow-scrolling: touch)) {
+    #layer-3 {
+      transform: translateZ(0px) translateY(0vh); } } }
 
 .blurb {
   z-index: 3;
