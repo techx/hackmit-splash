@@ -219,7 +219,7 @@ h2 {
     width: 100%; }
     @media screen and (min-width: 600px) {
       .streetview::before {
-        transform: translateZ(-0.2px) translateY(30vh) scale(1.2); } }
+        transform: translateZ(-0.2px) translateY(25vh) scale(1.2); } }
 
 .streetview #buildings {
   position: relative;
@@ -380,7 +380,7 @@ h2 {
     z-index: 5; }
 
 .navbar-mobile-bottom {
-  height: 9.3vw; }
+  height: 9.7vw; }
   .navbar-mobile-bottom a {
     z-index: 5; }
 
