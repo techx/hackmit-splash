@@ -400,14 +400,14 @@ mark.red {
     opacity: 0; }
 
 .sign-bottom {
-  margin-top: 60%; }
+  margin-top: 54%; }
   @media screen and (max-width: 599px) {
     .sign-bottom {
       margin-top: 0;
       bottom: 10%; } }
 
 .sign-top {
-  margin-top: 50%; }
+  margin-top: 44%; }
   @media screen and (max-width: 599px) {
     .sign-top {
       margin-top: 0;
