@@ -163,7 +163,7 @@ h2 {
 
 .background-skyline {
   width: 100vw;
-  height: calc(100vh + 2vh + 100px);
+  height: calc(100vh + 2vh + 300px);
   background-image: url("../assets/backgrounds/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,11 +172,11 @@ h2 {
   left: 0; }
 
 .skyline {
-  height: calc(100vh + 40px + 100px);
+  height: calc(100vh + 40px + 300px);
   transform-style: preserve-3d; }
 
 .layer {
-  height: calc(100vh + 100px);
+  height: calc(100vh + 300px);
   background-position: bottom center;
   min-width: 1100px;
   width: 100%;
