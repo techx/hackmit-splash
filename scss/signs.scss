@@ -108,6 +108,12 @@
         height: 60vh;
         left: 10vw;
         bottom: 10vh;
+        &.centered {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
         @include tablet-portrait {
             width: 550px;
             left: calc(40vw - 275px);

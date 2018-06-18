@@ -345,7 +345,7 @@ h2 {
       left: calc(50vw - 350px); } }
 
 .navbar {
-  font-family: "BrandonGrotesqueBlack", sans-serif;
+  font-family: "LoveloBlack", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -513,6 +513,11 @@ mark.red {
     height: 60vh;
     left: 10vw;
     bottom: 10vh; }
+    .expanded-bubble .content.centered {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center; }
     @media screen and (min-width: 600px) {
       .expanded-bubble .content {
         width: 550px;
