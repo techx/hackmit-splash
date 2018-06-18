@@ -516,8 +516,7 @@ mark.red {
     .expanded-bubble .content.centered {
       display: flex;
       justify-content: center;
-      flex-direction: column;
-      text-align: center; }
+      flex-direction: column; }
     @media screen and (min-width: 600px) {
       .expanded-bubble .content {
         width: 550px;
