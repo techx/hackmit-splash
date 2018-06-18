@@ -128,9 +128,9 @@
             font-size: 1.25rem;
         }
         .faq {
+            font-weight: 500;
             cursor: pointer;
             .question {
-                font-weight: 700;
                 font-size: 1.5rem;
                 @include mobile {
                     font-size: 1.25rem;

@@ -530,9 +530,9 @@ mark.red {
       .expanded-bubble .content {
         font-size: 1.25rem; } }
     .expanded-bubble .content .faq {
+      font-weight: 500;
       cursor: pointer; }
       .expanded-bubble .content .faq .question {
-        font-weight: 700;
         font-size: 1.5rem; }
         @media screen and (max-width: 599px) {
           .expanded-bubble .content .faq .question {
