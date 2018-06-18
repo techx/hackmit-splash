@@ -475,6 +475,27 @@ mark.red {
       left: 49%;
       bottom: 14%; } }
 
+#faq-expanded ::-webkit-scrollbar,
+#faq-expanded ::-webkit-scrollbar-thumb,
+#faq-expanded ::-webkit-scrollbar-track {
+  width: 8px;
+  border: none;
+  background: transparent; }
+
+#faq-expanded ::-webkit-scrollbar-button,
+#faq-expanded ::-webkit-scrollbar-track-piece,
+#faq-expanded ::-webkit-scrollbar-corner,
+#faq-expanded ::-webkit-resizer {
+  display: none; }
+
+#faq-expanded ::-webkit-scrollbar-thumb {
+  background-color: #36faea; }
+
+#faq-expanded ::-webkit-scrollbar-track {
+  background-image: url("../assets/backgrounds/smolgreen.png");
+  background-repeat: repeat-y;
+  background-size: contain; }
+
 .expanded-sign {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
