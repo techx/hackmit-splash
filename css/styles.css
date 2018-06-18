@@ -530,7 +530,7 @@ mark.red {
       .expanded-bubble .content {
         font-size: 1.25rem; } }
     .expanded-bubble .content .faq {
-      font-weight: 500;
+      font-weight: 400;
       cursor: pointer; }
       .expanded-bubble .content .faq .question {
         font-size: 1.5rem; }
@@ -605,15 +605,15 @@ mark.red {
   position: absolute;
   cursor: auto;
   height: auto;
-  width: 12vw; }
+  width: 15vw; }
   .expanded-x.left {
-    left: -2.8vw; }
+    left: -4vw; }
     .expanded-x.left.side {
-      left: 82vw; }
+      left: 78.5vw; }
   .expanded-x.right {
-    right: -2.8vw; }
+    right: -4vw; }
     .expanded-x.right.side {
-      right: 82vw; }
+      right: 78.5vw; }
   .expanded-x.top {
     bottom: 50vh; }
   .expanded-x.bottom {

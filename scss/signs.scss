@@ -128,7 +128,7 @@
             font-size: 1.25rem;
         }
         .faq {
-            font-weight: 500;
+            font-weight: 400;
             cursor: pointer;
             .question {
                 font-size: 1.5rem;
@@ -338,17 +338,17 @@
     position: absolute;
     cursor: auto;
     height: auto;
-    width: 12vw;
+    width: 15vw;
     &.left {
-        left: -2.8vw;
+        left: -4vw;
         &.side {
-            left: 82vw;
+            left: 78.5vw;
         }
     }
     &.right {
-        right: -2.8vw;
+        right: -4vw;
         &.side {
-            right: 82vw;
+            right: 78.5vw;
         }
     }
     &.top {
