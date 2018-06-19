@@ -63,21 +63,9 @@
         bottom: 14%;
     }
 }
-#faq-expanded {
-    // ::-webkit-scrollbar {
-    //     width: 6px;
-    // }
-    // ::-webkit-scrollbar-track {
-    //     -webkit-box-shadow: inset 0 0 6px #b9f734;
-    //     // background: #b9f734;
-    //     width: 3px;
-    // }
 
-    // ::-webkit-scrollbar-thumb {
-    //     border-radius: 10px;
-    //     // -webkit-box-shadow: inset 0 0 6px #36faea;
-    //     background: #36faea;
-    // }
+// custom scrollbar stuff
+#faq-expanded {
     ::-webkit-scrollbar,
     ::-webkit-scrollbar-thumb,
     ::-webkit-scrollbar-track {
@@ -85,21 +73,16 @@
         border: none;
         background: transparent;
     }
-
     ::-webkit-scrollbar-button,
     ::-webkit-scrollbar-track-piece,
     ::-webkit-scrollbar-corner,
     ::-webkit-resizer {
         display: none;
     }
-
     ::-webkit-scrollbar-thumb {
-        // border-radius: 6px;
         background-color: #36faea;
     }
-
     ::-webkit-scrollbar-track {
-        // background-image: url("https://i.imgur.com/GvV1R30.png");
         background-image: url("../assets/backgrounds/smolgreen.png");
         background-repeat: repeat-y;
         background-size: contain;
@@ -165,11 +148,11 @@
             left: calc(40vw - 350px);
         }
         // background-color: green;
-        // font-size: 3rem;
         @include mobile {
             font-size: 1.25rem;
         }
         .faq {
+            padding-right: 3.5%;
             font-weight: 400;
             cursor: pointer;
             .question {
