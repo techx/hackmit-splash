@@ -281,14 +281,15 @@ h2 {
     font-weight: 700; }
 
 .logo {
-  width: 75%;
+  width: 100%;
   display: block;
   margin: auto;
   padding-top: 60px; }
   @media screen and (max-width: 599px) {
     .logo {
-      width: 30%;
-      padding-top: 4vh; } }
+      width: 50%;
+      padding-top: 4vh;
+      margin-bottom: -10px; } }
   @media screen and (max-width: 365px) {
     .logo {
       padding-bottom: 6vh; } }

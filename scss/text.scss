@@ -25,13 +25,14 @@
     }
 }
 .logo {
-    width: 75%;
+    width: 100%;
     display: block;
     margin: auto;
     padding-top: 60px;
     @include mobile {
-        width: 30%;
+        width: 50%;
         padding-top: 4vh;
+        margin-bottom: -10px;
     }
     @include mobile-small {
         padding-bottom: 6vh;
