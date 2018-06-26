@@ -322,6 +322,7 @@ h2 {
       margin-top: 27px; } }
 
 .header {
+  transition: 250ms all ease;
   z-index: 15;
   margin: 0 auto;
   background-image: url("../assets/graphics/sign_no_words.svg");
@@ -332,7 +333,10 @@ h2 {
   height: 300px;
   position: absolute;
   font-family: "LoveloBlack", sans-serif;
-  left: calc(50vw - 40vw); }
+  left: calc(50vw - 40vw);
+  transform-origin: top;
+  animation: balance 1.5s ease-in-out 110ms 1 alternate;
+  animation-delay: 0.5s; }
   @media screen and (min-width: 600px) {
     .header {
       width: 600px;
@@ -407,6 +411,21 @@ mark.green {
 mark.red {
   background: none;
   color: #ec3e5b; }
+
+@keyframes balance {
+  0% { }
+  15% {
+    transform: rotateX(-0.02deg); }
+  30% {
+    transform: rotateX(0.02deg); }
+  45% {
+    transform: rotateX(-0.01deg); }
+  60% {
+    transform: rotateX(0.01deg); }
+  75% {
+    transform: rotateX(-0.005deg); }
+  100% {
+    transform: rotateX(0deg); } }
 
 .sign-link {
   position: absolute;
