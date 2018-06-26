@@ -1,0 +1,96 @@
+// colors
+$pink: #ff36bf;
+$blue: #36faea;
+$green: #b9f734;
+$red: #ec3e5b;
+$bg-color: #180724;
+$text-white: #edfaf0;
+
+// fonts
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("../fonts/Brandon_reg.otf") format("opentype");
+}
+// @font-face {
+//   font-family: "BrandonGrotesque";
+//   font-style: italic, oblique;
+//   src: url("../fonts/Brandon_reg_it.otf") format("opentype");
+// }
+@font-face {
+  font-family: "BrandonGrotesque";
+  font-weight: bold;
+  src: url("../fonts/Brandon_bld.otf") format("opentype");
+}
+@font-face {
+  font-family: "BrandonGrotesqueBlack";
+  src: url("../fonts/Brandon_blk.otf") format("opentype");
+}
+@font-face {
+  font-family: "LoveloBlack";
+  src: url("../fonts/Lovelo_Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "LoveloLine";
+  src: url("../fonts/Lovelo_Line_Light.otf") format("opentype");
+}
+// @font-face {
+//   font-family: "BrandonGrotesqueBlack";
+//   font-style: italic, oblique;
+//   src: url("../fonts/Brandon_blk_it.otf") format("opentype");
+// }
+$body-font: "BrandonGrotesque", sans-serif;
+$header-font: "BrandonGrotesqueBlack", sans-serif;
+$font-size-hm: 3.5rem, 1.5rem; // random
+$font-size-ht: 6rem, 1rem; //  random
+$font-size-hd: 6rem, 2rem; // random
+$font-weight-h: 800, 800; // random
+$letter-spacing-h: 0.06rem, 0.05rem; // random
+
+html {
+  color: $text-white;
+  font-family: $body-font;
+  min-height: 100%;
+  line-height: 1.5;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+}
+
+::selection {
+  background: $text-white;
+  color: $bg-color;
+  text-shadow: none;
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100%; //calc(100% + 1px);
+  background-color: $bg-color;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+}
+
+@for $index from 2 through 2 {
+  h#{$index} {
+    font-family: $header-font;
+    font-weight: nth($font-weight-h, $index);
+    letter-spacing: nth($letter-spacing-h, $index);
+
+    @include mobile {
+      font-size: nth($font-size-hm, $index);
+    }
+    @include tablet-landscape {
+      font-size: nth($font-size-ht, $index);
+    }
+    @include desktop {
+      font-size: nth($font-size-hd, $index);
+    }
+  }
+}
+
+@mixin animated {
+  transition: 0.50s all ease;
+    opacity: 1;
+    &.hide {
+        opacity: 0;
+    }
+}

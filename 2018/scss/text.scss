@@ -1,0 +1,183 @@
+// Blurb Text
+.blurb {
+    z-index: 3;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+    padding-top: 20px;
+    max-width: 80vw;
+    @include tablet-portrait {
+        position: absolute;
+        width: 25vw;
+        max-width: 25vw;
+        left: 50vw;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.blurb-text {
+    font-family: "BrandonGrotesque";
+    font-weight: 400;
+    .date {
+        font-family: "BrandonGrotesqueBlack";
+        font-weight: 700;
+    }
+}
+.logo {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding-top: 60px;
+    @include mobile {
+        width: 50%;
+        padding-top: 4vh;
+        margin-bottom: -10px;
+    }
+    @include mobile-small {
+        padding-bottom: 6vh;
+    }
+}
+
+// Header Size
+// TODO: Header Responsive Size
+@mixin header-size {
+    width: 80vw;
+    font-size: 10vw;
+    @include tablet-portrait {
+        width: 600px;
+        font-size: 70px;
+    }
+    @include desktop {
+        width: 700px;
+        font-size: 82px;
+    }
+}
+.heading { // "Welcome to HACKMIT 2018"
+    @include header-size();
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: $green;
+    line-height: 10.1vw; // avoids awkward gap between lines
+    font-family: "LoveloLine", sans-serif;
+    font-weight: 700;
+    margin-top: 2vw;
+    @include tablet-portrait {
+        line-height: 1;
+        margin-top: 27px; // manually set to match bgd
+    }
+    @include desktop {
+        margin-top: 27px; // manually set to match bgd
+    }
+}
+.header { // Wraps the sign at the top
+    transition: 250ms all ease;
+    z-index: 15;
+    margin: 0 auto;
+    background-image: url("../assets/graphics/sign_no_words.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    @include header-size();
+    height: 300px;
+    position: absolute;
+    font-family: "LoveloBlack", sans-serif; //TODO: should be Lovelo Black
+    left: calc(50vw - 40vw); // 50vw - width/2
+    @include tablet-portrait {
+        left: calc(50vw - 300px); // 50vw - width/2
+    }
+    @include desktop {
+        left: calc(50vw - 350px); // 50vw - width/2
+    }
+    transform-origin: top;
+    animation: balance 1.5s ease-in-out 110ms 1 alternate;
+    animation-delay: 0.5s;
+}
+.navbar { // Wraps the links above the header sign
+    font-family: "LoveloBlack", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 80%;
+    margin: 0 auto;
+    color: $bg-color;
+    font-weight: bold;
+}
+.navbar-desktop {
+    display: none;
+    @include tablet-portrait {
+        display: flex;
+        padding-top: 10px;
+        font-size: 25px;
+        height: 55px;
+    }
+    @include desktop { // TODO
+        display: flex;
+        font-size: 25px;
+        height: 65px;
+    }
+}
+.navbar-mobile {
+    font-size: 4vw;
+    @include tablet-portrait {
+        display: none;
+    }
+}
+.navbar-mobile-top {
+    height: 9.1vw;
+    a {
+        z-index: 5;
+    }
+}
+.navbar-mobile-bottom {
+    height: 10.2vw;
+    a {
+        z-index: 5;
+    }
+}
+.navbar-hack {
+    width: 100%;
+    display: inline-block;
+}
+
+// colors for "Can I attend?" FAQ
+mark.pink {
+    background: none;
+    color: $pink
+}
+mark.blue {
+    background: none;
+    color: $blue
+}
+mark.green {
+    background: none;
+    color: $green
+}
+mark.red {
+    background: none;
+    color: $red
+}
+
+@keyframes balance {
+    0% {
+    }
+    15% {
+    transform: rotateX(-0.02deg);
+    }
+    30% {
+    transform: rotateX(0.02deg);
+    }
+    45% {
+    transform: rotateX(-0.01deg);
+    }
+    60% {
+    transform: rotateX(0.01deg);
+    }
+    75% {
+    transform: rotateX(-0.005deg);
+    }
+    100% {
+    transform: rotateX(0deg);
+    }
+
+    }

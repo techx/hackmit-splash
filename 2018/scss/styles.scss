@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+// import base
+@import "./_reset.scss";
+@import "./_responsive.scss";
+@import "./_theme.scss";
+
+// import rules
+@import "./footer.scss";
+@import "./parallax.scss";
+@import "./text.scss";
+@import "./signs.scss";

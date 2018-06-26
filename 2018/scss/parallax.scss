@@ -1,0 +1,136 @@
+.parallax { // wraps the entire page and sets perspective
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    perspective: 1px;
+    -webkit-perspective: 1px;
+  }
+  -webkit-overflow-scrolling: touch;
+  &.hide {
+    overflow-y: hidden;
+  }
+}
+
+.skyline,
+.streetview { // page split in two
+  position: relative;
+}
+
+.background-skyline { // positions background to stick for skyline
+  width: 100vw;
+  height: calc(100vh + 2vh + 300px); // same as skyline height
+  background-image: url("../assets/backgrounds/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.2)
+}
+
+.skyline { // top half
+  height: calc(100vh + 40px + 300px); // same as background-skyline height; determines height of parallax scrolling skyline container
+  transform-style: preserve-3d; // preserve perspective in non-chrome browsers
+}
+
+.layer { // layers of the skyline
+  height: calc(100vh + 300px); // should be skyline height - 40px
+  background-position: bottom center;
+  min-width: 1100px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: repeat-x;
+  transition: transform 0.2s;
+}
+
+#layer-1 {
+  background-image: url("../assets/backgrounds/perspective1.svg");
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    transform: translateZ(-1px) translateY(-10vh) scale(2.08); // was scale(2)
+  }
+}
+#layer-2 {
+  background-image: url("../assets/backgrounds/perspective2.svg");
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    transform: translateZ(-0.5px) translateY(-5vh) scale(1.52); // was scale(1.5)
+  }
+}
+#layer-3 {
+  background-image: url("../assets/backgrounds/perspective3.svg");
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    transform: translateZ(-0.2px) translateY(10vh) scale(1.2);
+    margin-top: 0;
+  }
+  margin-top: 12vh;
+}
+
+.streetview { // bottom half of page
+  // background: $bg-color;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $bg-color;
+    height: calc(100% - 25vh);
+    width: 100%;
+    @include tablet-portrait {
+      transform: translateZ(-0.2px) translateY(25vh) scale(1.2);
+    }
+  }
+  margin-top: -1px;
+}
+
+.streetview #buildings {
+  position: relative;
+  // bottom: -5.2vw;
+  width: 100%;
+  z-index: 1;
+  @include tablet-portrait {
+    margin-top: -10vh; // move streetview closer to skyline
+  }
+}
+
+.footer {
+  position: relative;
+  margin-top: -6.2vw;
+  @include tablet-portrait {
+    margin-top: -5.6vw;
+  }
+  @include tablet-landscape {
+    margin-top: -5.2vw;
+  }
+  // margin-bottom: -10px; // deletes a weird gap - moved to #floor in footer
+}
+
+// phones & portrait tablets
+@media screen and (max-width: 600px) {
+  .skyline {
+    height: calc(100vh);
+  }
+
+  .layer {
+    height: calc(100vh);
+    // min-width: 800px!important;
+  }
+
+  #layer-1 {
+    @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    transform: translateZ(-1px) translateY(-15vh) scale(2.08);
+    }
+  }
+
+  #layer-2 {
+    @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    transform: translateZ(-0.5px) translateY(-10vh) scale(1.52);
+    }
+  }
+
+  #layer-3 {
+    @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    transform: translateZ(0px) translateY(0vh);
+    }
+  }
+}
