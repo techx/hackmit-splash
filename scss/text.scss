@@ -89,9 +89,12 @@
     @include desktop {
         left: calc(50vw - 350px); // 50vw - width/2
     }
-    transform-origin: top;
-    animation: balance 1.5s ease-in-out 110ms 1 alternate;
-    animation-delay: 0.5s;
+    @include tablet-landscape {
+        transform-origin: top;
+        animation: balance 1.5s ease-in-out 110ms 1 alternate;
+        animation-delay: 0.5s;
+        transform-style: preserve-3d
+    }
 }
 .navbar { // Wraps the links above the header sign
     font-family: "LoveloBlack", sans-serif;
@@ -160,6 +163,7 @@ mark.red {
 
 @keyframes balance {
     0% {
+        transform: rotateX(0deg);
     }
     15% {
     transform: rotateX(-0.02deg);

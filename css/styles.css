@@ -333,10 +333,7 @@ h2 {
   height: 300px;
   position: absolute;
   font-family: "LoveloBlack", sans-serif;
-  left: calc(50vw - 40vw);
-  transform-origin: top;
-  animation: balance 1.5s ease-in-out 110ms 1 alternate;
-  animation-delay: 0.5s; }
+  left: calc(50vw - 40vw); }
   @media screen and (min-width: 600px) {
     .header {
       width: 600px;
@@ -351,6 +348,12 @@ h2 {
   @media screen and (min-width: 1200px) {
     .header {
       left: calc(50vw - 350px); } }
+  @media screen and (min-width: 900px) {
+    .header {
+      transform-origin: top;
+      animation: balance 1.5s ease-in-out 110ms 1 alternate;
+      animation-delay: 0.5s;
+      transform-style: preserve-3d; } }
 
 .navbar {
   font-family: "LoveloBlack", sans-serif;
@@ -413,7 +416,8 @@ mark.red {
   color: #ec3e5b; }
 
 @keyframes balance {
-  0% { }
+  0% {
+    transform: rotateX(0deg); }
   15% {
     transform: rotateX(-0.02deg); }
   30% {
