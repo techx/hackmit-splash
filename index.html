@@ -76,7 +76,7 @@
 
             <div class="faq">
               <h4 class="question">How does registration work?</h4>
-              <p class="answer">Registration will open in early July! Admissions will be based on a weighted random lottery and will be done in two waves. If you’re accepted, you will have a week to confirm your attendance.</p>
+              <p class="answer">Registration is open now! See the Register tab for details. Admissions will be based on a weighted random lottery and will be done in two waves. If you’re accepted, you will have a week to confirm your attendance.</p>
             </div>
 
             <div class="faq">
@@ -165,7 +165,7 @@
       <div class="expanded-bubble right" id="green-expanded-bubble">
           <div class="content centered">
             <p>
-              Registration will open in early July! Submit your email <a href="http://go.hackmit.org/preregistration" style="text-decoration: underline;">here</a> and we'll notify you once applications are open.
+              Registration is now open! Register <a href="https://my.hackmit.org/login" style="text-decoration: underline;" id="register-button">here</a>!
             </p>
           </div>
       </div>
@@ -199,7 +199,7 @@
           <a class="sign-link sign-top speakers-link" id="speakers-sign-link" href="#"><object id="speakers-sign" data="assets/graphics/speakers.svg" class="sign"></object></a>
           <a class="sign-link sign-bottom faq-link" id="faq-sign-link" href="#"><object id="faq-sign" data="assets/graphics/faq.svg" class="sign"></object></a>
           <a class="sign-link sign-top sponsors-link" id="sponsors-sign-link" href="#"><object id="sponsors-sign" data="assets/graphics/sponsors_1.svg" class="sign"></object></a>
-          <a class="sign-link sign-bottom register-link" id="register-sign-link" href="#"><object id="register-sign" data="assets/graphics/registernew.svg" class="sign"></object></a>
+          <a class="sign-link sign-bottom register-link" id="register-sign-link" href="#"><object id="register-sign" data="assets/graphics/open.svg" class="sign"></object></a>
           <div class="blurb">
             <h2 class="blurb-text">
               Step into a world of boundless excitement and creation at the Massachusetts Institute of Technology on <span class="date">September 15th-16th</span>. Join 1,000 hackers as they hack and explore endless possibilities.
@@ -243,9 +243,15 @@
   </script>
   <script>
     // Facebook pixel
+    Array
+      .from(document.getElementsByClassName("register-link"))
+      .forEach(function(o) {
+        o.addEventListener('click', (function() {
+          fbq('track', 'Lead');
+        }).bind(this));
+      });
     document.getElementById("register-button").addEventListener("click", function() {
-        fbq('track', 'Lead');
-        fbq('track', 'CompleteRegistration');
+      fbq('track', 'CompleteRegistration');
     });
   </script>
 </body>
