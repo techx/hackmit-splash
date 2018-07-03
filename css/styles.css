@@ -400,20 +400,23 @@ h2 {
   display: inline-block; }
 
 mark.pink {
+  font-weight: 700;
   background: none;
-  color: #ff36bf; }
+  color: #36faea; }
 
 mark.blue {
   background: none;
   color: #36faea; }
 
 mark.green {
+  font-weight: 700;
   background: none;
-  color: #b9f734; }
+  color: #36faea; }
 
 mark.red {
+  font-weight: 700;
   background: none;
-  color: #ec3e5b; }
+  color: #36faea; }
 
 @keyframes balance {
   0% {
@@ -553,7 +556,7 @@ mark.red {
   .expanded-bubble.right {
     right: 7vw; }
   .expanded-bubble .content {
-    font-family: "BrandonGrotesqueBlack", sans-serif;
+    font-family: "BrandonGrotesque", sans-serif;
     font-weight: 400;
     position: absolute;
     overflow-y: auto;
@@ -580,9 +583,11 @@ mark.red {
     .expanded-bubble .content .faq {
       padding-right: 3.5%;
       font-weight: 400;
+      margin: 24px auto;
       cursor: pointer; }
       .expanded-bubble .content .faq .question {
-        font-size: 1.5rem; }
+        font-size: 1.5rem;
+        font-weight: 700; }
         @media screen and (max-width: 599px) {
           .expanded-bubble .content .faq .question {
             font-size: 1.25rem; } }

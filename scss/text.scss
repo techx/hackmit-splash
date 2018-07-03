@@ -145,20 +145,26 @@
 
 // colors for "Can I attend?" FAQ
 mark.pink {
+    font-weight: 700;
     background: none;
-    color: $pink
+    // color: $pink;
+    color: $blue;
 }
 mark.blue {
     background: none;
     color: $blue
 }
 mark.green {
+    font-weight: 700;
     background: none;
-    color: $green
+    // color: $green
+    color: $blue;
 }
 mark.red {
+    font-weight: 700;
     background: none;
-    color: $red
+    // color: $red
+    color: $blue;
 }
 
 @keyframes balance {

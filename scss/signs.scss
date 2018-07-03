@@ -125,7 +125,7 @@
     }
     overflow: hidden;
     .content {
-        font-family: "BrandonGrotesqueBlack", sans-serif;
+        font-family: "BrandonGrotesque", sans-serif;
         font-weight: 400;
         position: absolute;
         overflow-y: auto;
@@ -154,9 +154,11 @@
         .faq {
             padding-right: 3.5%;
             font-weight: 400;
+            margin: 24px auto;
             cursor: pointer;
             .question {
                 font-size: 1.5rem;
+                font-weight: 700;
                 @include mobile {
                     font-size: 1.25rem;
                 }
