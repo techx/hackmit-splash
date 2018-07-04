@@ -89,3 +89,65 @@ window.onload = function() {
 			}).bind(this));
 		});
 }
+
+/* LIT PUZZLE ENTRY */
+
+$('.bottom').click(function (e) {
+  
+  // Remove any old one
+  $(".ripple").remove();
+
+  // Setup
+  var posX = $(this).offset().left,
+      posY = $(this).offset().top,
+      buttonWidth = $(this).width(),
+      buttonHeight =  $(this).height();
+  
+  // Add the element
+  $(this).prepend("<span class='ripple'></span>");
+
+  
+ // Make it round!
+  if(buttonWidth >= buttonHeight) {
+    buttonHeight = buttonWidth;
+  } else {
+    buttonWidth = buttonHeight; 
+  }
+  
+  // Get the center of the element
+  var x = e.pageX - posX - buttonWidth / 2;
+  var y = e.pageY - posY - buttonHeight / 2;
+  
+ 
+  // Add the ripples CSS and start the animation
+  $(".ripple").css({
+    width: buttonWidth,
+    height: buttonHeight,
+    top: y + 'px',
+    left: x + 'px'
+  }).addClass("rippleEffect");
+});
+
+// click 21 times to enter puzzle
+// check console log for hint
+function puzzle() {
+    var bottom = document.getElementById("bottom");
+    var counter = 0;
+
+    bottom.onmouseover = function() {
+        this.style.backgroundColor = "blue";
+        this.style.opacity = "0.2";
+    }
+    bottom.onmouseout = function() {
+        this.style.backgroundColor = "transparent";
+    }
+    bottom.onclick = function() { 
+        counter += 1;
+        console.log(`You're ${counter}!`);
+        if (counter === 21) {
+            window.alert("PLACEHOLDER FOR COMMAND CENTER");
+        }
+    }
+}
+
+puzzle()
