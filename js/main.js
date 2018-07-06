@@ -37,7 +37,7 @@ window.onload = function() {
     ///////////////
     // Sign Links
     ///////////////
-    var signNames = ['speakers', 'faq', 'sponsors', 'register'];
+    var signNames = ['speakers', 'faq', 'sponsors'];
     signNames
         .forEach(function(name) {
             var expandedDiv = document.getElementById(name + '-expanded');            

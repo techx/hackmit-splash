@@ -160,18 +160,6 @@
       </div>
       <img src="assets/graphics/pinkarrow.svg" class="expanded-arrow right" id="sponsors-arrow">
     </div>
-    <div id="register-expanded" class="expanded-sign">
-      <img src="assets/graphics/greenx.svg" class="expanded-x right bottom">
-      <img src="assets/graphics/greenx.svg" class="expanded-x right bottom side">
-      <div class="expanded-bubble right" id="green-expanded-bubble">
-          <div class="content centered">
-            <p>
-              Registration is now open! Register <a href="https://my.hackmit.org/login" style="text-decoration: underline;" id="register-button">here</a>!
-            </p>
-          </div>
-      </div>
-      <img src="assets/graphics/greenarrow.svg" class="expanded-arrow right" id="register-arrow">
-    </div>
     <div class="parallax">
       <div class="background-skyline"></div>
       <div class="skyline">
@@ -180,7 +168,7 @@
             <a class="speakers-link" href="#">SPEAKERS</a>
             <a class="faq-link" href="#">FAQ</a>
             <a class="sponsors-link" href="#">SPONSORS</a>
-            <a class="register-link" href="#">REGISTER</a>
+            <a class="register-link" href="https://my.hackmit.org/login" target="_blank" rel="noopener noreferrer">REGISTER</a>
           </div>
           <div class="navbar navbar-mobile navbar-mobile-top">
             <a class="speakers-link" href="#">SPEAKERS</a>
@@ -189,7 +177,7 @@
           <h1 class="heading">WELCOME TO HACKMIT 2018</h1>
           <div class="navbar navbar-mobile navbar-mobile-bottom">
             <a class="faq-link" href="#">FAQ</a>
-            <a class="register-link" href="#">REGISTER</a>
+            <a class="register-link" href="https://my.hackmit.org/login" target="_blank" rel="noopener noreferrer">REGISTER</a>
           </div>
         </div>
         <div class="layer" id="layer-1" data-speed="-0.50" data-offset="80"></div>
@@ -200,12 +188,12 @@
           <a class="sign-link sign-top speakers-link" id="speakers-sign-link" href="#"><object id="speakers-sign" data="assets/graphics/speakers.svg" class="sign"></object></a>
           <a class="sign-link sign-bottom faq-link" id="faq-sign-link" href="#"><object id="faq-sign" data="assets/graphics/faq.svg" class="sign"></object></a>
           <a class="sign-link sign-top sponsors-link" id="sponsors-sign-link" href="#"><object id="sponsors-sign" data="assets/graphics/sponsors_1.svg" class="sign"></object></a>
-          <a class="sign-link sign-bottom register-link" id="register-sign-link" href="#"><object id="register-sign" data="assets/graphics/open.svg" class="sign"></object></a>
+          <a class="sign-link sign-bottom register-link" id="register-sign-link" href="https://my.hackmit.org/login" target="_blank" rel="noopener noreferrer"><object id="register-sign" data="assets/graphics/open.svg" class="sign"></object></a>
           <div class="blurb">
             <h2 class="blurb-text">
               Step into a world of boundless excitement and creation at the Massachusetts Institute of Technology on <span class="date">September 15th-16th</span>. Join 1,000 hackers as they hack and explore endless possibilities.
             </h2>
-            <img src="assets/graphics/hack-smol-transp.gif" class="logo">
+            <img src="assets/graphics/hacklogo400.gif" class="logo">
           </div>
           <img src="assets/backgrounds/litbuildings.svg" id="buildings">
       </div>
@@ -254,11 +242,9 @@
       .forEach(function(o) {
         o.addEventListener('click', (function() {
           fbq('track', 'Lead');
+          fbq('track', 'CompleteRegistration');
         }).bind(this));
       });
-    document.getElementById("register-button").addEventListener("click", function() {
-      fbq('track', 'CompleteRegistration');
-    });
   </script>
 </body>
 </html>
