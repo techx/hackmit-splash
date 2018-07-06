@@ -145,7 +145,7 @@ function puzzle() {
         counter += 1;
         console.log(`You're ${counter}!`);
         if (counter === 21) {
-            window.alert("PLACEHOLDER FOR COMMAND CENTER");
+            window.alert("hackmirror.icu");
         }
     }
 }
