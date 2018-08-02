@@ -37,10 +37,10 @@ window.onload = function() {
     ///////////////
     // Sign Links
     ///////////////
-    var signNames = ['speakers', 'faq', 'sponsors'];
+    var signNames = ['speakers', 'faq', 'sponsors', 'register'];
     signNames
         .forEach(function(name) {
-            var expandedDiv = document.getElementById(name + '-expanded');            
+            var expandedDiv = document.getElementById(name + '-expanded');
             var sign = document.getElementById(name + '-sign-link');
             // SHOW when clicked
             Array
@@ -62,7 +62,7 @@ window.onload = function() {
                 setTimeout(function() {expandedDiv.classList.remove('show1');}, 500);
             }).bind(this));
         });
-    
+
     ///////////////
     // Footer Toggle
     ///////////////
@@ -93,7 +93,7 @@ window.onload = function() {
 /* LIT PUZZLE ENTRY */
 
 $('.bottom').click(function (e) {
-  
+
   // Remove any old one
   $(".ripple").remove();
 
@@ -102,23 +102,23 @@ $('.bottom').click(function (e) {
       posY = $(this).offset().top,
       buttonWidth = $(this).width(),
       buttonHeight =  $(this).height();
-  
+
   // Add the element
   $(this).prepend("<span class='ripple'></span>");
 
-  
+
  // Make it round!
   if(buttonWidth >= buttonHeight) {
     buttonHeight = buttonWidth;
   } else {
-    buttonWidth = buttonHeight; 
+    buttonWidth = buttonHeight;
   }
-  
+
   // Get the center of the element
   var x = e.pageX - posX - buttonWidth / 2;
   var y = e.pageY - posY - buttonHeight / 2;
-  
- 
+
+
   // Add the ripples CSS and start the animation
   $(".ripple").css({
     width: buttonWidth,
@@ -141,7 +141,7 @@ function puzzle() {
     bottom.onmouseout = function() {
         this.style.backgroundColor = "transparent";
     }
-    bottom.onclick = function() { 
+    bottom.onclick = function() {
         counter += 1;
         console.log(`You're ${counter}!`);
         if (counter === 21) {
