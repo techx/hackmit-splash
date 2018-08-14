@@ -654,3 +654,20 @@ mark.red {
     left: 72.5vw; }
   .expanded-arrow.right {
     right: 72.5vw; }
+
+.sponsor {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+  padding: 5px;
+  margin: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .25s; }
+  .sponsor:hover {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    transition: .25s; }
+  .sponsor.platinum {
+    width: 145px;
+    height: 145px; }

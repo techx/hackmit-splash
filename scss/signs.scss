@@ -396,3 +396,22 @@
         right: 72.5vw;
     }
 }
+
+.sponsor {
+    -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+    padding: 5px;
+    margin: 5px;
+    &:hover {
+        -webkit-filter: brightness(1);
+        filter: brightness(1);
+        transition:.25s;
+    }
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition:.25s;
+    &.platinum {
+        width: 145px;
+        height: 145px;
+    }
+}
