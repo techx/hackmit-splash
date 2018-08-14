@@ -668,6 +668,18 @@ mark.red {
     -webkit-filter: brightness(1);
     filter: brightness(1);
     transition: .25s; }
+  .sponsor.diamond {
+    width: 300px;
+    height: 300px; }
   .sponsor.platinum {
-    width: 145px;
-    height: 145px; }
+    width: 200px;
+    height: 200px; }
+  .sponsor.gold {
+    width: 175px;
+    height: 175px; }
+  .sponsor.silver {
+    width: 150px;
+    height: 150px; }
+  .sponsor.bronze {
+    width: 100px;
+    height: 100px; }

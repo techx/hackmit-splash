@@ -397,6 +397,11 @@
     }
 }
 
+$diamond-size: 300px;
+$platinum-size: 200px;
+$gold-size: 175px;
+$silver-size: 150px;
+$bronze-size: 100px;
 .sponsor {
     -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
@@ -410,8 +415,24 @@
     background-size: contain;
     background-repeat: no-repeat;
     transition:.25s;
+    &.diamond {
+        width: $diamond-size;
+        height: $diamond-size;
+    }
     &.platinum {
-        width: 145px;
-        height: 145px;
+        width: $platinum-size;
+        height: $platinum-size;
+    }
+    &.gold {
+        width: $gold-size;
+        height: $gold-size;
+    }
+    &.silver {
+        width: $silver-size;
+        height: $silver-size;
+    }
+    &.bronze {
+        width: $bronze-size;
+        height: $bronze-size;
     }
 }
