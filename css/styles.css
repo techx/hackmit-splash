@@ -678,17 +678,17 @@ mark.red {
     filter: brightness(1);
     transition: .25s; }
   .sponsor.diamond {
-    width: 300px;
-    height: 300px; }
-  .sponsor.platinum, .sponsor.custom {
+    width: 350px;
+    height: 350px; }
+  .sponsor.platinum {
     width: 200px;
     height: 200px; }
   .sponsor.gold {
     width: 150px;
     height: 150px; }
   .sponsor.silver {
-    width: 120px;
-    height: 120px; }
+    width: 100px;
+    height: 100px; }
   .sponsor.bronze {
-    width: 80px;
-    height: 80px; }
+    width: 50px;
+    height: 50px; }

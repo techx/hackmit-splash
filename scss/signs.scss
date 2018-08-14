@@ -404,11 +404,11 @@
     }
 }
 
-$diamond-size: 300px;
+$diamond-size: 350px;
 $platinum-size: 200px;
 $gold-size: 150px;
-$silver-size: 120px;
-$bronze-size: 80px;
+$silver-size: 100px;
+$bronze-size: 50px;
 .sponsor {
     padding: 15px;
     margin: 15px;
@@ -431,7 +431,7 @@ $bronze-size: 80px;
         width: $diamond-size;
         height: $diamond-size;
     }
-    &.platinum, &.custom {
+    &.platinum {
         width: $platinum-size;
         height: $platinum-size;
     }
