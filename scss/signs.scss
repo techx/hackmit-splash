@@ -406,14 +406,14 @@
 
 $diamond-size: 300px;
 $platinum-size: 200px;
-$gold-size: 175px;
-$silver-size: 150px;
-$bronze-size: 100px;
+$gold-size: 150px;
+$silver-size: 120px;
+$bronze-size: 80px;
 .sponsor {
-    padding: 5px;
-    margin: 5px;
+    padding: 15px;
+    margin: 15px;
 	
-    background-size: calc(100% - 20px) auto;
+    background-size: calc(100% - 10px) auto;
     background-repeat: no-repeat;
     background-position: center center;
  
