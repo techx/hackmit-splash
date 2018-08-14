@@ -662,9 +662,9 @@ mark.red {
     right: 72.5vw; }
 
 .sponsor {
-  padding: 5px;
-  margin: 5px;
-  background-size: calc(100% - 20px) auto;
+  padding: 15px;
+  margin: 15px;
+  background-size: calc(100% - 10px) auto;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-filter: brightness(0) invert(1);
@@ -684,11 +684,11 @@ mark.red {
     width: 200px;
     height: 200px; }
   .sponsor.gold {
-    width: 175px;
-    height: 175px; }
-  .sponsor.silver {
     width: 150px;
     height: 150px; }
+  .sponsor.silver {
+    width: 120px;
+    height: 120px; }
   .sponsor.bronze {
-    width: 100px;
-    height: 100px; }
+    width: 80px;
+    height: 80px; }
