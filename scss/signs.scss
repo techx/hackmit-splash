@@ -139,6 +139,13 @@
             flex-direction: column;
             text-align: center;
         }
+	&.right {
+	    display: flex;
+	    justify-content: center;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    align-items: center;
+	}
         @include tablet-portrait {
             width: 550px;
             left: calc(40vw - 275px);
@@ -403,10 +410,15 @@ $gold-size: 175px;
 $silver-size: 150px;
 $bronze-size: 100px;
 .sponsor {
-    -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1);
-    filter: brightness(0) invert(1);
     padding: 5px;
     margin: 5px;
+	
+    background-size: calc(100% - 20px) auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+ 
+    -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
     &:hover {
         -webkit-filter: brightness(1);
         filter: brightness(1);
@@ -419,7 +431,7 @@ $bronze-size: 100px;
         width: $diamond-size;
         height: $diamond-size;
     }
-    &.platinum {
+    &.platinum, &.custom {
         width: $platinum-size;
         height: $platinum-size;
     }

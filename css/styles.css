@@ -542,6 +542,12 @@ mark.red {
       justify-content: center;
       flex-direction: column;
       text-align: center; }
+    .expanded-bubble .content.right {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center; }
     @media screen and (min-width: 600px) {
       .expanded-bubble .content {
         width: 550px;
@@ -656,11 +662,14 @@ mark.red {
     right: 72.5vw; }
 
 .sponsor {
+  padding: 5px;
+  margin: 5px;
+  background-size: calc(100% - 20px) auto;
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
-  padding: 5px;
-  margin: 5px;
   background-size: contain;
   background-repeat: no-repeat;
   transition: .25s; }
@@ -671,7 +680,7 @@ mark.red {
   .sponsor.diamond {
     width: 300px;
     height: 300px; }
-  .sponsor.platinum {
+  .sponsor.platinum, .sponsor.custom {
     width: 200px;
     height: 200px; }
   .sponsor.gold {
