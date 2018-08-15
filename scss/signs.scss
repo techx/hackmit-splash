@@ -89,6 +89,30 @@
     }
 }
 
+#sponsors-expanded {
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-track {
+        width: 8px;
+        border: none;
+        background: transparent;
+    }
+    ::-webkit-scrollbar-button,
+    ::-webkit-scrollbar-track-piece,
+    ::-webkit-scrollbar-corner,
+    ::-webkit-resizer {
+        display: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: $pink;
+    }
+    ::-webkit-scrollbar-track {
+        background-image: url("../assets/backgrounds/smolred.png");
+        background-repeat: repeat-y;
+        background-size: contain;
+    }
+}
+
 // Expanded Bubbles
 .expanded-sign { // fixed div cover, general styling
     background-color: rgba(0,0,0,0.7);

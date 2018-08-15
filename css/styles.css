@@ -499,6 +499,27 @@ mark.red {
   background-repeat: repeat-y;
   background-size: contain; }
 
+#sponsors-expanded ::-webkit-scrollbar,
+#sponsors-expanded ::-webkit-scrollbar-thumb,
+#sponsors-expanded ::-webkit-scrollbar-track {
+  width: 8px;
+  border: none;
+  background: transparent; }
+
+#sponsors-expanded ::-webkit-scrollbar-button,
+#sponsors-expanded ::-webkit-scrollbar-track-piece,
+#sponsors-expanded ::-webkit-scrollbar-corner,
+#sponsors-expanded ::-webkit-resizer {
+  display: none; }
+
+#sponsors-expanded ::-webkit-scrollbar-thumb {
+  background-color: #ff36bf; }
+
+#sponsors-expanded ::-webkit-scrollbar-track {
+  background-image: url("../assets/backgrounds/smolred.png");
+  background-repeat: repeat-y;
+  background-size: contain; }
+
 .expanded-sign {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
