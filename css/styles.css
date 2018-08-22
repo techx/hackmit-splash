@@ -535,6 +535,27 @@ mark.red {
   background-repeat: repeat-y;
   background-size: contain; }
 
+#sponsors-expanded ::-webkit-scrollbar,
+#sponsors-expanded ::-webkit-scrollbar-thumb,
+#sponsors-expanded ::-webkit-scrollbar-track {
+  width: 8px;
+  border: none;
+  background: transparent; }
+
+#sponsors-expanded ::-webkit-scrollbar-button,
+#sponsors-expanded ::-webkit-scrollbar-track-piece,
+#sponsors-expanded ::-webkit-scrollbar-corner,
+#sponsors-expanded ::-webkit-resizer {
+  display: none; }
+
+#sponsors-expanded ::-webkit-scrollbar-thumb {
+  background-color: #ff36bf; }
+
+#sponsors-expanded ::-webkit-scrollbar-track {
+  background-image: url("../assets/backgrounds/smolred.png");
+  background-repeat: repeat-y;
+  background-size: contain; }
+
 .expanded-sign {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -578,6 +599,12 @@ mark.red {
       justify-content: center;
       flex-direction: column;
       text-align: center; }
+    .expanded-bubble .content.right {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center; }
     @media screen and (min-width: 600px) {
       .expanded-bubble .content {
         width: 550px;
@@ -692,6 +719,38 @@ mark.red {
     left: 72.5vw; }
   .expanded-arrow.right {
     right: 72.5vw; }
+
+.sponsor {
+  padding: 15px;
+  margin: 15px;
+  background-size: calc(100% - 10px) auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .25s; }
+  .sponsor:hover {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    transition: .25s; }
+  .sponsor.diamond {
+    width: 350px;
+    height: 350px; }
+  .sponsor.platinum {
+    width: 200px;
+    height: 200px; }
+  .sponsor.gold {
+    width: 150px;
+    height: 150px; }
+  .sponsor.silver {
+    width: 100px;
+    height: 100px; }
+  .sponsor.bronze {
+    width: 50px;
+    height: 50px; }
 
 .bottom-2 {
   height: 5px; }
