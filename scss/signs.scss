@@ -430,6 +430,7 @@
     }
 }
 
+// Sponsors section
 $diamond-size: 350px;
 $platinum-size: 200px;
 $gold-size: 150px;
@@ -438,11 +439,11 @@ $bronze-size: 50px;
 .sponsor {
     padding: 15px;
     margin: 15px;
-	
+
     background-size: calc(100% - 10px) auto;
     background-repeat: no-repeat;
     background-position: center center;
- 
+
     -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
     &:hover {
