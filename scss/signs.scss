@@ -65,6 +65,30 @@
 }
 
 // custom scrollbar stuff
+#speakers-expanded {
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-track {
+        width: 8px;
+        border: none;
+        background: transparent;
+    }
+    ::-webkit-scrollbar-button,
+    ::-webkit-scrollbar-track-piece,
+    ::-webkit-scrollbar-corner,
+    ::-webkit-resizer {
+        display: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: $pink;
+    }
+    ::-webkit-scrollbar-track {
+        background-image: url("../assets/backgrounds/smolred.png");
+        background-repeat: repeat-y;
+        background-size: contain;
+    }
+}
+
 #faq-expanded {
     ::-webkit-scrollbar,
     ::-webkit-scrollbar-thumb,
@@ -490,6 +514,7 @@ $bronze-size: 50px;
     .slide {
         display: none;
         top: 20%;
+        bottom: 20%;
         margin-right: 3.5%;
         margin-left: 3.5%;
 
@@ -503,7 +528,7 @@ $bronze-size: 50px;
             }
 
             @include mobile {
-              font-size: 15px;
+              font-size: 20px;
             }
         }
     }
@@ -526,19 +551,25 @@ $bronze-size: 50px;
     }
 }
 
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  border: 2px solid $pink;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+.index {
+  position: relative;
+  text-align: center;
+  top: 87.5%;
 
-.active, .dot:hover {
-  background-color: $pink;
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border: 2px solid $pink;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: $pink;
+  }
 }
 
 .speaker {
@@ -590,11 +621,11 @@ $bronze-size: 50px;
         @include desktop {
           width: 225px;
           height: 225px;
-          border: 10px;
+          border: 10px solid $red;
         }
         @include mobile {
-          width: 75px;
-          height: 75px;
+          width: 85px;
+          height: 85px;
           border: 5px solid $red;
         }
     }
