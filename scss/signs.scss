@@ -489,11 +489,22 @@ $bronze-size: 50px;
 
     .slide {
         display: none;
+        top: 20%;
+        margin-right: 3.5%;
+        margin-left: 3.5%;
 
         p {
             font-family: "BrandonGrotesque", sans-serif;
             font-size: 2.0vw;
             margin: 20px 0 20px 0px;
+
+            @include desktop {
+              font-size: 35px;
+            }
+
+            @include mobile {
+              font-size: 15px;
+            }
         }
     }
 
@@ -547,6 +558,13 @@ $bronze-size: 50px;
       margin: 0;
       font-family: $header-font;
       font-size: 5.0vw;
+
+      @include desktop {
+        font-size: 80px;
+      }
+      @include mobile {
+        font-size: 24px;
+      }
     }
 
     h5 {
@@ -554,12 +572,30 @@ $bronze-size: 50px;
       font-family: $header-font;
       font-size: 2.5vw;
       color: $pink;
+
+      @include desktop {
+        font-size: 40px;
+      }
+      @include mobile {
+        font-size: 14px;
+      }
     }
 
     img {
         width: 15vw;
         height: 15vw;
-        border: 7.5px solid $red;
+        border: 1vw solid $red;
         border-radius: 100%;
+
+        @include desktop {
+          width: 225px;
+          height: 225px;
+          border: 10px;
+        }
+        @include mobile {
+          width: 75px;
+          height: 75px;
+          border: 5px solid $red;
+        }
     }
 }
