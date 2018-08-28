@@ -737,8 +737,8 @@ mark.red {
     filter: brightness(1);
     transition: .25s; }
   .sponsor.diamond {
-    width: 350px;
-    height: 350px; }
+    width: 300px;
+    height: 300px; }
   .sponsor.platinum {
     width: 200px;
     height: 200px; }

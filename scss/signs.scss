@@ -163,13 +163,13 @@
             flex-direction: column;
             text-align: center;
         }
-	&.right {
-	    display: flex;
-	    justify-content: center;
-	    flex-direction: row;
-	    flex-wrap: wrap;
-	    align-items: center;
-	}
+        &.right {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+        }
         @include tablet-portrait {
             width: 550px;
             left: calc(40vw - 275px);
@@ -431,7 +431,7 @@
 }
 
 // Sponsors section
-$diamond-size: 350px;
+$diamond-size: 300px;
 $platinum-size: 200px;
 $gold-size: 150px;
 $silver-size: 100px;
