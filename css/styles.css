@@ -514,6 +514,27 @@ mark.red {
       left: 49%;
       bottom: 14%; } }
 
+#speakers-expanded ::-webkit-scrollbar,
+#speakers-expanded ::-webkit-scrollbar-thumb,
+#speakers-expanded ::-webkit-scrollbar-track {
+  width: 8px;
+  border: none;
+  background: transparent; }
+
+#speakers-expanded ::-webkit-scrollbar-button,
+#speakers-expanded ::-webkit-scrollbar-track-piece,
+#speakers-expanded ::-webkit-scrollbar-corner,
+#speakers-expanded ::-webkit-resizer {
+  display: none; }
+
+#speakers-expanded ::-webkit-scrollbar-thumb {
+  background-color: #ff36bf; }
+
+#speakers-expanded ::-webkit-scrollbar-track {
+  background-image: url("../assets/backgrounds/smolred.png");
+  background-repeat: repeat-y;
+  background-size: contain; }
+
 #faq-expanded ::-webkit-scrollbar,
 #faq-expanded ::-webkit-scrollbar-thumb,
 #faq-expanded ::-webkit-scrollbar-track {
@@ -751,6 +772,126 @@ mark.red {
   .sponsor.bronze {
     width: 50px;
     height: 50px; }
+
+.slideshow {
+  font-family: "BrandonGrotesqueBlack", sans-serif;
+  font-weight: 400;
+  position: absolute;
+  overflow-y: auto;
+  width: 60vw;
+  height: 60vh;
+  left: 10vw;
+  bottom: 10vh; }
+  .slideshow .slide {
+    display: none;
+    top: 20%;
+    bottom: 20%;
+    margin-right: 3.5%;
+    margin-left: 3.5%; }
+    .slideshow .slide p {
+      font-family: "BrandonGrotesque", sans-serif;
+      font-size: 2.0vw;
+      margin: 20px 0 20px 0px; }
+      @media screen and (min-width: 1200px) {
+        .slideshow .slide p {
+          font-size: 35px; } }
+      @media screen and (min-width: 600px) {
+        .slideshow .slide p {
+          font-size: 25px; } }
+      @media screen and (max-width: 599px) {
+        .slideshow .slide p {
+          font-size: 20px; } }
+  .slideshow .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+.index {
+  position: relative;
+  text-align: center;
+  top: 87.5%; }
+  .index .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border: 2px solid #ff36bf;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease; }
+  .index .active, .index .dot:hover {
+    background-color: #ff36bf; }
+
+.speaker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; }
+  .speaker .info {
+    flex-basis: 75%;
+    padding-left: 2.5%;
+    text-transform: uppercase; }
+  .speaker h1 {
+    margin: 0;
+    font-family: "BrandonGrotesqueBlack", sans-serif;
+    font-size: 5.0vw; }
+    @media screen and (min-width: 1200px) {
+      .speaker h1 {
+        font-size: 75px; } }
+    @media screen and (min-width: 600px) {
+      .speaker h1 {
+        font-size: 50px; } }
+    @media screen and (max-width: 599px) {
+      .speaker h1 {
+        font-size: 25px; } }
+  .speaker h5 {
+    margin: 0;
+    font-family: "BrandonGrotesqueBlack", sans-serif;
+    font-size: 2.5vw;
+    color: #ff36bf; }
+    @media screen and (min-width: 1200px) {
+      .speaker h5 {
+        font-size: 50px; } }
+    @media screen and (min-width: 600px) {
+      .speaker h5 {
+        font-size: 30px; } }
+    @media screen and (max-width: 599px) {
+      .speaker h5 {
+        font-size: 15px; } }
+  .speaker img {
+    width: 15vw;
+    height: 15vw;
+    border: 1vw solid #ec3e5b;
+    border-radius: 100%; }
+    @media screen and (min-width: 1200px) {
+      .speaker img {
+        width: 225px;
+        height: 225px;
+        border: 15px solid #ec3e5b; } }
+    @media screen and (min-width: 600px) {
+      .speaker img {
+        width: 150px;
+        height: 150px;
+        border: 10px solid #ec3e5b; } }
+    @media screen and (max-width: 599px) {
+      .speaker img {
+        width: 75px;
+        height: 75px;
+        border: 5px solid #ec3e5b; } }
 
 .bottom-2 {
   height: 5px; }

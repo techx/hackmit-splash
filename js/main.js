@@ -90,6 +90,41 @@ window.onload = function() {
 		});
 }
 
+///////////////
+// Slideshow
+///////////////
+var slideIndex = 0;
+var noClick = true;
+showSlides();
+
+function plusSlides(n) {
+  noClick = false;
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  noClick = false;
+  showSlides(slideIndex = n);
+}
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+  if (noClick) {slideIndex++}
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  if (noClick) {setTimeout(showSlides, 5000)}
+}
+
 /* LIT PUZZLE ENTRY */
 
 $('.bottom').click(function (e) {

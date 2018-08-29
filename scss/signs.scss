@@ -65,6 +65,30 @@
 }
 
 // custom scrollbar stuff
+#speakers-expanded {
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-track {
+        width: 8px;
+        border: none;
+        background: transparent;
+    }
+    ::-webkit-scrollbar-button,
+    ::-webkit-scrollbar-track-piece,
+    ::-webkit-scrollbar-corner,
+    ::-webkit-resizer {
+        display: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: $pink;
+    }
+    ::-webkit-scrollbar-track {
+        background-image: url("../assets/backgrounds/smolred.png");
+        background-repeat: repeat-y;
+        background-size: contain;
+    }
+}
+
 #faq-expanded {
     ::-webkit-scrollbar,
     ::-webkit-scrollbar-thumb,
@@ -473,5 +497,149 @@ $bronze-size: 50px;
     &.bronze {
         width: $bronze-size;
         height: $bronze-size;
+    }
+}
+
+// Speakers section
+.slideshow {
+    font-family: "BrandonGrotesqueBlack", sans-serif;
+    font-weight: 400;
+    position: absolute;
+    overflow-y: auto;
+    width: 60vw;
+    height: 60vh;
+    left: 10vw;
+    bottom: 10vh;
+
+    .slide {
+        display: none;
+        top: 20%;
+        bottom: 20%;
+        margin-right: 3.5%;
+        margin-left: 3.5%;
+
+        p {
+            font-family: "BrandonGrotesque", sans-serif;
+            font-size: 2.0vw;
+            margin: 20px 0 20px 0px;
+
+            @include desktop {
+              font-size: 35px;
+            }
+            @include tablet-portrait {
+              font-size: 25px;
+            }
+            @include mobile {
+              font-size: 20px;
+            }
+        }
+    }
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+}
+
+.index {
+  position: relative;
+  text-align: center;
+  top: 87.5%;
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border: 2px solid $pink;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: $pink;
+  }
+}
+
+.speaker {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+
+    .info {
+      flex-basis: 75%;
+      padding-left: 2.5%;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: $header-font;
+      font-size: 5.0vw;
+
+      @include desktop {
+        font-size: 75px;
+      }
+      @include tablet-portrait {
+        font-size: 50px;
+      }
+      @include mobile {
+        font-size: 25px;
+      }
+    }
+
+    h5 {
+      margin: 0;
+      font-family: $header-font;
+      font-size: 2.5vw;
+      color: $pink;
+
+      @include desktop {
+        font-size: 50px;
+      }
+      @include tablet-portrait {
+        font-size: 30px;
+      }
+      @include mobile {
+        font-size: 15px;
+      }
+    }
+
+    img {
+        width: 15vw;
+        height: 15vw;
+        border: 1vw solid $red;
+        border-radius: 100%;
+
+        @include desktop {
+          width: 225px;
+          height: 225px;
+          border: 15px solid $red;
+        }
+        @include tablet-portrait {
+          width: 150px;
+          height: 150px;
+          border: 10px solid $red;
+        }
+        @include mobile {
+          width: 75px;
+          height: 75px;
+          border: 5px solid $red;
+        }
     }
 }
