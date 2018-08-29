@@ -795,6 +795,9 @@ mark.red {
       @media screen and (min-width: 1200px) {
         .slideshow .slide p {
           font-size: 35px; } }
+      @media screen and (min-width: 600px) {
+        .slideshow .slide p {
+          font-size: 25px; } }
       @media screen and (max-width: 599px) {
         .slideshow .slide p {
           font-size: 20px; } }
@@ -840,7 +843,7 @@ mark.red {
   align-items: center; }
   .speaker .info {
     flex-basis: 75%;
-    padding-right: 10px;
+    padding-left: 2.5%;
     text-transform: uppercase; }
   .speaker h1 {
     margin: 0;
@@ -848,10 +851,13 @@ mark.red {
     font-size: 5.0vw; }
     @media screen and (min-width: 1200px) {
       .speaker h1 {
-        font-size: 80px; } }
+        font-size: 75px; } }
+    @media screen and (min-width: 600px) {
+      .speaker h1 {
+        font-size: 50px; } }
     @media screen and (max-width: 599px) {
       .speaker h1 {
-        font-size: 24px; } }
+        font-size: 25px; } }
   .speaker h5 {
     margin: 0;
     font-family: "BrandonGrotesqueBlack", sans-serif;
@@ -859,10 +865,13 @@ mark.red {
     color: #ff36bf; }
     @media screen and (min-width: 1200px) {
       .speaker h5 {
-        font-size: 40px; } }
+        font-size: 50px; } }
+    @media screen and (min-width: 600px) {
+      .speaker h5 {
+        font-size: 30px; } }
     @media screen and (max-width: 599px) {
       .speaker h5 {
-        font-size: 14px; } }
+        font-size: 15px; } }
   .speaker img {
     width: 15vw;
     height: 15vw;
@@ -872,11 +881,16 @@ mark.red {
       .speaker img {
         width: 225px;
         height: 225px;
+        border: 15px solid #ec3e5b; } }
+    @media screen and (min-width: 600px) {
+      .speaker img {
+        width: 150px;
+        height: 150px;
         border: 10px solid #ec3e5b; } }
     @media screen and (max-width: 599px) {
       .speaker img {
-        width: 85px;
-        height: 85px;
+        width: 75px;
+        height: 75px;
         border: 5px solid #ec3e5b; } }
 
 .bottom-2 {
