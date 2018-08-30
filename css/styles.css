@@ -835,6 +835,12 @@ mark.red {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease; }
+    @media screen and (max-width: 599px) {
+      .index .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 1.5 px;
+        border: 1.5 px solid #ff36bf; } }
   .index .active, .index .dot:hover {
     background-color: #ff36bf; }
 
