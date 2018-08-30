@@ -513,7 +513,7 @@ $bronze-size: 50px;
 
     .slide {
         display: none;
-        top: 20%;
+        top: 10%;
         bottom: 20%;
         margin-right: 3.5%;
         margin-left: 3.5%;
@@ -530,7 +530,7 @@ $bronze-size: 50px;
               font-size: 25px;
             }
             @include mobile {
-              font-size: 20px;
+              font-size: 17.5px;
             }
         }
     }
@@ -554,9 +554,12 @@ $bronze-size: 50px;
 }
 
 .index {
-  position: relative;
+  position: absolute;
   text-align: center;
-  top: 87.5%;
+  top: 90%;
+  left: 25%;
+  right: 25%;
+  width: 50%;
 
   .dot {
     cursor: pointer;
@@ -575,16 +578,39 @@ $bronze-size: 50px;
 }
 
 .speaker {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
+    &.desktop {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
 
-    .info {
-      flex-basis: 75%;
-      padding-left: 2.5%;
-      text-transform: uppercase;
+      .info {
+        flex-basis: 75%;
+        padding-left: 2.5%;
+        text-transform: uppercase;
+      }
+    }
+
+    &.mobile {
+      display: none;
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+      }
+
+      .info {
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    @include mobile {
+      &.mobile {display: block}
+      &.desktop {display: none}
     }
 
     h1 {
@@ -596,10 +622,10 @@ $bronze-size: 50px;
         font-size: 75px;
       }
       @include tablet-portrait {
-        font-size: 50px;
+        font-size: 45px;
       }
       @include mobile {
-        font-size: 25px;
+        font-size: 20px;
       }
     }
 
@@ -613,7 +639,7 @@ $bronze-size: 50px;
         font-size: 50px;
       }
       @include tablet-portrait {
-        font-size: 30px;
+        font-size: 25px;
       }
       @include mobile {
         font-size: 15px;
@@ -621,6 +647,7 @@ $bronze-size: 50px;
     }
 
     img {
+        margin: auto;
         width: 15vw;
         height: 15vw;
         border: 1vw solid $red;

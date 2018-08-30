@@ -784,7 +784,7 @@ mark.red {
   bottom: 10vh; }
   .slideshow .slide {
     display: none;
-    top: 20%;
+    top: 10%;
     bottom: 20%;
     margin-right: 3.5%;
     margin-left: 3.5%; }
@@ -800,7 +800,7 @@ mark.red {
           font-size: 25px; } }
       @media screen and (max-width: 599px) {
         .slideshow .slide p {
-          font-size: 20px; } }
+          font-size: 17.5px; } }
   .slideshow .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -820,9 +820,12 @@ mark.red {
     opacity: 1; } }
 
 .index {
-  position: relative;
+  position: absolute;
   text-align: center;
-  top: 87.5%; }
+  top: 90%;
+  left: 25%;
+  right: 25%;
+  width: 50%; }
   .index .dot {
     cursor: pointer;
     height: 15px;
@@ -835,63 +838,84 @@ mark.red {
   .index .active, .index .dot:hover {
     background-color: #ff36bf; }
 
-.speaker {
+.speaker.desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   align-items: center; }
-  .speaker .info {
+  .speaker.desktop .info {
     flex-basis: 75%;
     padding-left: 2.5%;
     text-transform: uppercase; }
-  .speaker h1 {
-    margin: 0;
-    font-family: "BrandonGrotesqueBlack", sans-serif;
-    font-size: 5.0vw; }
-    @media screen and (min-width: 1200px) {
-      .speaker h1 {
-        font-size: 75px; } }
-    @media screen and (min-width: 600px) {
-      .speaker h1 {
-        font-size: 50px; } }
-    @media screen and (max-width: 599px) {
-      .speaker h1 {
-        font-size: 25px; } }
-  .speaker h5 {
-    margin: 0;
-    font-family: "BrandonGrotesqueBlack", sans-serif;
-    font-size: 2.5vw;
-    color: #ff36bf; }
-    @media screen and (min-width: 1200px) {
-      .speaker h5 {
-        font-size: 50px; } }
-    @media screen and (min-width: 600px) {
-      .speaker h5 {
-        font-size: 30px; } }
-    @media screen and (max-width: 599px) {
-      .speaker h5 {
-        font-size: 15px; } }
-  .speaker img {
-    width: 15vw;
-    height: 15vw;
-    border: 1vw solid #ec3e5b;
-    border-radius: 100%; }
-    @media screen and (min-width: 1200px) {
-      .speaker img {
-        width: 225px;
-        height: 225px;
-        border: 15px solid #ec3e5b; } }
-    @media screen and (min-width: 600px) {
-      .speaker img {
-        width: 150px;
-        height: 150px;
-        border: 10px solid #ec3e5b; } }
-    @media screen and (max-width: 599px) {
-      .speaker img {
-        width: 75px;
-        height: 75px;
-        border: 5px solid #ec3e5b; } }
+
+.speaker.mobile {
+  display: none; }
+  .speaker.mobile img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%; }
+  .speaker.mobile .info {
+    text-align: center;
+    text-transform: uppercase; }
+
+@media screen and (max-width: 599px) {
+  .speaker.mobile {
+    display: block; }
+  .speaker.desktop {
+    display: none; } }
+
+.speaker h1 {
+  margin: 0;
+  font-family: "BrandonGrotesqueBlack", sans-serif;
+  font-size: 5.0vw; }
+  @media screen and (min-width: 1200px) {
+    .speaker h1 {
+      font-size: 75px; } }
+  @media screen and (min-width: 600px) {
+    .speaker h1 {
+      font-size: 45px; } }
+  @media screen and (max-width: 599px) {
+    .speaker h1 {
+      font-size: 20px; } }
+
+.speaker h5 {
+  margin: 0;
+  font-family: "BrandonGrotesqueBlack", sans-serif;
+  font-size: 2.5vw;
+  color: #ff36bf; }
+  @media screen and (min-width: 1200px) {
+    .speaker h5 {
+      font-size: 50px; } }
+  @media screen and (min-width: 600px) {
+    .speaker h5 {
+      font-size: 25px; } }
+  @media screen and (max-width: 599px) {
+    .speaker h5 {
+      font-size: 15px; } }
+
+.speaker img {
+  margin: auto;
+  width: 15vw;
+  height: 15vw;
+  border: 1vw solid #ec3e5b;
+  border-radius: 100%; }
+  @media screen and (min-width: 1200px) {
+    .speaker img {
+      width: 225px;
+      height: 225px;
+      border: 15px solid #ec3e5b; } }
+  @media screen and (min-width: 600px) {
+    .speaker img {
+      width: 150px;
+      height: 150px;
+      border: 10px solid #ec3e5b; } }
+  @media screen and (max-width: 599px) {
+    .speaker img {
+      width: 75px;
+      height: 75px;
+      border: 5px solid #ec3e5b; } }
 
 .bottom-2 {
   height: 5px; }

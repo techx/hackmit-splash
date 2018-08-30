@@ -122,7 +122,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  if (noClick) {setTimeout(showSlides, 5000)}
+  if (noClick) {setTimeout(showSlides, 15000)}
 }
 
 /* LIT PUZZLE ENTRY */
