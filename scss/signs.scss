@@ -556,10 +556,14 @@ $bronze-size: 50px;
 .index {
   position: absolute;
   text-align: center;
-  top: 90%;
-  left: 25%;
-  right: 25%;
-  width: 50%;
+  top: 5%;
+  left: 20%;
+  right: 20%;
+  width: 60%;
+
+  @include mobile {
+    top: 2.5%;
+  }
 
   .dot {
     cursor: pointer;
