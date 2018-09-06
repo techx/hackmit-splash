@@ -785,7 +785,7 @@ mark.red {
   .slideshow .slide {
     display: none;
     top: 10%;
-    bottom: 20%;
+    bottom: 10%;
     margin-right: 3.5%;
     margin-left: 3.5%; }
     .slideshow .slide p {
