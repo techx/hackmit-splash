@@ -455,7 +455,6 @@
 }
 
 // Sponsors section
-$diamond-size: 300px;
 $platinum-size: 200px;
 $gold-size: 150px;
 $silver-size: 100px;
@@ -479,25 +478,30 @@ $bronze-size: 50px;
     background-repeat: no-repeat;
     transition:.25s;
     &.diamond {
-        width: $diamond-size;
-        height: $diamond-size;
+        width: 500px;
+        height: 200px;
     }
     &.platinum {
         width: $platinum-size;
-        height: $platinum-size;
+        height: $platinum-size*0.75;
     }
     &.gold {
         width: $gold-size;
-        height: $gold-size;
+        height: $gold-size*0.75;
     }
     &.silver {
         width: $silver-size;
-        height: $silver-size;
+        height: $silver-size*0.75;
     }
     &.bronze {
         width: $bronze-size;
         height: $bronze-size;
     }
+}
+
+.line-break {
+    width: 100%;
+    height: 50px;
 }
 
 // Speakers section
